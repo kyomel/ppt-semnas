@@ -47,6 +47,22 @@ Aturan di panggung:
 | 48:30 | 33 | Penutup + tanya jawab | 9,5 | 0,5 penutup, 9 tanya jawab |
 | 58:00 | | Cadangan | 2 | |
 
+## Plan B - bicara 43,5 menit (pas satu jam atau lebih cepat)
+
+Hasil riset pacing (23 Okt 2026): slot satu jam = bicara 45-50 menit. Aturan umum: slide sederhana satu menit per slide, slide rumit satu slide per dua menit ([Science Communication Toolkit](https://ecampusontario.pressbooks.pub/scicommtoolkit/chapter/talks/), [Naegle, Ten Simple Rules](https://pmc.ncbi.nlm.nih.gov/articles/PMC8638955/), [Dahlin, SIGCOMM](https://education.sigcomm.org/advice/dahlin_conferencetalk.pdf)). Jadwal utama (bicara 49 menit) masih masuk rentang itu, tetapi tanpa sisa. Kalau acara mulai telat, pakai Plan B dari awal:
+
+| Ubah | Slide | Dari | Jadi |
+|---|---|---|---|
+| Lewati | 9, 26 | 0,5 | 0 (satu kalimat jembatan) |
+| Padat | 6 | 2 | 1,5 (dua kabar saja) |
+| Padat | 15 | 2,5 | 1,5 (satu sukarelawan) |
+| Padat | 23 | 2 | 1,5 |
+| Padat | 27 | 1,5 | 1 (dua fase saja) |
+| Padat | 29 | 2 | 1,5 (satu kartu saja) |
+| Padat | 32 | 3 | 1,5 (satu jalur simulasi) |
+
+Hasil Plan B: bicara 43,5 menit + penutup dan tanya jawab 9,5 menit = 53 menit. Sisa 7 menit jadi cadangan atau tanya jawab ekstra. QR grup SWE Growth tampil di slide 33 selama tanya jawab.
+
 ## Poin bicara per slide
 
 **1. Judul dan kabar SI (1,5 menit)**

@@ -2,7 +2,7 @@ export const deck = {
   title: "Meningkatkan Literasi dan Mindset Pemahaman AI",
   subtitle: "Dari Awam ke Advanced",
   speaker: "Michael Stevan Lapandio",
-  speakerRole: "Praktisi AI",
+  speakerRole: "Software Engineer (Orbiitum)",
   event: "SEMNAS AMIKOM 2026",
   date: "2026-10-23",
   dateLabel: "23 Oktober 2026",

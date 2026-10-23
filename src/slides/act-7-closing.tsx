@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   ArrowRight,
@@ -462,6 +463,33 @@ export function QaSlide() {
             <span className="font-mono text-[0.62rem] tracking-[0.1em] text-ink-faint">
               {deck.handle}
             </span>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.72}>
+          <div className="mt-6 flex items-center gap-4 rounded-2xl bg-bg-soft/70 px-4 py-3 shadow-[inset_0_0_0_1px_var(--line)]">
+            <Image
+              src="/qr-swe-growth.png"
+              alt="QR code grup WhatsApp SWE Growth"
+              width={112}
+              height={112}
+              priority
+              className="h-28 w-28 rounded-xl bg-white p-1.5"
+            />
+            <div className="flex flex-col items-start gap-1 text-left">
+              <span className="font-mono text-[0.54rem] tracking-[0.18em] text-ink-faint uppercase">
+                grup whatsapp
+              </span>
+              <span className="text-sm font-medium">SWE Growth</span>
+              <a
+                href="https://chat.whatsapp.com/Gafg6mZXgFaCydmb3bW8W2"
+                target="_blank"
+                rel="noreferrer"
+                className="font-mono text-[0.54rem] tracking-[0.1em] text-accent underline-offset-4 hover:underline"
+              >
+                chat.whatsapp.com/Gafg6mZXgFaCydmb3bW8W2
+              </a>
+            </div>
           </div>
         </Reveal>
 
