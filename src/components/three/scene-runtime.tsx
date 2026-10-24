@@ -25,17 +25,18 @@ export type SceneProps = {
   kind: SceneKind;
   active?: number;
   level?: number;
+  count?: number;
   onPick?: (index: number) => void;
   camera?: [number, number, number];
   fov?: number;
 };
 
-function Scene({ kind, active = 0, level = 0.4, onPick }: SceneProps) {
+function Scene({ kind, active = 0, level = 0.4, count, onPick }: SceneProps) {
   switch (kind) {
     case "veil":
       return <ParticleVeil />
     case "tokens":
-      return <TokenCubes active={active} onPick={onPick} />;
+      return <TokenCubes active={active} count={count} onPick={onPick} />;
     case "timeline":
       return <TimelineRail active={active} onPick={onPick} />;
     case "gauge":
@@ -57,6 +58,7 @@ export default function SceneRuntime({
   kind,
   active,
   level,
+  count,
   onPick,
   camera = [0, 0, 6.2],
   fov = 42,
@@ -76,7 +78,7 @@ export default function SceneRuntime({
       }}
     >
       <Suspense fallback={null}>
-        <Scene kind={kind} active={active} level={level} onPick={onPick} />
+        <Scene kind={kind} active={active} level={level} count={count} onPick={onPick} />
       </Suspense>
     </Canvas>
   );

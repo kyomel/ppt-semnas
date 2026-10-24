@@ -23,35 +23,98 @@ function useGrow(target: number, duration = 1100) {
   return value;
 }
 
+const STEP_SPACING = 1.8;
+const CUBE_SIZE = 0.68;
+const CUBE_Y = 0.32;
+const RAIL_Y = -0.52;
+const ATTENTION_STEP = 2;
+
+type StepState = "done" | "active" | "next" | "pending";
+
+function stepX(index: number, total: number) {
+  return (index - (total - 1) / 2) * STEP_SPACING;
+}
+
 export function TokenCubes({
   active = 0,
+  count = 4,
   onPick,
 }: {
   active?: number;
+  count?: number;
   onPick?: (index: number) => void;
 }) {
   const palette = usePalette();
   const group = useRef<THREE.Group>(null);
-  const total = 7;
+  const fill = useRef<THREE.Group>(null);
+  const link = useRef<THREE.MeshBasicMaterial>(null);
+  const total = Math.max(2, count);
+  const current = Math.min(Math.max(active, 0), total - 1);
+  const rowWidth = (total - 1) * STEP_SPACING + CUBE_SIZE;
 
-  useFrame((_, delta) => {
-    if (group.current) group.current.rotation.y += delta * 0.05;
+  useFrame((state, delta) => {
+    if (group.current) {
+      group.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.22) * 0.07;
+    }
+    if (fill.current) {
+      const target = (stepX(current, total) + rowWidth / 2) / rowWidth;
+      fill.current.scale.x = THREE.MathUtils.damp(
+        fill.current.scale.x,
+        target,
+        6,
+        delta,
+      );
+    }
+    if (link.current) {
+      const target = current === ATTENTION_STEP ? 0.6 : 0.04;
+      link.current.opacity = THREE.MathUtils.damp(
+        link.current.opacity,
+        target,
+        5,
+        delta,
+      );
+    }
   });
 
   return (
     <Rig strength={0.26}>
       <group ref={group}>
+        <mesh position={[0, RAIL_Y, 0]}>
+          <boxGeometry args={[rowWidth, 0.035, 0.035]} />
+          <meshBasicMaterial color={palette.ink} transparent opacity={0.3} />
+        </mesh>
+        <group ref={fill} position={[-rowWidth / 2, RAIL_Y, 0]} scale={[0.001, 1, 1]}>
+          <mesh position={[rowWidth / 2, 0, 0]}>
+            <boxGeometry args={[rowWidth, 0.055, 0.055]} />
+            <meshBasicMaterial color={palette.accent} transparent opacity={0.95} />
+          </mesh>
+        </group>
+        <mesh position={[0, 0, -0.62]}>
+          <boxGeometry args={[rowWidth, 0.045, 0.045]} />
+          <meshBasicMaterial
+            ref={link}
+            color={palette.accent}
+            transparent
+            opacity={0.04}
+          />
+        </mesh>
+
         {Array.from({ length: total }, (_, i) => {
-          const x = (i - (total - 1) / 2) * 0.92;
-          const isActive = i === active;
-          const isNext = i === active + 1;
+          const state: StepState =
+            i === current
+              ? "active"
+              : i < current
+                ? "done"
+                : i === current + 1
+                  ? "next"
+                  : "pending";
           return (
             <Cube
               key={i}
-              position={[x, 0, 0]}
-              active={isActive}
-              next={isNext}
-              color={isActive ? palette.accent : palette.ink}
+              position={[stepX(i, total), CUBE_Y, 0]}
+              state={state}
+              color={state === "active" ? palette.accent : palette.ink}
+              accent={palette.accent}
               onClick={() => onPick?.(i)}
             />
           );
@@ -65,69 +128,98 @@ export function TokenCubes({
 
 function Cube({
   position,
-  active,
-  next,
+  state,
   color,
+  accent,
   onClick,
 }: {
   position: [number, number, number];
-  active: boolean;
-  next: boolean;
+  state: StepState;
   color: string;
+  accent: string;
   onClick: () => void;
 }) {
   const mesh = useRef<THREE.Mesh>(null);
+  const pulse = useRef<THREE.Mesh>(null);
+  const pulseMat = useRef<THREE.MeshBasicMaterial>(null);
+  const phase = useRef(0);
   const [hovered, setHovered] = useState(false);
 
-  useFrame((state, delta) => {
+  useFrame((frame, delta) => {
     if (!mesh.current) return;
-    const time = state.clock.elapsedTime;
-    const base = active ? 1.2 : next ? 1.02 : 0.86;
-    const target = hovered ? base * 1.08 : base;
+    const time = frame.clock.elapsedTime;
+    const base =
+      state === "active" ? 1.24 : state === "next" ? 1.06 : state === "done" ? 0.94 : 0.82;
+    const target = hovered ? base * 1.07 : base;
     const scale = THREE.MathUtils.damp(mesh.current.scale.x, target, 7, delta);
     mesh.current.scale.setScalar(scale);
-    mesh.current.rotation.y += delta * (active ? 0.9 : 0.18);
+    mesh.current.rotation.y += delta * (state === "active" ? 0.8 : 0.16);
     mesh.current.position.y =
-      Math.sin(time * 1.4 + position[0]) * (active ? 0.12 : 0.05);
+      Math.sin(time * 1.3 + position[0]) * (state === "active" ? 0.1 : 0.02);
     const material = mesh.current.material as THREE.MeshStandardMaterial;
     material.emissiveIntensity = THREE.MathUtils.damp(
       material.emissiveIntensity,
-      active ? 0.85 : hovered ? 0.4 : 0.06,
+      state === "active" ? 0.9 : hovered ? 0.45 : state === "next" ? 0.16 : 0.05,
       6,
       delta,
     );
+    material.opacity = THREE.MathUtils.damp(
+      material.opacity,
+      state === "active" ? 1 : state === "done" ? 0.7 : state === "next" ? 0.5 : 0.3,
+      6,
+      delta,
+    );
+
+    if (pulse.current && pulseMat.current) {
+      phase.current =
+        state === "active" ? (phase.current + delta / 1.5) % 1 : 0;
+      const t = phase.current;
+      pulse.current.scale.setScalar(0.9 + t * 1.3);
+      pulseMat.current.opacity = state === "active" ? (1 - t) * 0.6 : 0;
+    }
   });
 
   return (
-    <mesh
-      ref={mesh}
-      position={position}
-      rotation={[0.36, 0.42, 0]}
-      onClick={(event) => {
-        event.stopPropagation();
-        onClick();
-      }}
-      onPointerOver={(event) => {
-        event.stopPropagation();
-        setHovered(true);
-        document.body.style.cursor = "pointer";
-      }}
-      onPointerOut={() => {
-        setHovered(false);
-        document.body.style.cursor = "";
-      }}
-    >
-      <boxGeometry args={[0.54, 0.54, 0.54]} />
-      <meshStandardMaterial
-        color={color}
-        emissive={color}
-        emissiveIntensity={0.06}
-        roughness={0.32}
-        metalness={0.42}
-        transparent
-        opacity={active ? 1 : 0.82}
-      />
-    </mesh>
+    <group position={position}>
+      <mesh
+        ref={mesh}
+        rotation={[0.36, 0.42, 0]}
+        onClick={(event) => {
+          event.stopPropagation();
+          onClick();
+        }}
+        onPointerOver={(event) => {
+          event.stopPropagation();
+          setHovered(true);
+          document.body.style.cursor = "pointer";
+        }}
+        onPointerOut={() => {
+          setHovered(false);
+          document.body.style.cursor = "";
+        }}
+      >
+        <boxGeometry args={[CUBE_SIZE, CUBE_SIZE, CUBE_SIZE]} />
+        <meshStandardMaterial
+          color={color}
+          emissive={color}
+          emissiveIntensity={0.06}
+          roughness={0.32}
+          metalness={0.42}
+          transparent
+          opacity={0.22}
+        />
+      </mesh>
+      <mesh ref={pulse} position={[0, 0, 0]}>
+        <ringGeometry args={[0.52, 0.58, 64]} />
+        <meshBasicMaterial
+          ref={pulseMat}
+          color={accent}
+          transparent
+          opacity={0}
+          depthWrite={false}
+        />
+      </mesh>
+    </group>
   );
 }
 

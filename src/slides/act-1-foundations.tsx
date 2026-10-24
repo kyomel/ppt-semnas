@@ -42,7 +42,7 @@ const TOKEN_STEPS = [
 ] as const;
 
 export function PredictionSlide({ index }: { index: number }) {
-  const [active, setActive] = useState(3);
+  const [active, setActive] = useState(0);
 
   return (
     <SlideShell
@@ -101,7 +101,13 @@ export function PredictionSlide({ index }: { index: number }) {
 
         <div className="relative min-h-0">
           <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_50%_50%,var(--accent-soft),transparent_58%)] opacity-55" />
-          <SceneCanvas kind="tokens" active={active} onPick={setActive} camera={[0, 0, 7.6]} />
+          <SceneCanvas
+            kind="tokens"
+            active={active}
+            count={TOKEN_STEPS.length}
+            onPick={setActive}
+            camera={[0, 0, 7.6]}
+          />
         </div>
       </div>
 
