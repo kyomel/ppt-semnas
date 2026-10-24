@@ -5,6 +5,64 @@ Semua angka di bawah diambil dari sumber yang tercantum. Tanggal riset: 23 Oktob
 
 Catatan 24 Okt 2026: deck dipadatkan menjadi 27 slide. Deloitte (Tema 4) dan CAFE-AI (Tema 2) tidak lagi tampil di slide. Catatannya tetap di sini sebagai arsip.
 
+## Koreksi dan pembaruan 24 Okt 2026 (verifikasi ulang dengan Exa, acara 28 Okt 2026)
+
+Bagian ini menang atas catatan lama di bawahnya kalau ada selisih.
+
+### Koreksi yang mengubah slide
+
+| Hal | Sebelumnya | Benar | Sumber |
+|---|---|---|---|
+| Alasan belum memakai AI, APJII **2026** | 46,6% belum tahu, 22,7% tidak butuh, 15,5% tidak tahu cara (slide 8 menulis ini sebagai 2026) | **43,1%** tidak butuh, **35,5%** belum tahu teknologinya, **8,1%** tidak tahu cara. Angka lama adalah **2025** (46,56 / 22,68 / 15,5). | Metro TV 22 Mei 2026; GoodStats 8 Jun 2026; angka 2025: Kompas 11 Agu 2025, GoodStats 7 Okt 2025 |
+| Kabar MemT-1.0 | 22 Okt | arXiv v1 **19 Okt**, v2 20 Okt. Kabar ini dihapus dari slide 6. | https://arxiv.org/abs/2610.26825 |
+| Skor MiniMax M3.1 Flash | 42 | 42 saat peluncuran, **43** di halaman AA per 24 Okt | https://artificialanalysis.ai/leaderboards/models |
+| Dasar PISA 2029 | "dasar asesmen" | AILit **berkontribusi pada** asesmen PISA 2029 MAIL | OECD/EC, 18 Jun 2026 |
+| Peringatan halusinasi (Blanchard) | "yang bekerja: penanda spesifik" | Tinjauan studi. Peringatan umum paling lemah dan paling campur aduk. Penanda spesifik **tampak menjanjikan, buktinya terbatas**. Terbit daring 18 Sep 2026, edisi Februari 2027. | https://www.sciencedirect.com/science/article/pii/S2352250X2600165X |
+| WEF, pengurangan staf | "40% memperkirakan pengurangan staf di area yang bisa diotomasi" | Digest: **40%** berencana mengurangi staf yang skill-nya makin tidak relevan. Bab rinci menulis 41%. Ini rencana pemberi kerja. | https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/3-skills-outlook/ |
+| Perbandingan 2024 (APJII) | 24,73% | APJII menulis 24,72% (100 - 75,28); Kompas menulis 24,73%. Slide tidak memakainya. | GoodStats 7 Okt 2025; Kompas 14 Agu 2025 |
+
+### Konfirmasi (tidak ada perubahan)
+
+- APJII 2025: indeks literasi 49,96, "kurang baik", 8.700 responden. APJII 2026: 18,2% mengakses AI, internet 81,72% (235.261.078 jiwa), n=8.700, 38 provinsi, 1 Feb-15 Mar 2026, MoE 1,1%. Tujuan 2026: hiburan 36,5%, edukasi 30,2%, kerja 26,9%, asisten suara 6,4%. Generasi: Gen Z 29,4%, Milenial 16,7%, Gen X 7,5%, Baby Boomer (61-79) 0,8%.
+- Laporan primer APJII 2026 **tidak ditemukan**. Angka 2026 dibaca dari pers yang mengutip APJII (Metro TV, Bisnis.com, GoodStats). Kesamaan pertanyaan survei 2025 dan 2026 belum terbukti, jadi sebut "arah", bukan "turun X poin".
+- Bisnis.com (22 Jun 2026) memuat angka gender yang terbalik terhadap Metro TV dan angka alasan 2025 sebagai 2026. Jangan pakai Bisnis.com untuk dua hal itu. Deck tidak memakai angka gender.
+- kumparan x Populix 2025: 97% (37% sangat besar + 60% berperan), 68% bergantung, n=1.000 online, Gen Z 18-28 dan Milenial 29-44, Jabodetabek 50% dan lima kota 50%. Bukan angka nasional.
+- OECD/EC AILit (18 Jun 2026): definisi, empat domain, dan kalimat "AI literacy is different from AI tool use" cocok dengan PDF primer.
+- Dell'Acqua dkk., Organization Science 37(2):403-423, terbit daring 11 Mar 2026: 758 konsultan, 12,2% lebih banyak tugas, 25,1% lebih cepat, kontrol 84,5% vs 60% dan 70,6% (rata-rata turun 19 poin persentase).
+- MIT "Your Brain on ChatGPT": 54 peserta selesai sesi 1-3, hanya 18 selesai sesi 4. "Hingga 55%" adalah penurunan magnitudo dDTF di jaringan semantik dan pemantauan frekuensi rendah. 83,3% (15 dari 18) pengguna LLM gagal mengutip esai sendiri di sesi 1. Masih preprint. Ada komentar metodologi (arXiv 2601.00856); itu kritik, bukan replikasi.
+- Zhu & Li: tiga eksperimen, N=657 (292 + 204 + 161). Terbit daring 26 Sep 2026.
+- Springer, Cognitive Computation (terbit 24 Agu 2026): empat dimensi otonomi dan kerapuhan horizon panjang cocok.
+- HAIML: preprint OSF 16 Jun 2026. Model konseptual, tanpa data uji.
+- Google Pedagogical Framework (Sep 2026): kalimat "default tendency toward immediate task completion can bypass ... cognitive friction" cocok.
+- Anthropic context engineering (29 Sep 2025): "smallest possible set of high-signal tokens" dan "right altitude" cocok.
+- MiniMax M3.1 Flash: $0,15 / $0,60 per juta token. AA-Omniscience: benar 56% (sebelumnya 17%), mencoba menjawab 98% (35%), hallucination rate 93% (18%), indeks 16 (1). Definisi AA: salah dibagi (salah + menolak). Sumber: VentureBeat 19 Okt 2026 (93%, 56%) dan ai-primer (18%, 98%, 35%).
+- Mercury 3: 1.068 token/detik, konteks 1 juta. Harga standar $0,20 / $0,70; harga peluncuran $0,10 / $0,35 (diskon 50%). Klaim vendor.
+- Google Cloud + OpenAI (21 Okt): private preview, bukan GA. Claude Duet (21 Okt): waitlist, Pro dan Max di AS, Opus 5.5, 6.000+ connector dan plugin.
+- SI: tidak ada perubahan 20-24 Okt. Pertemuan berikutnya paling lambat November 2026, tanggal pasti belum terverifikasi.
+
+### Data baru yang dipakai di slide
+
+- **Komdigi, siaran pers 23 Okt 2026** (dialog 22 Okt): jawaban chatbot tidak dapat dijadikan bukti, "trust but verify". Komdigi meminta klarifikasi Meta atas jawaban Meta AI soal pembatasan konten karhutla. Perpres Etika AI dan Peta Jalan AI Nasional 2026-2029 masih rancangan. https://portal.komdigi.go.id/kanal-publik/berita-kini/10638
+- **METR, 22 Okt 2026**: uji tiga minggu (21 Jul-11 Agu 2026) atas pemantauan agent internal OpenAI. Perkiraan 75-94% lalu lintas agent internal layak dipantau (ketidakpastian besar). OpenAI menyatakan celah produksi sudah ditambal; METR belum menilai klaim itu. https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring
+- **Google, kebijakan privasi (berlaku 16 Okt 2026; The Verge 23 Okt)**: data Drive, Gmail, Foto yang dihubungkan ke layanan yang mendukung iklan personal boleh memengaruhi iklan. Pengiklan tidak mendapat datanya; tidak ada kategori sensitif; bersifat pilihan. https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update
+- **Artificial Analysis, snapshot 24 Okt 2026**: Claude Opus 5.5 (max) skor 58, $5,98 per tugas. MiniMax-M3.1-Flash 43, $0,22. DeepSeek V4.1 Flash 1017 45, $0,26. Claude Haiku 5.5 (max) 43, $0,21. GPT-6.1 Sol (max) 52, $0,72. 5,98 / 0,22 = sekitar 27 kali.
+- **e-Conomy SEA 2026 (Google, Temasek, Bain; 21 Okt 2026)**: 243 juta orang, 58% penduduk usia kerja SEA-6, sudah mengadopsi AI generatif dalam kurang dari tiga tahun. Separuh pengguna memakainya mingguan, hampir seperlima harian. Indonesia dan Filipina punya ruang tumbuh terbesar. Ukuran berbeda dari APJII. https://www.bain.com/insights/e-conomy-sea-2026/
+- **Kemdiktisaintek, 10 Okt 2026**: uji publik draf Framework Pemanfaatan KAG di Perguruan Tinggi (9 Okt, ITB). "Framework ini merupakan panduan, bukan regulasi yang bersifat mengikat." Panduan GenAI Dikti terbit 11 Okt 2024. https://dikti.kemdiktisaintek.go.id/publikasi/berita/uji-publik-framework-ai-generatif-di-perguruan-tinggi-jaga-keseimbangan-inovasi-dan-integritas-akademik
+- **EU AI Act**: berlaku sejak 2 Agu 2026 dengan pengecualian. Larangan dan kewajiban literasi AI sejak 2 Feb 2025; tata kelola dan GPAI sejak 2 Agu 2025. Sistem risiko tinggi Annex III (termasuk pendidikan) mulai 2 Des 2027; Annex I mulai 2 Agu 2028 (AI Omnibus, Reg. 2026/1744, berlaku 27 Jul 2026). Larangan konten seksual tanpa persetujuan dan CSAM mulai 2 Des 2026. Pasal 4 diubah: tidak ada tingkat literasi minimum, pengawasan oleh otoritas nasional sejak 2 Agu 2026. https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- **UU PDP**: Pasal 46 pemberitahuan kebocoran tertulis paling lambat 3 x 24 jam; denda administratif sampai 2% pendapatan tahunan (Pasal 57). **PP 33/2026** terbit 16 Jul 2026, berlaku 16 Jan 2027 (Deloitte, 15 Okt 2026). Lembaga PDP masih disiapkan lewat Perpres (Hukumonline, 23 Okt 2026).
+- **Indonesia, instrumen AI**: SE Menkominfo 9/2023 tentang Etika AI (19 Des 2023); tata kelola AI perbankan OJK (29 Apr 2025). Perpres Etika AI dan Peta Jalan AI Nasional 2026-2029 masih rancangan (Komdigi, siaran pers 23 Okt 2026, dibaca langsung). Rilis Komdigi 6 Okt 2026 (201/HM-KKD/10/2026) dilaporkan agent Exa dengan isi sama; tidak dibuka manual. Tidak ada Perpres AI terbit yang ditemukan per 24 Okt 2026.
+- **SKB tujuh menteri (12 Mar 2026)**: koding dan AI mapel pilihan (Permendikdasmen 13/2025 Pasal 32A); kemungkinan wajib dikatakan menteri dengan syarat jumlah guru cukup, belum ditetapkan. Batas usia dan durasi untuk PAUD ada di SKB (laporan detik.com: 30 menit per sesi, 60 menit per hari). Teks resmi tidak diverifikasi. Batas itu bukan untuk mahasiswa.
+
+### Pembanding lain yang ditemukan, belum dipakai di slide
+
+- Microsoft AI Diffusion Report Q2 2026 (Sep 2026): 18,8% penduduk usia kerja dunia memakai AI generatif (Q1: 17,8%); Singapura 64,3%; Global North 28,8%, Global South 16,2%. Tidak ada angka Indonesia.
+- McKinsey State of AI 2026 (25 Agu 2026; 1.719 responden, 97 negara): 40% responden di organisasi berpendapatan di atas $1 miliar melaporkan sudah menskalakan AI agent (tahun lalu 27%).
+- Chen, Frontiers in Psychology (28 Agu 2026): kuasi-eksperimen delapan minggu, enam kelas. Dukungan AI terbatas plus refleksi unggul atas kolaborasi terbuka pada tugas mandiri tanpa AI. Nilai p 0,050-0,063; penulis menolak tafsir kausal tegas.
+- UMD (versi Okt 2026, bukan peer review): 2.379 mahasiswa. Akses ke tutor AI menurunkan nilai akhir 0,37 simpangan baku di bagian kelas yang sama. Satu studi, jangan digeneralisasi.
+- Pew (22 Okt 2026): hubungan antara paparan AI pada pekerjaan dan pertumbuhan lapangan kerja pria vs wanita. Asosiasi, bukan sebab.
+- LMArena teks (snapshot 22 Okt 2026): Gemini 4 Argon (High) peringkat 1, skor 1517, status preliminary.
+- Kabar 22-23 Okt yang tidak dipakai: OpenAI Decisions API GA (22 Okt); Anthropic riset verifikasi formal (22 Okt); Microsoft Medical Diagnostic Orchestrator (22 Okt, klaim vendor); OpenAI melanjutkan pelatihan model frontier dengan keamanan baru (23 Okt, Reuters); laporan China menyetujui DeepSeek dan MiniMax untuk pemakaian global (23 Okt, akun afiliasi media negara).
+
 ---
 
 ## Tema 1 - Kondisi literasi AI di Indonesia
@@ -12,11 +70,11 @@ Catatan 24 Okt 2026: deck dipadatkan menjadi 27 slide. Deloitte (Tema 4) dan CAF
 ### Indeks literasi AI nasional
 - Indeks literasi AI masyarakat Indonesia **49,96**, kategori **"kurang baik"** (skala 0-100, skor di bawah 50 = kurang baik). Survei APJII 2025, 8.700 responden.
   - Sumber: https://komunitech.com/blog/riset/indeks-literasi-ai-indonesia-cuma-4996-kenapa-bisa-pakai-chatgpt-beda-dari-produktif-pakai-ai/
-- **27,34%** masyarakat sudah memakai AI di survei 2025, naik dari **24,73%** tahun sebelumnya (APJII 2025; Kompas.id 14 Agu 2025).
+- **27,34%** masyarakat sudah memakai AI di survei 2025, naik dari **24,73%** tahun sebelumnya (APJII 2025; Kompas.id 14 Agu 2025). APJII menulis 24,72% (100 - 75,28%).
 - **KOREKSI 23 Okt 2026:** APJII 2026 mencatat hanya **18,2%** responden mengakses AI, turun dari 27,3% (2025). Yang tidak mengakses naik dari 72,7% ke 81,8%. Pertanyaan survei bisa berbeda antar tahun, jadi baca sebagai arah. Penetrasi internet 2026: 81,72% (235,26 juta jiwa).
   - Sumber: https://metrotvnews.com/read/kqYCdR56-survei-apjii-gen-z-paling-banyak-mengakses-ai, https://teknologi.bisnis.com/read/20260622/84/1982423/pengguna-ai-di-ri-masih-182-gen-z-jadi-generasi-paling-aktif, https://databoks.katadata.co.id/teknologi-telekomunikasi/statistik/6a0fbd9fc14cb/pola-penggunaan-ai-di-indonesia-2026-hiburan-naik-edukasi-turun
 - Tujuan pemakaian bergeser: 2025 edukasi **43,98%** dan hiburan **29,52%**; 2026 hiburan **36,5%** dan edukasi **30,2%** (Kompas.id; Databoks).
-- Alasan belum memakai AI (2026): **46,6%** belum tahu teknologinya, **22,7%** merasa tidak butuh, **15,5%** tidak tahu cara memakai. Di Gen Z, **70,6%** belum mengakses AI (Bisnis.com; Metro TV).
+- **KOREKSI 24 Okt 2026:** alasan belum memakai AI (**2026**): **43,1%** merasa tidak butuh (2025: 22,7%), **35,5%** belum tahu teknologinya (2025: 46,6%), **8,1%** tidak tahu cara memakai (2025: 15,5%). Angka 46,6 / 22,7 / 15,5 adalah 2025. Di Gen Z, **70,6%** belum mengakses AI (Metro TV; GoodStats).
 - **97%** menganggap AI berperan penting dalam keseharian; **68%** mengaku bergantung pada AI. Indonesia AI Report 2025 (kumparan x Populix): **n=1.000**, hanya Gen Z (18-28) dan Milenial (29-44), online, kota urban, sudah akrab dengan AI, MoE ±3%. **Bukan angka nasional.**
   - Sumber: https://blue.kumparan.com/document/kumparan-Indonesia-AI-Report-2025.pdf
 
@@ -171,7 +229,7 @@ Semua item di bawah terverifikasi ke sumber primer atau pers teknologi pada 23 O
 - **21 Okt 2026** - **Claude Duet** (lihat Tema 6). Research preview lewat waitlist, hanya Pro dan Max di AS, belum untuk Team atau Enterprise.
 - **20 Okt 2026** - **DeepSeek DeepInfer** (Apache 2.0). Baru mendukung DeepSeek-V4.1-Flash, di GPU Nvidia SM100 (Blackwell) dan Huawei Ascend 950. Hanya inference offline; KV cache, pemisahan prefill/decode, dan load balancing belum disertakan. Deployment efisien terkecil yang DeepSeek gambarkan memakai 64 GPU prefill dan 64 GPU decode.
   - Sumber: https://github.com/deepseek-ai/DeepInfer, https://thenewstack.io/deepseek-deepinfer-huawei-nvidia/, https://siliconangle.com/2026/10/20/deepseek-open-sources-deepinfer-the-inference-framework-behind-its-production-services/
-- **22 Okt 2026** - **MemT 1.0** (MemTensor): state memori berukuran tetap. Varian Nano: 1,86x lebih cepat pada 128K dan **3,99x pada 256K** dibanding full context (uji peneliti sendiri, preprint arXiv); penyimpanan 66x lebih kecil pada 128K. Keterbatasan yang mereka tulis: kapasitas tetap, detail bisa hilang.
+- **19 Okt 2026** (arXiv v1; v2 20 Okt; dihapus dari slide 6) - **MemT 1.0** (MemTensor): state memori berukuran tetap. Varian Nano: 1,86x lebih cepat pada 128K dan **3,99x pada 256K** dibanding full context (uji peneliti sendiri, preprint arXiv); penyimpanan 66x lebih kecil pada 128K. Keterbatasan yang mereka tulis: kapasitas tetap, detail bisa hilang.
   - Sumber: https://arxiv.org/html/2610.26825, https://github.com/MemTensor/MemT-1.0
 - **20-22 Okt 2026** - **Voxtral 3** (Mistral): transkripsi 50+ bahasa, TTS ekspresif, dan SDK agen suara real-time. Public preview (dokumentasi tanggal 20 Okt, blog 22 Okt).
   - Sumber: https://mistral.ai/news/voxtral-3/, https://docs.mistral.ai/resources/changelogs
@@ -238,6 +296,13 @@ Dipakai di slide 1 ("Kabar terbaru"). Terverifikasi 23 Okt 2026.
 
 Diverifikasi ulang ke sumber: APJII 2025 dan 2026; kumparan x Populix; SKB 12 Mar 2026; OECD/EC AILit (kutipan dan empat domain); Dell'Acqua dkk.; MIT (83%, 55%, n=54); Deloitte (50%, ~60%, <60%, 25%, 54%, n=3.235); Zhu & Li (N=657); semua kabar 19-22 Okt 2026; SI.
 
-Belum diverifikasi ulang (dari riset awal, dipakai apa adanya): WEF Future of Jobs 2025 (39%, 59/100, 63%, 85%); Blanchard dkk. (peringatan umum paling lemah); CAFE-AI (n=152); HAIML; Springer (Cognitive Computation); Google Pedagogical Framework; UU PDP dan EU AI Act (ringkasan umum).
+Belum diverifikasi ulang pada 23 Okt: WEF Future of Jobs 2025; Blanchard dkk.; HAIML; Springer; Google Pedagogical Framework; UU PDP; EU AI Act. **Semuanya diverifikasi pada 24 Okt 2026** (lihat bagian "Koreksi dan pembaruan" di atas). CAFE-AI (n=152) tidak lagi tampil di deck dan tidak diverifikasi ulang.
+
+## Log verifikasi 24 Okt 2026
+
+Alat: Exa (agent_run empat kluster, web_search_exa, web_fetch_exa). Diperiksa langsung ke halaman sumber: Metro TV dan Bisnis.com (APJII 2026), VentureBeat dan ai-primer (MiniMax), arXiv (MemT), halaman EU AI Act (Komisi Eropa dan Consilium), Deloitte dan Hukumonline (PP PDP), Komdigi (23 Okt), METR (22 Okt), The Verge (23 Okt), Artificial Analysis (24 Okt), Bain (e-Conomy SEA), Dikti (framework dan panduan).
+Diperiksa lewat ringkasan agent Exa dengan kutipan dan tautan primer (tanpa buka ulang manual): WEF, OECD/EC, Dell'Acqua, MIT, Zhu & Li, Blanchard, Springer, HAIML, Google, Anthropic, SKB tujuh menteri, UU PDP Pasal 46 dan 57, kumparan x Populix.
+Tidak ditemukan: laporan primer APJII 2026; angka Indonesia di laporan Microsoft AI Diffusion; teks resmi SKB tentang batas durasi.
+Sebelum tampil pada 28 Okt: ulangi lima cek di bagian "Cek ulang pada hari H" di docs/TALK-TRACK.md.
 
 Konten ilustrasi (bukan data, sudah diberi label di slide): batang keyakinan vs kebenaran; dua jawaban JLPT N3; kurva minggu latihan; simulasi gerbang otonomi (termasuk "47 kali"); hitungan 0,9 pangkat n.

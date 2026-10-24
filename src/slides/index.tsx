@@ -70,7 +70,7 @@ export const slides: SlideMeta[] = [
   {
     id: "timeline",
     section: "Fondasi",
-    short: "Satu minggu terakhir di AI",
+    short: "Sepekan di AI, 19-23 Oktober",
     Component: TimelineSlide,
   },
 

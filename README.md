@@ -109,7 +109,7 @@ export const deck = {
   title: "Meningkatkan Literasi dan Mindset Pemahaman AI",
   speaker: "Michael Stevan Lapandio",
   event: "SEMNAS AMIKOM 2026",
-  dateLabel: "23 Oktober 2026",
+  dateLabel: "28 Oktober 2026",
   // ...
 };
 ```

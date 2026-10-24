@@ -53,7 +53,7 @@ export function IndonesiaSlide({ index }: { index: number }) {
       eyebrow="Realita"
       title="Indonesia: literasi belum cukup, pemakaian belum merata"
       lead="Skor literasi AI masih “kurang baik”, dan pengguna AI di survei terbaru hanya 18,2%."
-      source="Sumber: APJII 2025 (indeks 49,96); APJII 2026 (18,2%; 27,34% pada 2025); Indonesia AI Report 2025 kumparan × Populix (68%; n=1.000, Gen Z dan Milenial urban). Tiga survei berbeda, jangan digabung."
+      source="Sumber: APJII 2025 (indeks 49,96); APJII 2026 (18,2%; 27,34% pada 2025); Indonesia AI Report 2025 kumparan × Populix (68%; n=1.000, Gen Z dan Milenial urban). Tiga survei berbeda, jangan digabung. Pembanding: e-Conomy SEA 2026 (Google, Temasek, Bain; 21 Okt 2026) mengukur enam negara, bukan Indonesia saja."
     >
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] gap-[clamp(1.5rem,3vw,3rem)]">
         <Stagger className="flex flex-col justify-center gap-2">
@@ -102,6 +102,19 @@ export function IndonesiaSlide({ index }: { index: number }) {
               </StaggerItem>
             );
           })}
+          <StaggerItem>
+            <div className="mt-1 flex items-start gap-2.5 rounded-lg border border-line px-3.5 py-2.5">
+              <span className="mt-0.5 shrink-0 font-mono text-[0.5rem] tracking-[0.16em] text-accent uppercase">
+                pembanding
+              </span>
+              <p className="text-[0.72rem] leading-snug text-ink-soft">
+                e-Conomy SEA 2026 (21 Okt): 58% penduduk usia kerja di enam negara
+                Asia Tenggara sudah mengadopsi AI generatif. Ukurannya berbeda dari
+                APJII, jadi jangan dikurangkan. Indonesia dan Filipina disebut punya
+                ruang tumbuh terbesar.
+              </p>
+            </div>
+          </StaggerItem>
         </Stagger>
 
         <div className="relative min-h-0">
@@ -187,7 +200,7 @@ export function UsageSlide({ index }: { index: number }) {
       eyebrow="Realita"
       title="Untuk apa kita benar-benar memakai AI"
       lead="Setahun lalu edukasi memimpin. Sekarang hiburan, dan produktivitas ada di urutan ketiga."
-      source="Sumber: APJII 2026 (n=8.700, 38 provinsi, 1 Feb-15 Mar 2026, MoE ±1,1%) lewat detik.com dan Bisnis.com; pembanding 2025 dari Kompas.id dan Databoks."
+      source="Sumber: APJII 2026 (n=8.700, 38 provinsi, 1 Feb-15 Mar 2026, MoE ±1,1%) lewat Metro TV, GoodStats, detik.com, dan Bisnis.com; pembanding 2025 dari Kompas dan Databoks. Alasan belum memakai dibaca dari bagan APJII oleh Metro TV dan GoodStats; sejumlah media menulis angka 2025 sebagai angka 2026."
     >
       <div className="grid min-h-0 flex-1 grid-cols-2 gap-[clamp(1.5rem,3vw,3rem)]">
         <UsageBars
@@ -198,7 +211,7 @@ export function UsageSlide({ index }: { index: number }) {
         <UsageBars
           title="Menurut generasi"
           data={GENERATION}
-          note="Semakin muda, semakin tinggi. Dari yang belum memakai AI, 46,6% belum tahu teknologinya dan 15,5% tidak tahu cara memakainya."
+          note="Semakin muda, semakin tinggi. Yang belum memakai AI, 2026: 43,1% merasa tidak butuh (2025: 22,7%), 35,5% belum tahu teknologinya (2025: 46,6%), 8,1% tidak tahu cara memakai (2025: 15,5%)."
         />
       </div>
     </SlideShell>
@@ -326,7 +339,7 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
       eyebrow="Realita"
       title="Literasi AI bukan sekadar bisa memakai tool"
       lead="Definisi OECD dan Komisi Eropa (2026). Empat kata kerjanya kita bahas di slide berikutnya."
-      source="Sumber: OECD & European Commission, “Empowering Learners for the Age of AI: An AI Literacy Framework for Primary and Secondary Education” (Juni 2026). Dasar asesmen PISA 2029 Media & AI Literacy."
+      source="Sumber: OECD & European Commission, “Empowering Learners for the Age of AI: An AI Literacy Framework for Primary and Secondary Education” (Juni 2026). Berkontribusi pada asesmen PISA 2029 Media & AI Literacy."
     >
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-[clamp(1.8rem,3.4vw,3.6rem)]">
         <div className="flex flex-col justify-center">
@@ -361,8 +374,9 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
             <div className="flex items-start gap-2.5 rounded-lg border border-line px-3.5 py-2.5">
               <span className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
               <p className="text-[0.78rem] leading-snug text-ink-soft">
-                Kerangka ini ditulis untuk pendidikan dasar dan menengah, dan menjadi
-                dasar asesmen PISA 2029. Prinsipnya berlaku juga untuk kita.
+                Kerangka ini ditulis untuk pendidikan dasar dan menengah, dan
+                berkontribusi pada asesmen PISA 2029. Prinsipnya berlaku juga untuk
+                kita.
               </p>
             </div>
           </Reveal>

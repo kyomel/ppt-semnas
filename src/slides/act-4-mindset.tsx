@@ -156,7 +156,7 @@ export function VerificationSlide({ index }: { index: number }) {
       eyebrow="Mindset · 2 dari 5"
       title="Verifikasi adalah bagian dari pekerjaan"
       lead="Penalaran yang ditampilkan membuat jawaban terasa benar. Riset 2026: itu menaikkan ketergantungan."
-      source="Sumber: Zhu & Li, Telematics and Informatics (Okt 2026), tiga eksperimen, N=657; Blanchard, Garvey & O’Laughlin, Current Opinion in Psychology (Sep 2026). Dua jawaban di kiri disusun untuk ilustrasi."
+      source="Sumber: Zhu & Li, Telematics and Informatics (Okt 2026), tiga eksperimen, N=657; Blanchard, Garvey & O’Laughlin, Current Opinion in Psychology (daring 18 Sep 2026), tinjauan studi; Komdigi, siaran pers 23 Okt 2026. Dua jawaban di kiri disusun untuk ilustrasi."
     >
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-[clamp(1.5rem,3vw,3rem)]">
         <div className="flex flex-col justify-center gap-2">
@@ -220,8 +220,21 @@ export function VerificationSlide({ index }: { index: number }) {
               kompleks.
             </p>
             <p className="mt-2 border-t border-line pt-2 text-[0.72rem] leading-relaxed text-ink-faint">
-              Peringatan umum “hati-hati halusinasi” efeknya paling lemah. Yang
-              bekerja: penanda spesifik tentang di mana AI biasanya gagal.
+              Tinjauan studi: peringatan umum “hati-hati halusinasi” efeknya paling
+              lemah dan paling campur aduk. Penanda spesifik tentang di mana AI
+              biasanya gagal tampak lebih menjanjikan, tetapi buktinya masih
+              terbatas.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-line p-4">
+            <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+              dari Komdigi, 23 Okt 2026
+            </p>
+            <p className="mt-2 text-[0.76rem] leading-relaxed text-ink-soft">
+              “AI dapat membantu masyarakat mencari dan memahami informasi, tetapi
+              jawabannya tidak selalu benar. Karena itu, setiap informasi penting
+              tetap harus diperiksa melalui sumber yang kredibel.”
             </p>
           </div>
         </div>
@@ -256,7 +269,7 @@ export function VerificationSlide({ index }: { index: number }) {
 
 const CONNECTIVITY = [
   { label: "Menulis tanpa tool", value: 100, display: "acuan", tone: "accent2", note: "Jaringan otak paling kuat dan paling tersebar." },
-  { label: "Dengan LLM", value: 45, display: "hingga 55% lebih rendah", tone: "accent", note: "Konektivitas paling lemah. Pengguna search engine ada di tengah, tanpa persentase di ringkasan." },
+  { label: "Dengan LLM", value: 45, display: "hingga 55% lebih rendah", tone: "accent", note: "Konektivitas paling lemah (EEG, jaringan frekuensi rendah; bukan ukuran kecerdasan). Pengguna search engine ada di tengah, tanpa persentase di ringkasan." },
 ] as const;
 
 export function FrictionSlide({ index }: { index: number }) {
@@ -390,7 +403,7 @@ export function AgencySlide({ index }: { index: number }) {
       eyebrow="Mindset · 4 dari 5"
       title="Kamu yang memutuskan, bukan modelnya"
       lead="Automation bias: kita cenderung menerima saran mesin begitu saja. Lawan dengan prosedur, bukan niat baik."
-      source="Sumber: HAIML, Human-Centered AI Metacognitive Learning Model (preprint, Jun 2026); riset automation bias yang dirujuknya."
+      source="Sumber: HAIML, Human-Centered AI Metacognitive Learning Model (preprint konseptual, Jun 2026, belum ada data uji); riset automation bias yang dirujuknya."
     >
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-[clamp(1.5rem,3vw,3rem)]">
         <div className="flex flex-col justify-center gap-2">

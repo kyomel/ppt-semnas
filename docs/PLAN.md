@@ -10,7 +10,7 @@
 | `subtitle` | Dari Awam ke Advanced |
 | `speaker` | Michael Stevan Lapandio |
 | `event_name` | SEMNAS AMIKOM 2026 (Yogyakarta) |
-| `event_date` | 2026-10-23 |
+| `event_date` | 2026-10-28 |
 | `audience_persona` | Campuran: mahasiswa, dosen, praktisi, dan masyarakat umum. Sebagian sudah pakai ChatGPT, sebagian belum. Rentang literasi lebar, jadi deck harus masuk dari nol lalu naik cepat. |
 | `subject_focus` | Literasi AI dan mindset memakai AI: apa itu AI, di mana posisi Indonesia, model mental yang benar, dan jalur dari awam ke advanced. |
 | `talk_duration_minutes` | 60 |

@@ -11,11 +11,10 @@ const RULES = [
     scope: "Indonesia · 12 Mar 2026",
     line: "Pedoman nasional AI dan teknologi digital di pendidikan, dari PAUD sampai perguruan tinggi.",
     points: [
-      "Berlaku di jalur formal, nonformal, dan informal, dengan menghormati otonomi akademik.",
-      "Satuan pendidikan menilai kesiapan SDM, infrastruktur, dan tata kelola: data, etika akademik, etika AI.",
-      "Koding dan AI: mata pelajaran pilihan sejak 2025/2026, bisa jadi wajib nanti.",
+      "Berlaku PAUD sampai perguruan tinggi, menghormati otonomi akademik. Koding dan AI: mapel pilihan, belum wajib.",
+      "Panduan GenAI kampus (Dikti, 2024): integritas, privasi data, transparansi. Framework baru (uji publik 9 Okt 2026): aturan pakai jelas, hasil AI diverifikasi, asesmen tahan GenAI. Panduan, bukan regulasi mengikat.",
     ],
-    impact: "Kalau kamu di kampus: kampus diminta menilai kesiapan dan menyusun tata kelola AI sendiri. Cek aturan di mata kuliahmu.",
+    impact: "Kalau kamu di kampus: kampus menilai kesiapan dan menyusun tata kelola AI sendiri. Tanyakan aturannya sebelum memakai AI untuk tugas.",
   },
   {
     icon: Shield,
@@ -25,19 +24,20 @@ const RULES = [
     points: [
       "Data pribadi butuh dasar pemrosesan yang sah.",
       "Subjek data punya hak akses, koreksi, dan penghapusan.",
-      "Kebocoran wajib dilaporkan dalam batas waktu.",
+      "Kebocoran wajib diberitahukan tertulis dalam 3 x 24 jam (Pasal 46).",
+      "PP 33/2026 terbit 16 Jul 2026, berlaku 16 Jan 2027. Lembaga PDP masih disiapkan (23 Okt 2026).",
     ],
     impact: "Kalau kamu memakai AI: jangan masukkan data pelanggan ke tool tanpa perjanjian.",
   },
   {
     icon: Globe,
     name: "EU AI Act",
-    scope: "Uni Eropa · 2024",
+    scope: "Uni Eropa · Reg. 2024/1689",
     line: "Rujukan klasifikasi risiko. Relevan kalau produkmu dipakai di pasar EU.",
     points: [
-      "Praktik terlarang, risiko tinggi, risiko terbatas, risiko minimal.",
-      "Kewajiban transparansi berbeda per tingkat risiko.",
-      "Dokumentasi dan pengawasan manusia untuk sistem berisiko tinggi.",
+      "Empat tingkat risiko: terlarang, tinggi, transparansi, minimal.",
+      "Kewajiban literasi AI bagi penyedia dan pengguna sistem AI berlaku sejak 2 Feb 2025.",
+      "AI di lembaga pendidikan yang menentukan akses atau jalur belajar (misalnya menilai ujian) berisiko tinggi. Kewajibannya berlaku 2 Des 2027 setelah AI Omnibus.",
     ],
     impact: "Kalau kamu membangun produk: klasifikasikan risikonya sebelum menulis kode.",
   },
@@ -49,8 +49,8 @@ export function RulesSlide({ index }: { index: number }) {
       index={index}
       eyebrow="Aksi"
       title="Aturan main: tiga lapis yang perlu kamu tahu"
-      lead="Kamu tidak perlu menghafal pasal. Cukup tahu lapis mana yang menyentuh pekerjaanmu."
-      source="Sumber: Keputusan Bersama Tujuh Menteri tentang Pedoman Pemanfaatan dan Pembelajaran Teknologi Digital dan Kecerdasan Artifisial (12 Mar 2026; Kemendikdasmen, Komdigi); UU 27/2022 tentang Pelindungan Data Pribadi; EU AI Act (2024). Ringkasan, bukan nasihat hukum."
+      lead="Kamu tidak perlu menghafal pasal. Cukup tahu lapis mana yang menyentuh pekerjaanmu. Perpres etika AI dan peta jalan AI nasional masih rancangan (Komdigi, 23 Okt 2026)."
+      source="Sumber: Keputusan Bersama Tujuh Menteri tentang Pedoman Pemanfaatan dan Pembelajaran Teknologi Digital dan Kecerdasan Artifisial (12 Mar 2026; Kemendikdasmen, Komdigi); Komdigi, siaran pers 23 Okt 2026; UU 27/2022 tentang Pelindungan Data Pribadi; UU 27/2022 dan PP 33/2026 tentang PDP; panduan GenAI Dikti (2024) dan uji publik framework (9 Okt 2026); EU AI Act (Reg. 2024/1689, diubah Reg. 2026/1744; Komisi Eropa, 19 Okt 2026). Ringkasan, bukan nasihat hukum."
     >
       <div className="grid min-h-0 flex-1 grid-cols-3 items-center gap-[clamp(1rem,2.2vw,2.2rem)]">
         {RULES.map((rule) => {
@@ -124,7 +124,7 @@ export function RulesSlide({ index }: { index: number }) {
 const MYTHS = [
   {
     myth: "AI akan menggantikan semua pekerjaan.",
-    fact: "40% perusahaan memperkirakan pengurangan staf di area yang bisa diotomasi, tapi 85% memprioritaskan upskilling dan 70% merekrut skill baru.",
+    fact: "Survei WEF: 40% pemberi kerja berencana mengurangi staf yang skill-nya makin tidak relevan, tapi 85% memprioritaskan upskilling dan 70% akan merekrut skill baru. Itu rencana pemberi kerja, bukan hasil yang sudah terjadi.",
     source: "WEF, 2025",
   },
   {
@@ -133,14 +133,14 @@ const MYTHS = [
     source: "Anthropic, 2025",
   },
   {
-    myth: "Model lebih besar selalu lebih baik.",
-    fact: "Pekan 19-22 Okt 2026: model murah dan cepat bersaing. M3.1 Flash $0,15 per juta token; Mercury 3 mengklaim 1.068 token per detik dan menyaingi model cepat kelas atas.",
-    source: "MiniMax, Inception Labs, 2026",
+    myth: "Model lebih besar dan lebih mahal selalu lebih baik.",
+    fact: "Artificial Analysis, 24 Okt 2026: Claude Opus 5.5 memimpin (skor 58, $5,98 per tugas uji). MiniMax M3.1 Flash skor 43 dengan $0,22 per tugas. Selisih 15 poin, selisih biaya sekitar 27 kali. Pilih model sesuai tugas.",
+    source: "Artificial Analysis, 24 Okt 2026",
   },
   {
     myth: "Kalau gratis, berarti aman.",
-    fact: "Layanan gratis sering memakai data untuk perbaikan layanan. Baca pengaturan data, dan matikan opsi pelatihan kalau ada.",
-    source: "Praktik umum, bergantung layanan",
+    fact: "Layanan gratis sering memakai data untuk perbaikan layanan. Contoh: kebijakan privasi Google (berlaku 16 Okt 2026) membolehkan data Gmail, Drive, dan Foto yang kamu sambungkan ke fitur AI memengaruhi iklan. Baca pengaturan data.",
+    source: "The Verge, 23 Okt 2026 · praktik umum, bergantung layanan",
   },
 ] as const;
 
@@ -151,7 +151,7 @@ export function MythsSlide({ index }: { index: number }) {
       eyebrow="Aksi"
       title="Empat mitos yang masih beredar"
       lead="Mitos di atas, fakta di bawah, masing-masing dengan sumbernya."
-      source="Sumber: WEF Future of Jobs 2025; Anthropic 2025; MiniMax dan Inception Labs Okt 2026. Klaim praktik umum ditandai."
+      source="Sumber: WEF Future of Jobs 2025; Anthropic 2025; Artificial Analysis (24 Okt 2026); The Verge (23 Okt 2026). Klaim praktik umum ditandai."
     >
       <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-2.5">
         {MYTHS.map((item, i) => (

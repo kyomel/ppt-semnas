@@ -223,8 +223,9 @@ export function HallucinationSlide({ index }: { index: number }) {
                 <Badge tone="accent3">satu model</Badge>
               </div>
               <p className="mt-1 text-[0.7rem] leading-snug text-ink-soft">
-                Saat gagal menjawab benar, MiniMax M3.1 Flash memilih menjawab
-                salah, bukan mengaku tidak tahu, pada 93% kasus (18% di model
+                Di uji AA-Omniscience, MiniMax M3.1 Flash menjawab benar 56%
+                pertanyaan. Tapi saat tidak benar, ia memilih menjawab salah,
+                bukan mengaku tidak tahu, pada 93% kasus (18% di model
                 sebelumnya). Artificial Analysis, Okt 2026.
               </p>
             </div>
@@ -345,8 +346,8 @@ const EVENTS = [
   {
     date: "19 Okt",
     title: "Model murah jadi pintar",
-    body: "MiniMax M3.1 Flash: $0,15 per juta token input. Skor Intelligence Index 42 (M3: 29).",
-    why: "Biaya bukan alasan lagi untuk tidak mencoba. Tapi ini model yang tadi menjawab salah dengan yakin pada 93% kegagalannya.",
+    body: "MiniMax M3.1 Flash: $0,15 per juta token input, $0,60 output. Skor Intelligence Index Artificial Analysis 43 (saat peluncuran 42; M3: 29).",
+    why: "Biaya bukan alasan lagi untuk tidak mencoba. Tapi model ini memilih menjawab salah pada 93% kegagalannya, bukan mengaku tidak tahu.",
     tag: "Harga",
   },
   {
@@ -355,20 +356,6 @@ const EVENTS = [
     body: "Mercury 3 (model difusi): 1.068 token per detik, konteks 1 juta token. Angka dari Inception Labs.",
     why: "Jawaban datang dalam hitungan detik. Kebiasaan memakainya ikut berubah.",
     tag: "Kecepatan",
-  },
-  {
-    date: "20 Okt",
-    title: "Mesin inference dibuka",
-    body: "DeepSeek membuka DeepInfer (Apache 2.0). Baru mendukung V4.1 Flash, di GPU Nvidia Blackwell atau Huawei Ascend.",
-    why: "Resep menekan biaya inference jadi terbuka. Perangkat kerasnya tetap kelas data center.",
-    tag: "Terbuka",
-  },
-  {
-    date: "20 Okt",
-    title: "Suara jadi antarmuka",
-    body: "Mistral merilis Voxtral 3: transkripsi 50+ bahasa, suara sintetis, dan SDK agen suara real-time (public preview).",
-    why: "Input bukan lagi soal mengetik. Rapat dan telepon bisa jadi bahan kerja.",
-    tag: "Suara",
   },
   {
     date: "21 Okt",
@@ -386,24 +373,38 @@ const EVENTS = [
   },
   {
     date: "22 Okt",
-    title: "Memori menggantikan konteks panjang",
-    body: "MemT 1.0 menyimpan riwayat sebagai state berukuran tetap. Varian Nano 3,99x lebih cepat dari full context pada 256K token (uji peneliti sendiri).",
-    why: "AI yang mengingat tidak perlu kamu ulang dari nol. Tapi memori tetap terbatas: detail bisa hilang.",
-    tag: "Memori",
+    title: "Agent diuji dari luar",
+    body: "METR dan Redwood Research menguji sistem pemantauan agent internal OpenAI selama tiga minggu. Mereka menemukan celah. OpenAI menyatakan celah yang memengaruhi produksi sudah ditambal. METR belum menilai klaim itu.",
+    why: "Gerbang jejak harus diuji pihak luar. Pemantauan yang tidak pernah diuji belum bisa dipercaya.",
+    tag: "Pengawasan",
+  },
+  {
+    date: "23 Okt",
+    title: "Jawaban AI bukan bukti",
+    body: "Komdigi meminta klarifikasi Meta atas jawaban Meta AI yang dikaitkan dengan dugaan pembatasan konten karhutla. Kata Komdigi: jawaban chatbot bukan bukti, periksa sumbernya (trust but verify).",
+    why: "Halusinasi sudah jadi urusan kementerian. Jawaban yang meyakinkan tetap perlu dicek.",
+    tag: "Indonesia",
+  },
+  {
+    date: "23 Okt",
+    title: "Fitur AI personal, data personal",
+    body: "Google menambah satu pengecualian di kebijakan privasi (berlaku 16 Okt). Kalau kamu menyambungkan Gmail, Drive, atau Foto ke fitur AI seperti Personal Intelligence, data itu boleh memengaruhi iklan. Pengiklan tidak mendapat datanya.",
+    why: "Fitur yang lebih personal meminta akses ke datamu. Baca pengaturannya sebelum menyambungkan.",
+    tag: "Data",
   },
 ] as const;
 
 export function TimelineSlide({ index }: { index: number }) {
-  const [active, setActive] = useState(5);
+  const [active, setActive] = useState(0);
   const event = EVENTS[active];
 
   return (
     <SlideShell
       index={index}
       eyebrow="Fondasi"
-      title="Satu minggu terakhir di AI"
-      lead="Kalau AI terasa berubah terlalu cepat, memang begitu. Ini tujuh kabar dari 19 sampai 22 Oktober 2026."
-      source="Sumber: MiniMax dan Artificial Analysis (19 Okt); Inception Labs (19 Okt); DeepSeek di GitHub (20 Okt); Mistral (20-22 Okt); Google Cloud dan OpenAI (21 Okt); Anthropic (21 Okt); MemTensor di arXiv (22 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
+      title="Sepekan di AI, 19-23 Oktober"
+      lead="Kalau AI terasa berubah terlalu cepat, memang begitu. Ini tujuh kabar pilihan dari pekan itu."
+      source="Sumber: MiniMax, Artificial Analysis dan VentureBeat (19 Okt); Inception Labs (19 Okt); Google Cloud dan OpenAI (21 Okt); Anthropic (21 Okt); METR (22 Okt); Komdigi (23 Okt); The Verge (23 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
     >
       <div className="flex min-h-0 flex-1 flex-col gap-2">
         <div className="relative h-[32%] min-h-[8.5rem] w-full">

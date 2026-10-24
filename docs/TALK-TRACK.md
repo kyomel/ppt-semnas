@@ -1,15 +1,15 @@
 # TALK TRACK - SEMNAS AMIKOM 2026
 
-Pembicara: Michael Stevan Lapandio. Yogyakarta, 23 Oktober 2026.
+Pembicara: Michael Stevan Lapandio. Yogyakarta, 28 Oktober 2026.
 Deck: **27 slide**, mode penyaji. Peserta tidak mengklik apa pun.
 
 Anggaran waktu (satu jam penuh, tanya jawab termasuk):
 
 | Bagian | Menit |
 |---|---|
-| Bicara (slide 1 sampai 27) | 42,5 |
+| Bicara (slide 1 sampai 27) | 44 |
 | Tanya jawab | 10 |
-| Cadangan (acara mulai telat, jawaban panjang) | 7,5 |
+| Cadangan (acara mulai telat, jawaban panjang) | 6 |
 | **Total** | **60** |
 
 Aturan di panggung:
@@ -17,7 +17,8 @@ Aturan di panggung:
 - Pesan utama tiap slide tampil tanpa klik. Kamu menjelaskannya dengan suara.
 - Klik hanya alat bantu penyaji (simpul 3D, daftar kabar, tombol lapisan). Klik secukupnya hanya di slide 6, 12, 18, dan 19. Di slide lain tidak perlu klik.
 - Jangan minta peserta menjawab keras. Pertanyaan di slide dijawab dalam hati.
-- Cek jam di tiga titik: slide 12 (menit 16:30), slide 19 (menit 28:30), slide 23 (menit 37:00).
+- Cek jam di tiga titik: slide 12 (menit 17:30), slide 19 (menit 29:30), slide 23 (menit 38:00).
+- Tiap catatan slide dibagi dua. **Ucapkan** harus muat dalam durasi slide. **Di layar, jawab kalau ditanya** tidak perlu kamu ucapkan: peserta bisa membacanya.
 
 ## Jadwal
 
@@ -28,30 +29,40 @@ Aturan di panggung:
 | 2:00 | 3 | AI mesin prediksi | 2,5 | |
 | 4:30 | 4 | Salah dengan yakin | 2 | |
 | 6:30 | 5 | Tujuh istilah | 1 | **Lewati jika telat** |
-| 7:30 | 6 | Satu minggu di AI | 2 | Tiga dari tujuh kabar |
-| 9:30 | 7 | Indonesia | 2 | |
-| 11:30 | 8 | Untuk apa AI dipakai | 1,5 | |
-| 13:00 | 9 | Skill 2030 | 1 | **Lewati jika telat** |
-| 14:00 | 10 | Literasi bukan tool use | 1 | |
-| 15:00 | 11 | Empat domain | 1,5 | |
-| 16:30 | 12 | Tangga lima level | 2,5 | Titik cek jam 1 |
-| 19:00 | 13 | Empat jebakan | 1,5 | |
-| 20:30 | 14 | Rekan magang | 1 | |
-| 21:30 | 15 | Verifikasi | 2 | |
-| 23:30 | 16 | Friksi kognitif | 1,5 | |
-| 25:00 | 17 | Kamu yang memutuskan | 1,5 | **Lewati jika telat** |
-| 26:30 | 18 | Frontier bergerigi | 2 | |
-| 28:30 | 19 | Empat lapis prompt | 3 | Titik cek jam 2 |
-| 31:30 | 20 | Anatomi agent | 1,5 | |
-| 33:00 | 21 | Otonomi dan lima gerbang | 2,5 | |
-| 35:30 | 22 | Studi kasus 60 menit | 1,5 | |
-| 37:00 | 23 | Aturan main | 1,5 | Titik cek jam 3 |
-| 38:30 | 24 | Empat mitos | 1,5 | |
-| 40:00 | 25 | Rencana 30 hari | 1 | |
-| 41:00 | 26 | Rangkuman | 1 | |
-| 42:00 | 27 | Penutup | 0,5 | |
-| 42:30 | | Tanya jawab | 10 | QR grup SWE Growth tampil |
-| 52:30 | | Cadangan | 7,5 | |
+| 7:30 | 6 | Sepekan di AI (19-23 Okt) | 2,5 | Tiga dari tujuh kabar |
+| 10:00 | 7 | Indonesia | 2,5 | Termasuk kotak pembanding |
+| 12:30 | 8 | Untuk apa AI dipakai | 1,5 | |
+| 14:00 | 9 | Skill 2030 | 1 | **Lewati jika telat** |
+| 15:00 | 10 | Literasi bukan tool use | 1 | |
+| 16:00 | 11 | Empat domain | 1,5 | |
+| 17:30 | 12 | Tangga lima level | 2,5 | Titik cek jam 1 |
+| 20:00 | 13 | Empat jebakan | 1,5 | |
+| 21:30 | 14 | Rekan magang | 1 | |
+| 22:30 | 15 | Verifikasi | 2 | |
+| 24:30 | 16 | Friksi kognitif | 1,5 | |
+| 26:00 | 17 | Kamu yang memutuskan | 1,5 | **Lewati jika telat** |
+| 27:30 | 18 | Frontier bergerigi | 2 | |
+| 29:30 | 19 | Empat lapis prompt | 3 | Titik cek jam 2 |
+| 32:30 | 20 | Anatomi agent | 1,5 | |
+| 34:00 | 21 | Otonomi dan lima gerbang | 2,5 | |
+| 36:30 | 22 | Studi kasus 60 menit | 1,5 | |
+| 38:00 | 23 | Aturan main | 2 | Titik cek jam 3 |
+| 40:00 | 24 | Empat mitos | 1,5 | |
+| 41:30 | 25 | Rencana 30 hari | 1 | |
+| 42:30 | 26 | Rangkuman | 1 | |
+| 43:30 | 27 | Penutup | 0,5 | |
+| 44:00 | | Tanya jawab | 10 | QR grup SWE Growth tampil |
+| 54:00 | | Cadangan | 6 | |
+
+## Cek ulang pada hari H (27-28 Oktober)
+
+Data di deck diverifikasi 24 Oktober 2026 dengan Exa. Lakukan lima cek ini sebelum tampil. Semuanya muat dalam 15 menit.
+
+1. **Slide 6, kabar AI.** Cari kabar 24-27 Oktober. Kalau ada kabar besar, ganti dua kabar tertua (19 Okt). Ubah `EVENTS` di `src/slides/act-1-foundations.tsx`. Jumlah kabar harus tetap 7. Ubah juga judul slide ("Sepekan di AI, 19-23 Oktober"), kalimat tanggal, label di `src/slides/index.tsx`, dan baris sumber.
+2. **Slide 24, mitos model.** Buka https://artificialanalysis.ai/leaderboards/models. Cek skor dan biaya per tugas Claude Opus 5.5 (58; $5,98) dan MiniMax M3.1 Flash (43; $0,22). Ubah teks mitos 3 kalau angkanya bergeser.
+3. **Slide 1, kabar SI.** Cek apakah Tiongkok atau pihak lain berubah sikap sejak 26 September. Dialog SI AS-Tiongkok dijadwalkan paling lambat November.
+4. **Slide 23, aturan.** Cek apakah Perpres etika AI dan peta jalan AI nasional, serta lembaga PDP, sudah resmi terbit. Kalau ya, ubah kalimat di bawah judul slide.
+5. **Slide 21, Claude Duet.** Cek apakah ketersediaan berubah dari "research preview, waitlist, AS".
 
 Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu menghemat 3,5 menit. Kalau masih telat, potong tanya jawab, bukan slide 19 sampai 22.
 
@@ -66,19 +77,27 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 
 **3. AI mesin prediksi (2,5)**: empat langkah terbaca di daftar kiri: token, vektor, attention, prediksi. Jelaskan satu kalimat per langkah. Analogi autocomplete. Kubus 3D menyorot langkah yang kamu klik, tetapi klik itu opsional.
 
-**4. Salah dengan yakin (2)**: tiga pemicu halusinasi. Batang keyakinan 94% dan kebenaran 38% adalah ilustrasi, bukan data. Katakan itu. Satu contoh nyata: MiniMax M3.1 Flash, saat gagal menjawab benar, memilih menjawab salah pada 93% kasus (18% di model sebelumnya). Satu model, satu benchmark. Tutup dengan empat tanda perlu dicek.
+**4. Salah dengan yakin (2)**
+- Ucapkan: tiga pemicu halusinasi. Batang 94% yakin dan 38% benar adalah ilustrasi, bukan data. Contoh nyata: MiniMax M3.1 Flash menjawab benar 56% pertanyaan, tetapi saat tidak benar, 93% jawabannya salah total, bukan "tidak tahu".
+- Di layar, jawab kalau ditanya: 93% bukan "93% semua jawaban salah". Ukurannya salah dibagi (salah + menolak menjawab). Model sebelumnya 18%. Satu model, satu benchmark (AA-Omniscience).
 
 **5. Tujuh istilah (1)**: LLM, token, konteks, halusinasi, RAG, fine-tuning, agent. Semua definisi tampil. Bacakan dua atau tiga, sisanya dibaca sendiri.
 
-**6. Satu minggu di AI (2)**: pilih tiga dengan klik daftar kanan: MiniMax (murah), Claude Duet (agent dengan izin), OpenAI di Google Cloud (pilihan model cair). Sebut "klaim vendor" untuk angka kecepatan.
+**6. Sepekan di AI (2,5)**
+- Ucapkan (klik daftar kanan, tiga kabar, sekitar 40 detik per kabar): MiniMax (murah, tapi menebak daripada mengaku tidak tahu), Claude Duet (agent dengan gerbang izin), Komdigi (jawaban chatbot bukan bukti). Lalu satu kalimat: METR menguji pemantauan agent OpenAI, dan Google mengubah kebijakan privasi.
+- Di layar, jawab kalau ditanya: angka kecepatan Mercury 3 adalah klaim vendor. Kabar Google: pengiklan tidak mendapat datamu, sambungan Gmail, Drive, Foto ke fitur AI bersifat pilihan. METR: OpenAI menyatakan celah sudah ditambal, METR belum menilai klaim itu.
 
-**7. Indonesia (2)**: indeks literasi 49,96 (APJII 2025, "kurang baik"). Pengguna AI di survei 2026: 18,2%, sebelumnya 27,34%. Baca sebagai arah, pertanyaan survei bisa berbeda. 68% bergantung: hanya 1.000 Gen Z dan Milenial urban, bukan nasional.
+**7. Indonesia (2,5)**
+- Ucapkan: indeks literasi 49,96 ("kurang baik", APJII 2025). Pengguna AI di survei 2026: 18,2%, sebelumnya 27,34%. Baca sebagai arah. 68% bergantung: hanya 1.000 Gen Z dan Milenial urban. Lalu kotak pembanding: e-Conomy SEA menyebut 58% penduduk usia kerja enam negara Asia Tenggara sudah mengadopsi AI generatif. Katakan: ukurannya berbeda, jangan dikurangkan. Periksa apa yang diukur.
+- Di layar, jawab kalau ditanya: APJII mengukur semua responden usia 13+, wawancara tatap muka, pertanyaan bisa berbeda antar tahun. e-Conomy SEA (21 Okt): Indonesia dan Filipina punya ruang tumbuh terbesar.
 
-**8. Untuk apa AI dipakai (1,5)**: dua grafik sejajar. Kiri: 2025 edukasi memimpin (43,98%). 2026 hiburan (36,5%), edukasi 30,2%, kerja 26,9%. Kanan: makin muda makin tinggi. Alasan belum pakai: 46,6% belum tahu teknologinya.
+**8. Untuk apa AI dipakai (1,5)**
+- Ucapkan: kiri, 2025 edukasi memimpin (43,98%), 2026 hiburan (36,5%). Kanan, makin muda makin tinggi. Alasan belum memakai AI bergeser: tidak butuh naik ke 43,1%, belum tahu turun ke 35,5%. Pesan: hambatan bergeser dari "belum tahu" ke "belum merasa perlu".
+- Di layar, jawab kalau ditanya: nilai 2025 ada di kotak (22,7%, 46,6%, 15,5%). Sebagian media menulis 46,6% sebagai angka 2026. Itu angka 2025.
 
 **9. Skill 2030 (1, lewati jika telat)**: WEF. Dari 100 pekerja, 59 butuh pelatihan. Warna titik: 29 di peran sekarang, 19 ditempatkan ulang, 11 mungkin tidak mendapat pelatihan. Analytical thinking tetap skill inti.
 
-**10. Literasi bukan tool use (1)**: kutip OECD dan Komisi Eropa (Juni 2026). Kerangka ini untuk pendidikan dasar dan menengah, dasar asesmen PISA 2029. Prinsipnya berlaku juga untuk kita. Empat kata kerjanya dibahas di slide 11.
+**10. Literasi bukan tool use (1)**: kutip OECD dan Komisi Eropa (Juni 2026). Kerangka ini untuk pendidikan dasar dan menengah, dan berkontribusi pada asesmen PISA 2029 (Media & AI Literacy). Prinsipnya berlaku juga untuk kita. Empat kata kerjanya dibahas di slide 11.
 
 **11. Empat domain (1,5)**: Engage, lalu Create dan Manage sejajar, lalu Shape. Contoh tiap domain tampil di slide. Bacakan satu atau dua.
 
@@ -88,11 +107,17 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 
 **14. Rekan magang (1)**: ujian: kalau AI hilang besok, bisakah kamu menjelaskan keputusanmu hari ini?
 
-**15. Verifikasi (2)**: dua jawaban untuk satu pertanyaan (JLPT N3). Jawaban A jujur dan mengarah ke sumber. Jawaban B rapi dengan angka presisi, tanpa sumber. Tanya retoris: "Mana yang terasa lebih meyakinkan?" Jangan tunggu jawaban. Zhu & Li (N=657): penalaran yang ditampilkan menaikkan ketergantungan. Literasi menahan efek itu, tetapi tidak untuk tugas kompleks.
+**15. Verifikasi (2)**
+- Ucapkan: dua jawaban untuk satu pertanyaan (JLPT N3). A jujur dan mengarah ke sumber. B rapi dengan angka presisi, tanpa sumber. Tanya retoris "mana yang terasa meyakinkan?" tanpa menunggu jawaban. Zhu & Li (N=657): penalaran yang ditampilkan menaikkan ketergantungan. Tutup dengan kutipan Komdigi (23 Okt): jawaban AI tidak selalu benar, periksa sumber.
+- Di layar, jawab kalau ditanya: literasi menahan efek itu, tetapi tidak untuk tugas kompleks. Blanchard dkk. adalah tinjauan studi: peringatan umum paling lemah, penanda spesifik "tampak menjanjikan", buktinya terbatas.
 
-**16. Friksi kognitif (1,5)**: MIT, 54 peserta, preprint. 15 dari 18 pengguna LLM tidak bisa mengutip esai sendiri di sesi pertama. Hingga 55% konektivitas lebih rendah. Jangan digeneralisasi.
+**16. Friksi kognitif (1,5)**
+- Ucapkan: MIT, 54 peserta, preprint. 15 dari 18 pengguna LLM tidak bisa mengutip esai sendiri di sesi pertama. Hingga 55% konektivitas lebih rendah. Jangan digeneralisasi. Aturan praktis: tulis dugaanmu dulu, baru tanya AI.
+- Di layar, jawab kalau ditanya: 55% adalah EEG di jaringan frekuensi rendah, bukan ukuran kecerdasan. Belum ada replikasi independen yang kami temukan. Hanya 18 peserta menyelesaikan sesi 4.
 
-**17. Kamu yang memutuskan (1,5, lewati jika telat)**: automation bias. Tiga lapis di kiri, empat pertanyaan sebelum menerima di kanan. Bacakan empat pertanyaan.
+**17. Kamu yang memutuskan (1,5, lewati jika telat)**
+- Ucapkan: automation bias. Tiga lapis di kiri, lalu bacakan empat pertanyaan sebelum menerima.
+- Di layar, jawab kalau ditanya: HAIML adalah model konseptual (preprint), belum diuji dengan data.
 
 **18. Frontier bergerigi (2)**: 758 konsultan BCG, GPT-4. Di dalam frontier: 12,2% lebih banyak tugas, 25,1% lebih cepat. Di luar: **19 poin persentase** lebih jarang benar (84,5% ke sekitar 65%). Klik satu tugas di dalam dan satu di luar untuk contoh.
 
@@ -104,9 +129,13 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 
 **22. Studi kasus (1,5)**: 20 chat pelanggan jadi laporan pagi. Lima fase, tiap fase punya keluaran dan kesalahan umum. Tekankan satu gerbang.
 
-**23. Aturan main (1,5)**: Keputusan Bersama Tujuh Menteri 12 Maret 2026: PAUD sampai perguruan tinggi, menghormati otonomi akademik, kampus menilai kesiapan dan tata kelola. Koding dan AI: mapel pilihan. UU PDP: data pelanggan. EU AI Act: rujukan risiko. Bukan nasihat hukum.
+**23. Aturan main (2)**
+- Ucapkan (empat hal): (1) SKB tujuh menteri 12 Maret 2026 mengatur AI di pendidikan dari PAUD sampai kampus. Kampus menyusun tata kelolanya sendiri. (2) Framework GenAI kampus diuji publik 9 Oktober. Itu panduan, bukan regulasi mengikat, jadi tanyakan aturan kampusmu. (3) UU PDP: kebocoran wajib diberitahukan dalam 3 x 24 jam. (4) EU AI Act: kewajiban literasi AI sudah berlaku sejak Februari 2025. Tutup: bukan nasihat hukum.
+- Di layar, jawab kalau ditanya: Koding dan AI mapel pilihan, belum wajib. PP 33/2026 terbit 16 Juli 2026, berlaku 16 Januari 2027. Lembaga PDP masih disiapkan (23 Okt). AI yang menilai ujian berisiko tinggi di EU, kewajiban penuh 2 Desember 2027 setelah AI Omnibus. Perpres etika AI dan peta jalan AI nasional masih rancangan (Komdigi, 23 Okt).
 
-**24. Empat mitos (1,5)**: mitos dan fakta tampil bersama. Mitos "AI ganti semua pekerjaan": 40% perusahaan memperkirakan pengurangan staf, 85% memprioritaskan upskilling. Bacakan tiga, sisanya dibaca sendiri.
+**24. Empat mitos (1,5)**
+- Ucapkan tiga mitos: (1) "AI ganti semua pekerjaan": di survei WEF 40% pemberi kerja berencana mengurangi staf yang skill-nya tidak relevan, 85% memprioritaskan upskilling. Itu rencana, bukan hasil. (2) "Model paling mahal paling baik": Artificial Analysis 24 Okt, Opus 5.5 skor 58 ($5,98 per tugas), M3.1 Flash skor 43 ($0,22). (3) "Gratis berarti aman": kebijakan privasi Google.
+- Di layar, jawab kalau ditanya: mitos prompt panjang. Selisih biaya sekitar 27 kali untuk selisih 15 poin.
 
 **25. Rencana 30 hari (1)**: satu aksi, satu bukti per minggu. Minta audiens memilih satu item untuk besok, dalam hati.
 
@@ -124,6 +153,12 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 | "AI membuat hasil 19% lebih buruk" | "19 poin persentase lebih jarang benar, di satu tugas di luar frontier, dengan GPT-4." |
 | "Otak pengguna ChatGPT rusak" | "Preprint kecil, 54 peserta, tugas menulis esai. Arah yang perlu diuji." |
 | "Claude Duet sudah tersedia" | "Research preview, waitlist, baru untuk pelanggan Pro dan Max di AS." |
+| "46,6% orang Indonesia belum tahu AI (2026)" | "Di 2026: 43,1% merasa tidak butuh, 35,5% belum tahu teknologinya. 46,6% adalah angka 2025." |
+| "Adopsi AI di Asia Tenggara 58%, di Indonesia 18%" | "Dua ukuran berbeda: e-Conomy SEA mengukur pekerja enam negara, APJII mengukur semua responden usia 13+. Jangan dikurangkan." |
+| "MiniMax salah 93% dari semua jawaban" | "Saat tidak benar, 93% jawabannya salah total, bukan menolak menjawab. Benar 56% dari semua pertanyaan." |
+| "Penelitian membuktikan penanda spesifik mengurangi halusinasi" | "Tinjauan studi: penanda spesifik tampak menjanjikan, buktinya masih terbatas." |
+| "Indonesia sudah punya aturan AI lengkap" | "Ada SKB tujuh menteri, UU PDP, dan SE etika AI 2023. Perpres etika AI dan peta jalan AI masih rancangan per 23 Oktober." |
+| "AI membuat 40% orang kehilangan pekerjaan" | "40% pemberi kerja berencana mengurangi staf yang skill-nya tidak relevan. Itu rencana di survei WEF 2025." |
 
 ## Slide yang dihapus dari versi 33 slide
 
