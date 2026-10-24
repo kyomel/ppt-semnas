@@ -15,7 +15,6 @@ import { SlideShell, Badge } from "@/components/deck/slide-shell";
 import { SceneCanvas } from "@/components/three/scene-host";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/containers";
 import { Counter } from "@/components/motion/interactive";
-import { FlipCard } from "@/components/ui/controls";
 import { cn } from "@/lib/cn";
 import { ease } from "@/config/theme";
 
@@ -103,11 +102,6 @@ export function PredictionSlide({ index }: { index: number }) {
         <div className="relative min-h-0">
           <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_50%_50%,var(--accent-soft),transparent_58%)] opacity-55" />
           <SceneCanvas kind="tokens" active={active} onPick={setActive} camera={[0, 0, 7.6]} />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center">
-            <p className="font-mono text-[0.54rem] tracking-[0.18em] text-ink-faint uppercase">
-              klik kubus untuk melihat langkahnya
-            </p>
-          </div>
         </div>
       </div>
 
@@ -144,12 +138,10 @@ const TRIGGERS = [
   },
 ] as const;
 
-export function HallucinationSlide({ index }: { index: number }) {
-  const [confidence, setConfidence] = useState(78);
-  const truth = Math.round(
-    26 + 46 * Math.abs(Math.sin(confidence * 0.19)) + (confidence % 7) * 2,
-  );
+const CONFIDENCE = 94;
+const TRUTH = 38;
 
+export function HallucinationSlide({ index }: { index: number }) {
   return (
     <SlideShell
       index={index}
@@ -187,14 +179,15 @@ export function HallucinationSlide({ index }: { index: number }) {
                 Keyakinan model
               </span>
               <span className="font-mono text-[0.8rem] text-accent tabular">
-                {confidence}%
+                {CONFIDENCE}%
               </span>
             </div>
             <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-ink/8">
               <motion.div
                 className="h-full rounded-full bg-accent"
-                animate={{ width: `${confidence}%` }}
-                transition={{ duration: 0.3, ease }}
+                initial={{ width: 0 }}
+                animate={{ width: `${CONFIDENCE}%` }}
+                transition={{ duration: 0.9, delay: 0.3, ease }}
               />
             </div>
 
@@ -203,29 +196,21 @@ export function HallucinationSlide({ index }: { index: number }) {
                 Kebenaran jawaban (ilustrasi)
               </span>
               <span className="font-mono text-[0.8rem] text-accent-2 tabular">
-                {truth}%
+                {TRUTH}%
               </span>
             </div>
             <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-ink/8">
               <motion.div
                 className="h-full rounded-full bg-accent-2"
-                animate={{ width: `${truth}%` }}
-                transition={{ duration: 0.3, ease }}
+                initial={{ width: 0 }}
+                animate={{ width: `${TRUTH}%` }}
+                transition={{ duration: 0.9, delay: 0.45, ease }}
               />
             </div>
 
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={confidence}
-              onChange={(event) => setConfidence(Number(event.target.value))}
-              aria-label="Geser keyakinan model"
-              className="mt-4 h-1 w-full cursor-pointer appearance-none rounded-full bg-line-strong accent-accent"
-            />
-            <p className="mt-2 text-[0.68rem] leading-snug text-ink-faint">
-              Geser. Dua batang ini tidak saling mengunci: model bisa sangat
-              yakin dan tetap salah.
+            <p className="mt-4 text-[0.68rem] leading-snug text-ink-faint">
+              Dua batang ini tidak saling mengunci: model bisa sangat yakin dan
+              tetap salah.
             </p>
           </div>
 
@@ -315,48 +300,28 @@ export function GlossarySlide({ index }: { index: number }) {
       index={index}
       eyebrow="Fondasi"
       title="Peta istilah: tujuh kata yang harus kamu tahu"
-      lead="Klik kartu. Depan bahasa manusia, belakang bahasa teknis. Kamu butuh keduanya."
+      lead="Tiap istilah punya dua bahasa: bahasa manusia dan bahasa teknis. Kamu butuh keduanya."
       source="Sumber: definisi disusun dari OECD/EC AILit Framework (2026), Anthropic (2025), dan dokumentasi istilah agentic AI (2026)."
     >
       <div className="grid min-h-0 flex-1 grid-cols-4 grid-rows-2 gap-2.5">
-        {GLOSSARY.map((item) => (
-          <FlipCard
+        {GLOSSARY.map((item, i) => (
+          <div
             key={item.term}
-            height="h-full"
-            front={
-              <>
-                <div className="flex items-start justify-between">
-                  <span className="font-mono text-[0.5rem] tracking-[0.2em] text-ink-faint uppercase">
-                    istilah
-                  </span>
-                  <span className="font-mono text-[0.5rem] text-ink-faint tabular">
-                    {String(GLOSSARY.findIndex((g) => g.term === item.term) + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <span className="font-display text-[clamp(1.75rem,2.7vw,2.7rem)] leading-none">
-                  {item.term}
-                </span>
-                <span className="font-mono text-[0.5rem] tracking-[0.14em] text-accent uppercase">
-                  klik untuk definisi
-                </span>
-              </>
-            }
-            back={
-              <>
-                <div>
-                  <p className="text-[0.86rem] leading-snug font-medium">
-                    {item.plain}
-                  </p>
-                  <p className="mt-2 text-[0.7rem] leading-snug text-ink-soft">
-                    {item.tech}
-                  </p>
-                </div>
-                <span className="font-mono text-[0.5rem] tracking-[0.14em] text-ink-faint uppercase">
-                  ← klik untuk balik
-                </span>
-              </>
-            }
-          />
+            className="flex flex-col justify-between rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]"
+          >
+            <div className="flex items-start justify-between">
+              <span className="font-display text-[clamp(1.5rem,2.3vw,2.3rem)] leading-none">
+                {item.term}
+              </span>
+              <span className="font-mono text-[0.5rem] text-ink-faint tabular">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+            </div>
+            <div>
+              <p className="text-[0.84rem] leading-snug font-medium">{item.plain}</p>
+              <p className="mt-2 text-[0.7rem] leading-snug text-ink-soft">{item.tech}</p>
+            </div>
+          </div>
         ))}
 
         <div className="flex flex-col justify-between rounded-xl bg-accent-soft p-3.5 shadow-[inset_0_0_0_1px_var(--accent)]">

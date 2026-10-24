@@ -139,6 +139,8 @@ export function IntroSlide() {
   );
 }
 
+const contentSlides = sections.reduce((sum, section) => sum + section.slides, 0);
+
 export function OverviewSlide({ index }: { index: number }) {
   return (
     <section className="relative flex h-full w-full flex-col overflow-hidden bg-bg text-ink">
@@ -154,7 +156,7 @@ export function OverviewSlide({ index }: { index: number }) {
           </span>
         </div>
         <p className="font-mono text-[0.58rem] tracking-[0.18em] text-ink-faint uppercase">
-          Enam bagian · 28 slide konten
+          Enam bagian · {contentSlides} slide konten
         </p>
       </div>
 
@@ -170,14 +172,6 @@ export function OverviewSlide({ index }: { index: number }) {
               Urutannya sengaja: paham dulu cara kerjanya, lihat datanya, baru
               ubah cara berpikir, lalu latih keterampilannya.
             </p>
-          </Reveal>
-          <Reveal delay={0.42}>
-            <div className="mt-7 flex items-center gap-4">
-              <div className="h-px flex-1 bg-line" />
-              <span className="font-mono text-[0.56rem] tracking-[0.2em] text-ink-faint uppercase">
-                klik untuk lompat
-              </span>
-            </div>
           </Reveal>
         </div>
 

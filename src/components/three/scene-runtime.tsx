@@ -2,7 +2,7 @@
 
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { ParticleVeil, ForgeCore } from "./scenes/ambient";
+import { ParticleVeil } from "./scenes/ambient";
 import {
   DomainOrbit,
   GaugeCluster,
@@ -19,8 +19,7 @@ export type SceneKind =
   | "orbit"
   | "stairs"
   | "agent"
-  | "flow"
-  | "forge";
+  | "flow";
 
 export type SceneProps = {
   kind: SceneKind;
@@ -49,8 +48,6 @@ function Scene({ kind, active = 0, level = 0.4, onPick }: SceneProps) {
       return <AgentGraph active={active} level={level} onPick={onPick} />;
     case "flow":
       return <FlowGraph active={active} onPick={onPick} />;
-    case "forge":
-      return <ForgeCore level={level} />;
     default:
       return null;
   }

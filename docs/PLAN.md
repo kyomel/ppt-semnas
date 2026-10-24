@@ -1,5 +1,7 @@
 # PLAN - Deck Build
 
+> **Catatan 24 Okt 2026.** Dokumen ini adalah rencana awal 33 slide. Deck sudah dipadatkan menjadi 27 slide untuk mode penyaji tanpa interaksi peserta: slide 9, 15, 19, 23, 26, dan 32 dihapus atau dilipat ke slide lain. Urutan terbaru ada di `src/slides/index.tsx`. Jadwal bicara ada di `docs/TALK-TRACK.md`.
+
 ## Konfigurasi
 
 | Field | Nilai |

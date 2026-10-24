@@ -7,7 +7,6 @@ import {
   TimelineSlide,
 } from "./act-1-foundations";
 import {
-  AccessGapSlide,
   IndonesiaSlide,
   LiteracyDefinitionSlide,
   SkillsSlide,
@@ -16,14 +15,12 @@ import {
 import {
   DomainsSlide,
   LadderSlide,
-  SelfCheckSlide,
   TrapsSlide,
 } from "./act-3-mental-models";
 import {
   AgencySlide,
   ApprenticeSlide,
   FrictionSlide,
-  GrowthMindsetSlide,
   JaggedFrontierSlide,
   VerificationSlide,
 } from "./act-4-mindset";
@@ -31,12 +28,10 @@ import {
   AgentAnatomySlide,
   AutonomyGatesSlide,
   CaseStudySlide,
-  FiveGatesSlide,
   PromptAnatomySlide,
-  PromptPatternsSlide,
 } from "./act-5-skill";
 import { MythsSlide, PlanSlide, RulesSlide } from "./act-6-action";
-import { DemoSlide, QaSlide, RecapSlide } from "./act-7-closing";
+import { QaSlide, RecapSlide } from "./act-7-closing";
 
 export type SlideMeta = {
   id: string;
@@ -82,7 +77,7 @@ export const slides: SlideMeta[] = [
   {
     id: "indonesia",
     section: "Realita",
-    short: "Adopsi naik, literasi tertinggal",
+    short: "Literasi belum cukup, pemakaian belum merata",
     Component: IndonesiaSlide,
   },
   {
@@ -90,12 +85,6 @@ export const slides: SlideMeta[] = [
     section: "Realita",
     short: "Untuk apa AI benar-benar dipakai",
     Component: UsageSlide,
-  },
-  {
-    id: "access-gap",
-    section: "Realita",
-    short: "Jurang akses dan pemakaian",
-    Component: AccessGapSlide,
   },
   {
     id: "skills",
@@ -119,7 +108,7 @@ export const slides: SlideMeta[] = [
   {
     id: "ladder",
     section: "Model mental",
-    short: "Tangga lima level",
+    short: "Tangga lima level dan posisimu",
     Component: LadderSlide,
   },
   {
@@ -127,12 +116,6 @@ export const slides: SlideMeta[] = [
     section: "Model mental",
     short: "Empat jebakan level awam",
     Component: TrapsSlide,
-  },
-  {
-    id: "self-check",
-    section: "Model mental",
-    short: "Di level mana kamu",
-    Component: SelfCheckSlide,
   },
 
   {
@@ -154,12 +137,6 @@ export const slides: SlideMeta[] = [
     Component: FrictionSlide,
   },
   {
-    id: "growth",
-    section: "Mindset",
-    short: "Growth mindset, bukan bakat",
-    Component: GrowthMindsetSlide,
-  },
-  {
     id: "agency",
     section: "Mindset",
     short: "Kamu yang memutuskan",
@@ -179,12 +156,6 @@ export const slides: SlideMeta[] = [
     Component: PromptAnatomySlide,
   },
   {
-    id: "prompt-patterns",
-    section: "Skill",
-    short: "Empat pola prompt",
-    Component: PromptPatternsSlide,
-  },
-  {
     id: "agent-anatomy",
     section: "Skill",
     short: "Anatomi agent",
@@ -195,12 +166,6 @@ export const slides: SlideMeta[] = [
     section: "Skill",
     short: "Otonomi butuh gerbang",
     Component: AutonomyGatesSlide,
-  },
-  {
-    id: "five-gates",
-    section: "Skill",
-    short: "Lima gerbang alur kerja",
-    Component: FiveGatesSlide,
   },
   {
     id: "case-study",
@@ -218,7 +183,7 @@ export const slides: SlideMeta[] = [
   {
     id: "myths",
     section: "Aksi",
-    short: "Enam mitos dan faktanya",
+    short: "Empat mitos dan faktanya",
     Component: MythsSlide,
   },
   {
@@ -233,12 +198,6 @@ export const slides: SlideMeta[] = [
     section: "Rangkuman",
     short: "Enam langkah yang bisa diulang",
     Component: RecapSlide,
-  },
-  {
-    id: "demo",
-    section: "Demo",
-    short: "Prompt Forge",
-    Component: DemoSlide,
   },
   {
     id: "qa",

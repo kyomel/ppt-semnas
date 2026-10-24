@@ -4,11 +4,9 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import {
   Activity,
-  ArrowRight,
   Brain,
   Check,
   Compass,
-  LineChart,
   Scale,
   ShieldCheck,
   Sparkles,
@@ -27,7 +25,7 @@ export function ApprenticeSlide({ index }: { index: number }) {
   return (
     <SlideShell
       index={index}
-      eyebrow="Mindset · 1 dari 6"
+      eyebrow="Mindset · 1 dari 5"
       title="Rekan magang, bukan oracle"
       lead="AI cepat, tapi tidak tahu apa yang kamu tahu tentang pekerjaanmu. Kamu yang menetapkan standar."
       source="Sumber: kerangka sikap pada AILit Framework (OECD/EC, 2026); pembagian kerja manusia-AI pada HAIML (2026)."
@@ -152,13 +150,10 @@ const ANSWERS = [
 ] as const;
 
 export function VerificationSlide({ index }: { index: number }) {
-  const [picked, setPicked] = useState<string | null>(null);
-  const chosen = ANSWERS.find((answer) => answer.id === picked);
-
   return (
     <SlideShell
       index={index}
-      eyebrow="Mindset · 2 dari 6"
+      eyebrow="Mindset · 2 dari 5"
       title="Verifikasi adalah bagian dari pekerjaan"
       lead="Penalaran yang ditampilkan membuat jawaban terasa benar. Riset 2026: itu menaikkan ketergantungan."
       source="Sumber: Zhu & Li, Telematics and Informatics (Okt 2026), tiga eksperimen, N=657; Blanchard, Garvey & O’Laughlin, Current Opinion in Psychology (Sep 2026). Dua jawaban di kiri disusun untuk ilustrasi."
@@ -167,69 +162,49 @@ export function VerificationSlide({ index }: { index: number }) {
         <div className="flex flex-col justify-center gap-2">
           <Reveal delay={0.1}>
             <p className="font-mono text-[0.56rem] tracking-[0.16em] text-ink-faint uppercase">
-              “Berapa jam belajar untuk lulus JLPT N3?” Dua jawaban. Mana yang kamu percaya?
+              “Berapa jam belajar untuk lulus JLPT N3?” Dua jawaban AI untuk satu pertanyaan.
             </p>
           </Reveal>
 
-          {ANSWERS.map((answer, i) => {
-            const isPicked = picked === answer.id;
-            const dim = picked !== null && !isPicked;
-            return (
-              <motion.button
-                key={answer.id}
-                type="button"
-                onClick={() => setPicked(answer.id)}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: dim ? 0.42 : 1, y: 0 }}
-                transition={{ duration: 0.45, delay: 0.15 + i * 0.08, ease }}
-                className={cn(
-                  "rounded-xl p-3.5 text-left transition-colors duration-300",
-                  isPicked
-                    ? "bg-bg-soft/80 shadow-[inset_0_0_0_1.5px_var(--accent)]"
-                    : "bg-bg-soft/50 shadow-[inset_0_0_0_1px_var(--line)] hover:bg-bg-soft/70",
-                )}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
-                    {answer.tag}
+          {ANSWERS.map((answer, i) => (
+            <motion.div
+              key={answer.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.15 + i * 0.08, ease }}
+              className={cn(
+                "rounded-xl p-3.5",
+                answer.reasoning
+                  ? "bg-bg-soft/80 shadow-[inset_0_0_0_1.5px_var(--accent)]"
+                  : "bg-bg-soft/50 shadow-[inset_0_0_0_1px_var(--line)]",
+              )}
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+                  {answer.tag}
+                </span>
+                {answer.reasoning ? (
+                  <span className="rounded-full bg-ink/5 px-2 py-0.5 font-mono text-[0.48rem] tracking-[0.12em] text-ink-faint uppercase">
+                    dengan penalaran
                   </span>
-                  {answer.reasoning ? (
-                    <span className="rounded-full bg-ink/5 px-2 py-0.5 font-mono text-[0.48rem] tracking-[0.12em] text-ink-faint uppercase">
-                      dengan penalaran
-                    </span>
-                  ) : null}
-                </div>
-                <p className="mt-1.5 text-[0.78rem] leading-relaxed text-ink-soft">
-                  {answer.text}
+                ) : null}
+              </div>
+              <p className="mt-1.5 text-[0.78rem] leading-relaxed text-ink-soft">
+                {answer.text}
+              </p>
+              <div className="mt-2 border-t border-line pt-2">
+                <p className="font-mono text-[0.52rem] tracking-[0.18em] text-accent uppercase">
+                  {answer.verdict}
                 </p>
-              </motion.button>
-            );
-          })}
+                <p className="mt-1 text-[0.74rem] leading-snug text-ink-soft">
+                  {answer.note}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         <div className="flex flex-col justify-center gap-2.5">
-          <motion.div
-            key={picked ?? "empty"}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, ease }}
-            className={cn(
-              "rounded-xl p-4",
-              chosen
-                ? "bg-accent-soft/60 shadow-[inset_0_0_0_1.5px_var(--accent)]"
-                : "bg-bg-soft/50 shadow-[inset_0_0_0_1px_var(--line)]",
-            )}
-          >
-            <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
-              {chosen ? chosen.verdict : "pilih satu"}
-            </p>
-            <p className="mt-1.5 text-[0.78rem] leading-relaxed text-ink-soft">
-              {chosen
-                ? chosen.note
-                : "Klik salah satu jawaban untuk melihat pembacaan risetnya."}
-            </p>
-          </motion.div>
-
           <div className="rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]">
             <div className="flex items-center gap-2">
               <ShieldCheck size={13} className="text-accent" />
@@ -285,12 +260,10 @@ const CONNECTIVITY = [
 ] as const;
 
 export function FrictionSlide({ index }: { index: number }) {
-  const [active, setActive] = useState(1);
-
   return (
     <SlideShell
       index={index}
-      eyebrow="Mindset · 3 dari 6"
+      eyebrow="Mindset · 3 dari 5"
       title="Friksi kognitif itu fitur, bukan bug"
       lead="AI yang langsung menyelesaikan tugas terasa efisien, tapi melewati bagian tempat kamu belajar."
       source="Sumber: MIT Media Lab, “Your Brain on ChatGPT” (arXiv, 2025): 54 peserta, 18 per kelompok, 4 sesi, 4 bulan, preprint; Google, Pedagogical Framework for Generative AI (Sep 2026). Panjang batang LLM mengikuti angka “hingga 55% lebih rendah”."
@@ -309,25 +282,11 @@ export function FrictionSlide({ index }: { index: number }) {
 
           <div className="mt-5 space-y-2.5">
             {CONNECTIVITY.map((item, i) => {
-              const isActive = i === active;
               return (
-                <button
-                  key={item.label}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  className={cn(
-                    "w-full rounded-lg px-3 py-2 text-left transition-colors",
-                    isActive ? "bg-bg-soft/70" : "hover:bg-ink/[0.03]",
-                  )}
-                >
+                <div key={item.label} className="w-full rounded-lg bg-bg-soft/70 px-3 py-2">
                   <div className="flex items-baseline justify-between gap-3">
                     <span className="text-[0.78rem]">{item.label}</span>
-                    <span
-                      className={cn(
-                        "font-mono text-[0.72rem] tabular",
-                        isActive ? "text-ink" : "text-ink-faint",
-                      )}
-                    >
+                    <span className="font-mono text-[0.72rem] text-ink tabular">
                       {item.display}
                     </span>
                   </div>
@@ -346,17 +305,15 @@ export function FrictionSlide({ index }: { index: number }) {
                       transition={{ duration: 0.9, delay: 0.2 + i * 0.1, ease }}
                     />
                   </div>
-                  {isActive ? (
-                    <p className="mt-1.5 text-[0.7rem] leading-snug text-ink-faint">
-                      {item.note}
-                    </p>
-                  ) : null}
-                </button>
+                  <p className="mt-1.5 text-[0.7rem] leading-snug text-ink-faint">
+                    {item.note}
+                  </p>
+                </div>
               );
             })}
           </div>
           <p className="mt-3 font-mono text-[0.52rem] tracking-[0.12em] text-ink-faint uppercase">
-            klik batang untuk keterangan · n=54, preprint, tugas menulis esai
+            n=54, preprint, tugas menulis esai
           </p>
         </div>
 
@@ -408,147 +365,6 @@ export function FrictionSlide({ index }: { index: number }) {
   );
 }
 
-function Curve({ growth, delay }: { growth: boolean; delay: number }) {
-  const points = 22;
-  return (
-    <div className="relative flex h-[6.5rem] items-end gap-[3px]">
-      {Array.from({ length: points }, (_, i) => {
-        const t = i / (points - 1);
-        const height = growth
-          ? 8 + Math.pow(t, 2.1) * 92
-          : 26 + Math.sin(t * 2.4) * 8;
-        return (
-          <motion.span
-            key={i}
-            className={cn(
-              "flex-1 rounded-[1px]",
-              growth ? "bg-accent" : "bg-ink/20",
-            )}
-            style={{ height: `${height}%` }}
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 1 }}
-            transition={{ duration: 0.4, delay: delay + i * 0.028, ease }}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
-export function GrowthMindsetSlide({ index }: { index: number }) {
-  const [week, setWeek] = useState(8);
-
-  return (
-    <SlideShell
-      index={index}
-      eyebrow="Mindset · 4 dari 6"
-      title="Growth mindset, bukan bakat"
-      lead="Memakai AI dengan baik bisa dilatih. Satu studi 2026: literasi AI dan growth mindset naik bersama."
-      source="Sumber: CAFE-AI, Cogent Education (Apr 2026), kuasi-eksperimen n=152, p<0,05; WEF Future of Jobs 2025 (curiosity & lifelong learning)."
-    >
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-[clamp(1.5rem,3vw,3rem)]">
-        <div className="flex flex-col justify-center">
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <p className="font-mono text-[0.52rem] tracking-[0.16em] text-ink-faint uppercase">
-                mindset tetap
-              </p>
-              <Curve growth={false} delay={0.2} />
-              <p className="mt-1.5 text-[0.7rem] leading-snug text-ink-faint">
-                Mencoba sekali, gagal, menyimpulkan “bukan untuk saya”.
-              </p>
-            </div>
-            <div>
-              <p className="font-mono text-[0.52rem] tracking-[0.16em] text-accent uppercase">
-                mindset tumbuh
-              </p>
-              <Curve growth delay={0.35} />
-              <p className="mt-1.5 text-[0.7rem] leading-snug text-ink-soft">
-                Mengubah satu variabel tiap percobaan. Kemampuan menumpuk.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <div className="flex items-baseline justify-between">
-              <span className="font-mono text-[0.54rem] tracking-[0.16em] text-ink-faint uppercase">
-                minggu latihan (ilustrasi, bukan data)
-              </span>
-              <span className="font-mono text-[0.72rem] text-accent tabular">
-                {week}
-              </span>
-            </div>
-            <input
-              type="range"
-              min={1}
-              max={12}
-              value={week}
-              onChange={(event) => setWeek(Number(event.target.value))}
-              aria-label="Minggu latihan"
-              className="mt-2 w-full"
-            />
-            <p className="mt-2 text-[0.74rem] leading-snug text-ink-soft">
-              {week < 4
-                ? "Empat minggu pertama terasa lambat. Ini fase membangun kosakata dan kebiasaan."
-                : week < 8
-                  ? "Minggu 4-8 biasanya titik di mana template mulai terasa berguna."
-                  : "Setelah minggu 8, kenaikan datang dari sistem, bukan dari usaha yang lebih keras."}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col justify-center gap-2.5">
-          <Reveal delay={0.2}>
-            <div className="rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]">
-              <div className="flex items-center gap-2">
-                <LineChart size={13} className="text-accent" />
-                <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
-                  bukti
-                </p>
-              </div>
-              <p className="mt-2 text-[0.78rem] leading-relaxed text-ink-soft">
-                Model CAFE-AI yang menggabungkan pedagogi dan AI lebih efektif secara
-                signifikan dibanding e-learning konvensional, untuk{" "}
-                <span className="font-medium text-ink">literasi AI dan growth mindset</span>{" "}
-                sekaligus.
-              </p>
-              <div className="mt-3 flex items-baseline gap-2 border-t border-line pt-2">
-                <span className="font-display text-[1.6rem] leading-none text-accent">
-                  n=152
-                </span>
-                <span className="text-[0.68rem] text-ink-faint">
-                  kuasi-eksperimen, p&lt;0,05
-                </span>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.32}>
-            <div className="rounded-xl border border-line p-4">
-              <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
-                sinyal pasar kerja
-              </p>
-              <p className="mt-2 text-[0.78rem] leading-relaxed text-ink-soft">
-                WEF menempatkan{" "}
-                <span className="font-medium text-ink">curiosity dan lifelong learning</span>{" "}
-                sebagai skill yang naik kepentingannya sampai 2030, bersama creative
-                thinking dan resilience.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.42}>
-            <p className="text-[0.72rem] leading-snug text-ink-faint">
-              Yang dilatih bukan “cara pakai tool A”. Yang dilatih adalah kebiasaan
-              mengubah satu variabel lalu mengamati hasilnya.
-            </p>
-          </Reveal>
-        </div>
-      </div>
-    </SlideShell>
-  );
-}
-
 const LAYERS = [
   {
     name: "Experiential AI use",
@@ -568,68 +384,35 @@ const LAYERS = [
 ] as const;
 
 export function AgencySlide({ index }: { index: number }) {
-  const [open, setOpen] = useState(0);
-
   return (
     <SlideShell
       index={index}
-      eyebrow="Mindset · 5 dari 6"
+      eyebrow="Mindset · 4 dari 5"
       title="Kamu yang memutuskan, bukan modelnya"
       lead="Automation bias: kita cenderung menerima saran mesin begitu saja. Lawan dengan prosedur, bukan niat baik."
       source="Sumber: HAIML, Human-Centered AI Metacognitive Learning Model (preprint, Jun 2026); riset automation bias yang dirujuknya."
     >
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-[clamp(1.5rem,3vw,3rem)]">
         <div className="flex flex-col justify-center gap-2">
-          {LAYERS.map((layer, i) => {
-            const isOpen = open === i;
-            return (
-              <button
-                key={layer.name}
-                type="button"
-                onClick={() => setOpen(i)}
-                className={cn(
-                  "rounded-lg px-3.5 py-3 text-left transition-all duration-300",
-                  isOpen
-                    ? "bg-bg-soft/80 shadow-[inset_0_0_0_1.5px_var(--accent)]"
-                    : "bg-bg-soft/40 shadow-[inset_0_0_0_1px_var(--line)] hover:bg-bg-soft/60",
-                )}
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <span className="flex items-center gap-2">
-                    <span
-                      className={cn(
-                        "grid h-5 w-5 place-items-center rounded-full font-mono text-[0.5rem]",
-                        isOpen ? "bg-accent text-bg" : "bg-ink/8 text-ink-faint",
-                      )}
-                    >
-                      {i + 1}
-                    </span>
-                    <span className="text-[0.84rem] font-medium">{layer.name}</span>
-                  </span>
-                  <ArrowRight
-                    size={12}
-                    className={cn(
-                      "shrink-0 transition-transform duration-300",
-                      isOpen ? "rotate-90 text-accent" : "text-ink-faint",
-                    )}
-                  />
-                </div>
-                <p className="mt-1 pl-7 text-[0.74rem] leading-snug text-ink-soft">
-                  {layer.line}
-                </p>
-                <motion.div
-                  initial={false}
-                  animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-                  transition={{ duration: 0.34, ease }}
-                  className="overflow-hidden"
-                >
-                  <p className="mt-1.5 border-t border-line pt-1.5 pl-7 text-[0.72rem] leading-snug text-ink-faint">
-                    {layer.detail}
-                  </p>
-                </motion.div>
-              </button>
-            );
-          })}
+          {LAYERS.map((layer, i) => (
+            <div
+              key={layer.name}
+              className="rounded-lg bg-bg-soft/60 px-3.5 py-3 shadow-[inset_0_0_0_1px_var(--line)]"
+            >
+              <div className="flex items-center gap-2">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-accent font-mono text-[0.5rem] text-bg">
+                  {i + 1}
+                </span>
+                <span className="text-[0.84rem] font-medium">{layer.name}</span>
+              </div>
+              <p className="mt-1 pl-7 text-[0.74rem] leading-snug text-ink-soft">
+                {layer.line}
+              </p>
+              <p className="mt-1.5 border-t border-line pt-1.5 pl-7 text-[0.72rem] leading-snug text-ink-faint">
+                {layer.detail}
+              </p>
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col justify-center">
@@ -687,7 +470,7 @@ export function JaggedFrontierSlide({ index }: { index: number }) {
   return (
     <SlideShell
       index={index}
-      eyebrow="Mindset · 6 dari 6"
+      eyebrow="Mindset · 5 dari 5"
       title="Frontier bergerigi: AI tidak rata"
       lead="Di satu alur kerja, AI bisa menaikkan hasil satu tugas dan menurunkan tugas lain yang tampak mirip."
       source="Sumber: Dell’Acqua, McFowland, Mollick, Lifshitz-Assaf, Kellogg dkk., Organization Science (Mar 2026). Eksperimen praregistrasi, 758 konsultan BCG, memakai GPT-4 (model 2023). Yang penting polanya, bukan angkanya."

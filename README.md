@@ -1,6 +1,7 @@
 # Meningkatkan Literasi dan Mindset Pemahaman AI
 
-Deck presentasi web untuk **SEMNAS AMIKOM 2026** (Yogyakarta), 60 menit, 33 slide.
+Deck presentasi web untuk **SEMNAS AMIKOM 2026** (Yogyakarta), 60 menit, 27 slide.
+Deck dibuat untuk penyaji, bukan untuk peserta: pesan utama tiap slide tampil tanpa klik. Simpul 3D dan tombol lapisan hanya alat bantu penyaji. Jadwal bicara ada di `docs/TALK-TRACK.md`.
 Dibangun dengan Next.js 16 (App Router), React 19, Tailwind CSS 4, Motion, dan React Three Fiber.
 Bahasa materi: Bahasa Indonesia.
 
@@ -75,18 +76,15 @@ src/
       scene-runtime.tsx     Canvas + pemilihan scene
       primitives.tsx        Rig, Spin, usePalette
       scenes/               ambient, structures, graphs
-    ui/
-      code-block.tsx        highlight Shiki (dimuat dinamis)
-      controls.tsx          FlipCard, Segmented
   slides/
     act-0-opening.tsx       01-02
     act-1-foundations.tsx   03-06
-    act-2-reality.tsx       07-11
-    act-3-mental-models.tsx 12-15
-    act-4-mindset.tsx       16-21
-    act-5-skill.tsx         22-27
-    act-6-action.tsx        28-30
-    act-7-closing.tsx       31-33
+    act-2-reality.tsx       07-10
+    act-3-mental-models.tsx 11-13
+    act-4-mindset.tsx       14-18
+    act-5-skill.tsx         19-22
+    act-6-action.tsx        23-25
+    act-7-closing.tsx       26-27
     index.tsx               daftar slide berurutan
   config/
     deck.ts             judul, pembicara, event, daftar bagian
@@ -95,7 +93,8 @@ src/
     cn.ts
     use-deck-nav.ts     state indeks + sinkronisasi hash
 docs/
-  PLAN.md               rencana slide dan konsep animasi
+  PLAN.md               rencana awal 33 slide dan konsep animasi
+  TALK-TRACK.md         jadwal bicara 60 menit dan poin per slide
   SOURCE-NOTES.md       semua angka dan sumbernya
 ```
 
@@ -145,7 +144,7 @@ page.tsx
             -> SlideShell       kerangka + animasi judul
             -> SceneCanvas      dynamic import, hanya scene slide aktif
        -> NavigationBar         counter, progress, tombol
-       -> ThumbnailOverview     grid 33 kartu, tanpa memasang canvas
+       -> ThumbnailOverview     grid kartu semua slide, tanpa memasang canvas
        -> HelpOverlay
 ```
 

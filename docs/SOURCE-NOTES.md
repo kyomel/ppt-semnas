@@ -3,6 +3,8 @@
 Riset untuk deck **"Meningkatkan Literasi dan Mindset Pemahaman AI (Awam to Advanced)"**.
 Semua angka di bawah diambil dari sumber yang tercantum. Tanggal riset: 23 Oktober 2026.
 
+Catatan 24 Okt 2026: deck dipadatkan menjadi 27 slide. Deloitte (Tema 4) dan CAFE-AI (Tema 2) tidak lagi tampil di slide. Catatannya tetap di sini sebagai arsip.
+
 ---
 
 ## Tema 1 - Kondisi literasi AI di Indonesia

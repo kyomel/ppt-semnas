@@ -2,12 +2,18 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Briefcase, Clapperboard, GraduationCap, Mic, TrendingUp } from "lucide-react";
+import {
+  Briefcase,
+  Clapperboard,
+  GraduationCap,
+  Mic,
+  TrendingUp,
+  type LucideIcon,
+} from "lucide-react";
 import { SlideShell, Badge } from "@/components/deck/slide-shell";
 import { SceneCanvas } from "@/components/three/scene-host";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/containers";
 import { Counter } from "@/components/motion/interactive";
-import { Segmented } from "@/components/ui/controls";
 import { cn } from "@/lib/cn";
 import { ease } from "@/config/theme";
 
@@ -100,11 +106,6 @@ export function IndonesiaSlide({ index }: { index: number }) {
 
         <div className="relative min-h-0">
           <SceneCanvas kind="gauge" active={active} camera={[0, 0, 4.6]} />
-          <div className="pointer-events-none absolute inset-x-0 bottom-2 flex justify-center">
-            <p className="font-mono text-[0.54rem] tracking-[0.16em] text-ink-faint uppercase">
-              klik angka untuk menyorot cincin
-            </p>
-          </div>
         </div>
       </div>
     </SlideShell>
@@ -125,12 +126,61 @@ const GENERATION = [
   { label: "Baby Boomer (61-79 tahun)", value: 0.8, icon: Mic },
 ] as const;
 
-export function UsageSlide({ index }: { index: number }) {
-  const [mode, setMode] = useState<"purpose" | "generation">("purpose");
-  const [hovered, setHovered] = useState<number | null>(null);
-  const data = mode === "purpose" ? PURPOSE : GENERATION;
+function UsageBars({
+  title,
+  data,
+  note,
+}: {
+  title: string;
+  data: readonly { label: string; value: number; icon: LucideIcon }[];
+  note: string;
+}) {
   const max = Math.max(...data.map((d) => d.value));
 
+  return (
+    <div className="flex min-h-0 flex-col">
+      <p className="font-mono text-[0.56rem] tracking-[0.2em] text-ink-faint uppercase">
+        {title}
+      </p>
+
+      <div className="mt-2 flex min-h-0 flex-1 flex-col">
+        {data.map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <div key={item.label} className="flex flex-1 items-center gap-3">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-ink/5 text-ink-soft">
+                <Icon size={13} />
+              </span>
+              <span className="w-[8.5rem] shrink-0 text-[0.8rem] leading-tight">
+                {item.label}
+              </span>
+              <span className="relative h-8 flex-1 overflow-hidden rounded-sm bg-ink/[0.04]">
+                <motion.span
+                  className="absolute inset-y-0 left-0 rounded-sm bg-accent/85"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${(item.value / max) * 100}%` }}
+                  transition={{ duration: 0.9, delay: 0.15 + i * 0.08, ease }}
+                />
+              </span>
+              <span className="w-14 shrink-0 text-right font-mono text-[0.84rem] text-ink tabular">
+                {item.value.toFixed(1).replace(".", ",")}%
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-3 flex items-start gap-3 rounded-lg bg-bg-soft/60 px-4 py-2.5 shadow-[inset_0_0_0_1px_var(--line)]">
+        <Badge tone="accent">
+          <TrendingUp size={10} /> catatan
+        </Badge>
+        <p className="text-[0.76rem] leading-snug text-ink-soft">{note}</p>
+      </div>
+    </div>
+  );
+}
+
+export function UsageSlide({ index }: { index: number }) {
   return (
     <SlideShell
       index={index}
@@ -139,176 +189,17 @@ export function UsageSlide({ index }: { index: number }) {
       lead="Setahun lalu edukasi memimpin. Sekarang hiburan, dan produktivitas ada di urutan ketiga."
       source="Sumber: APJII 2026 (n=8.700, 38 provinsi, 1 Feb-15 Mar 2026, MoE ±1,1%) lewat detik.com dan Bisnis.com; pembanding 2025 dari Kompas.id dan Databoks."
     >
-      <div className="flex min-h-0 flex-1 flex-col">
-        <Reveal delay={0.15} className="shrink-0">
-          <Segmented
-            value={mode}
-            onChange={setMode}
-            options={[
-              { value: "purpose", label: "Menurut tujuan" },
-              { value: "generation", label: "Menurut generasi" },
-            ]}
-          />
-        </Reveal>
-
-        <div className="mt-3 flex min-h-0 flex-1 flex-col">
-          {data.map((item, i) => {
-            const Icon = item.icon;
-            const isHovered = hovered === i;
-            const dim = hovered !== null && !isHovered;
-            return (
-              <motion.div
-                key={`${mode}-${item.label}`}
-                initial={{ opacity: 0, x: -14 }}
-                animate={{ opacity: dim ? 0.35 : 1, x: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.06, ease }}
-                onPointerEnter={() => setHovered(i)}
-                onPointerLeave={() => setHovered(null)}
-                className="group flex flex-1 items-center gap-3"
-              >
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-ink/5 text-ink-soft">
-                  <Icon size={13} />
-                </span>
-                <span className="w-[16.5rem] shrink-0 text-[0.84rem] leading-tight">
-                  {item.label}
-                </span>
-                <span className="relative h-9 flex-1 overflow-hidden rounded-sm bg-ink/[0.04]">
-                  <motion.span
-                    className="absolute inset-y-0 left-0 rounded-sm bg-accent/85"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${(item.value / max) * 100}%` }}
-                    transition={{ duration: 0.9, delay: 0.15 + i * 0.08, ease }}
-                  />
-                </span>
-                <span className="w-16 shrink-0 text-right font-mono text-[0.84rem] text-ink tabular">
-                  {item.value.toFixed(1).replace(".", ",")}%
-                </span>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        <Reveal delay={0.5} className="mt-3 shrink-0">
-          <div className="flex items-center gap-3 rounded-lg bg-bg-soft/60 px-4 py-2.5 shadow-[inset_0_0_0_1px_var(--line)]">
-            <Badge tone="accent">
-              <TrendingUp size={10} /> catatan
-            </Badge>
-            <p className="text-[0.78rem] leading-snug text-ink-soft">
-              {mode === "purpose"
-                ? "Pada 2025 edukasi memimpin (43,98%), hiburan 29,5%. Pada 2026 berbalik. Hanya 26,9% ke pekerjaan."
-                : "Semakin muda, semakin tinggi. Dari yang belum memakai AI, 46,6% belum tahu teknologinya dan 15,5% tidak tahu cara memakainya."}
-            </p>
-          </div>
-        </Reveal>
-      </div>
-    </SlideShell>
-  );
-}
-
-const FUNNEL = [
-  {
-    value: 60,
-    label: "Punya akses resmi ke tool AI",
-    note: "Naik 50% dalam satu tahun, dari di bawah 40%.",
-  },
-  {
-    value: 60,
-    label: "Dari mereka, memakainya tiap hari",
-    note: "Kurang dari 60% dari yang punya akses. Pola ini tidak berubah dari tahun lalu.",
-  },
-  {
-    value: 25,
-    label: "Organisasi dengan 40%+ eksperimen di produksi",
-    note: "54% berharap mencapainya dalam 3-6 bulan.",
-  },
-] as const;
-
-export function AccessGapSlide({ index }: { index: number }) {
-  const [active, setActive] = useState(0);
-
-  return (
-    <SlideShell
-      index={index}
-      eyebrow="Realita"
-      title="Jurang akses: ~60% punya, kurang dari 60% pakai"
-      lead="Akses tumbuh lebih cepat daripada kebiasaan. Tool ada di tangan, belum masuk ke cara kerja."
-      source="Sumber: Deloitte, State of AI in the Enterprise 2026. Survei 3.235 pemimpin bisnis dan IT di 24 negara, Agustus-September 2025."
-    >
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-[clamp(1.5rem,3vw,3rem)]">
-        <div className="flex flex-col justify-center gap-2">
-          {FUNNEL.map((item, i) => {
-            const isActive = i === active;
-            return (
-              <button
-                key={item.label}
-                type="button"
-                onClick={() => setActive(i)}
-                className={cn(
-                  "group w-full rounded-lg border-l-2 py-3 pr-3 pl-4 text-left transition-all duration-300",
-                  isActive
-                    ? "border-accent bg-accent-soft/40"
-                    : "border-transparent hover:border-line-strong hover:bg-ink/[0.03]",
-                )}
-              >
-                <div className="flex items-baseline gap-3">
-                  <span
-                    className={cn(
-                      "min-w-[4.6rem] font-display text-[clamp(1.6rem,2.3vw,2.3rem)] leading-none tabular transition-colors",
-                      isActive ? "text-accent" : "text-ink",
-                    )}
-                  >
-                    {i === 0 ? "~60%" : i === 1 ? "<60%" : "25%"}
-                  </span>
-                  <span className="text-[0.86rem] leading-tight font-medium">
-                    {item.label}
-                  </span>
-                </div>
-                <p
-                  className={cn(
-                    "mt-1 text-[0.76rem] leading-snug transition-colors",
-                    isActive ? "text-ink-soft" : "text-ink-faint",
-                  )}
-                >
-                  {item.note}
-                </p>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="flex flex-col justify-center">
-          <div className="rounded-xl bg-bg-soft/60 p-5 shadow-[inset_0_0_0_1px_var(--line)]">
-            <p className="font-mono text-[0.55rem] tracking-[0.2em] text-ink-faint uppercase">
-              Kesimpulan laporan
-            </p>
-            <p className="mt-2 font-display text-[clamp(1.15rem,1.6vw,1.6rem)] leading-tight">
-              Akses melebar, tapi AI di perusahaan masih{" "}
-              <span className="italic text-accent">underutilized</span>.
-            </p>
-            <p className="mt-3 text-[0.78rem] leading-relaxed text-ink-soft">
-              Ini bukan masalah model. Ini masalah orang yang belum tahu harus
-              dipakai untuk apa, dan belum punya kebiasaan untuk memakainya.
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-3 border-t border-line pt-3">
-              <div>
-                <p className="font-display text-[1.5rem] leading-none text-accent">
-                  <Counter to={50} suffix="%" duration={1.3} />
-                </p>
-                <p className="mt-1 text-[0.68rem] leading-snug text-ink-faint">
-                  kenaikan akses dalam satu tahun
-                </p>
-              </div>
-              <div>
-                <p className="font-display text-[1.5rem] leading-none text-accent-2">
-                  <Counter to={54} suffix="%" duration={1.3} />
-                </p>
-                <p className="mt-1 text-[0.68rem] leading-snug text-ink-faint">
-                  berharap naik ke produksi dalam 3-6 bulan
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="grid min-h-0 flex-1 grid-cols-2 gap-[clamp(1.5rem,3vw,3rem)]">
+        <UsageBars
+          title="Menurut tujuan"
+          data={PURPOSE}
+          note="Pada 2025 edukasi memimpin (43,98%), hiburan 29,5%. Pada 2026 berbalik. Hanya 26,9% ke pekerjaan."
+        />
+        <UsageBars
+          title="Menurut generasi"
+          data={GENERATION}
+          note="Semakin muda, semakin tinggi. Dari yang belum memakai AI, 46,6% belum tahu teknologinya dan 15,5% tidak tahu cara memakainya."
+        />
       </div>
     </SlideShell>
   );
@@ -321,8 +212,6 @@ const TRAINING_GROUPS = [
 ] as const;
 
 export function SkillsSlide({ index }: { index: number }) {
-  const [split, setSplit] = useState(false);
-
   return (
     <SlideShell
       index={index}
@@ -342,12 +231,7 @@ export function SkillsSlide({ index }: { index: number }) {
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setSplit((v) => !v)}
-            className="mt-4 grid w-full max-w-[21rem] grid-cols-10 gap-[3px]"
-            aria-label="Lihat pembagian kelompok pelatihan"
-          >
+          <div className="mt-3 grid w-full max-w-[15rem] grid-cols-10 gap-[3px]">
             {Array.from({ length: 100 }, (_, i) => {
               const shuffled = (i * 37) % 100;
               const isNeeded = shuffled < 59;
@@ -366,12 +250,12 @@ export function SkillsSlide({ index }: { index: number }) {
                   transition={{ duration: 0.3, delay: i * 0.004, ease }}
                   className={cn(
                     "aspect-square rounded-[2px]",
-                    isNeeded ? (split ? tone : "bg-accent") : "bg-ink/10",
+                    isNeeded ? tone : "bg-ink/10",
                   )}
                 />
               );
             })}
-          </button>
+          </div>
 
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5">
             {TRAINING_GROUPS.map((group) => (
@@ -392,9 +276,6 @@ export function SkillsSlide({ index }: { index: number }) {
               </span>
             ))}
           </div>
-          <p className="mt-2 font-mono text-[0.54rem] tracking-[0.14em] text-ink-faint uppercase">
-            klik kotak untuk memisahkan 29 / 19 / 11
-          </p>
         </div>
 
         <div className="flex flex-col justify-center gap-2">
@@ -439,23 +320,17 @@ export function SkillsSlide({ index }: { index: number }) {
 }
 
 export function LiteracyDefinitionSlide({ index }: { index: number }) {
-  const [showSource, setShowSource] = useState(false);
-
   return (
     <SlideShell
       index={index}
       eyebrow="Realita"
       title="Literasi AI bukan sekadar bisa memakai tool"
-      lead="Definisi OECD dan Komisi Eropa (2026). Perhatikan empat kata kerjanya."
+      lead="Definisi OECD dan Komisi Eropa (2026). Empat kata kerjanya kita bahas di slide berikutnya."
       source="Sumber: OECD & European Commission, “Empowering Learners for the Age of AI: An AI Literacy Framework for Primary and Secondary Education” (Juni 2026). Dasar asesmen PISA 2029 Media & AI Literacy."
     >
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-[clamp(1.8rem,3.4vw,3.6rem)]">
         <div className="flex flex-col justify-center">
-          <button
-            type="button"
-            onClick={() => setShowSource((v) => !v)}
-            className="group relative text-left"
-          >
+          <div className="relative text-left">
             <span className="absolute -top-7 -left-1 font-display text-[4rem] leading-none text-accent/25 select-none">
               “
             </span>
@@ -466,47 +341,26 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
               knowledge, skills or competences.
             </blockquote>
             <p className="mt-3 font-mono text-[0.56rem] tracking-[0.14em] text-ink-faint uppercase">
-              {showSource ? "OECD & European Commission, 2026" : "klik untuk sitasi lengkap"}
+              OECD & European Commission, 2026
             </p>
-          </button>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center gap-2.5">
+        <div className="flex flex-col justify-center gap-4">
           <Reveal delay={0.15}>
             <p className="font-mono text-[0.55rem] tracking-[0.2em] text-ink-faint uppercase">
               Definisi lengkap
             </p>
-            <p className="mt-1.5 text-[0.84rem] leading-relaxed text-ink-soft">
+            <p className="mt-1.5 text-[0.9rem] leading-relaxed text-ink-soft">
               Pengetahuan teknis, keterampilan yang tahan lama, dan sikap siap masa
               depan yang dibutuhkan untuk berkembang di dunia yang dipengaruhi AI.
             </p>
           </Reveal>
 
           <Reveal delay={0.28}>
-            <div className="grid grid-cols-2 gap-2">
-              {[
-                ["Engage", "Ikut serta secara kritis"],
-                ["Create", "Berkarya dengan agensi manusia"],
-                ["Manage", "Membagi kerja manusia dan AI"],
-                ["Shape", "Memperbaiki sistem AI"],
-              ].map(([term, meaning]) => (
-                <div
-                  key={term}
-                  className="rounded-lg bg-bg-soft/60 px-3 py-2.5 shadow-[inset_0_0_0_1px_var(--line)]"
-                >
-                  <p className="text-[0.82rem] font-medium">{term}</p>
-                  <p className="mt-0.5 text-[0.7rem] leading-snug text-ink-faint">
-                    {meaning}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.4}>
             <div className="flex items-start gap-2.5 rounded-lg border border-line px-3.5 py-2.5">
               <span className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              <p className="text-[0.76rem] leading-snug text-ink-soft">
+              <p className="text-[0.78rem] leading-snug text-ink-soft">
                 Kerangka ini ditulis untuk pendidikan dasar dan menengah, dan menjadi
                 dasar asesmen PISA 2029. Prinsipnya berlaku juga untuk kita.
               </p>
@@ -515,7 +369,7 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
         </div>
       </div>
 
-      <Reveal delay={0.5} className="mt-3 shrink-0">
+      <Reveal delay={0.4} className="mt-3 shrink-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3">
           <span className="font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
             Hambatan yang disebut framework

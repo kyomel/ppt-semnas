@@ -3,7 +3,7 @@
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Float, Icosahedron, Torus } from "@react-three/drei";
-import type { Group, Points } from "three";
+import type { Points } from "three";
 import { Rig, Spin, usePalette } from "@/components/three/primitives";
 
 export function ParticleVeil({ intensity = 1 }: { intensity?: number }) {
@@ -99,84 +99,3 @@ export function ParticleVeil({ intensity = 1 }: { intensity?: number }) {
   );
 }
 
-export function ForgeCore({ level = 0 }: { level?: number }) {
-  const palette = usePalette();
-  const core = useRef<Group>(null);
-  const shell = useRef<Group>(null);
-
-  useFrame((state, delta) => {
-    const time = state.clock.elapsedTime;
-    if (core.current) {
-      core.current.rotation.y += delta * (0.18 + level * 0.42);
-      core.current.rotation.x = Math.sin(time * 0.4) * 0.12;
-      const scale = 0.92 + level * 0.2;
-      core.current.scale.setScalar(
-        scale + Math.sin(time * 1.6) * 0.012 * (1 + level),
-      );
-    }
-    if (shell.current) {
-      shell.current.rotation.y -= delta * 0.09;
-      shell.current.rotation.z += delta * 0.05;
-    }
-  });
-
-  return (
-    <Rig strength={0.34}>
-      <group ref={core}>
-        <Icosahedron args={[0.8, 2]}>
-          <meshStandardMaterial
-            color={palette.accent}
-            emissive={palette.accent}
-            emissiveIntensity={0.14 + level * 0.62}
-            roughness={0.42}
-            metalness={0.35}
-            flatShading
-          />
-        </Icosahedron>
-        <Icosahedron args={[0.95, 1]}>
-          <meshBasicMaterial
-            color={palette.ink}
-            wireframe
-            transparent
-            opacity={0.22 + level * 0.2}
-          />
-        </Icosahedron>
-      </group>
-
-      <group ref={shell}>
-        {[1.05, 1.2, 1.35].map((radius, i) => (
-          <Torus
-            key={radius}
-            args={[radius, 0.003, 8, 140]}
-            rotation={[
-              Math.PI / 2 + i * 0.35,
-              i * 0.5,
-              i * 0.28,
-            ]}
-          >
-            <meshBasicMaterial
-              color={i === 0 ? palette.accent2 : palette.ink}
-              transparent
-              opacity={0.42 - i * 0.09}
-            />
-          </Torus>
-        ))}
-      </group>
-
-      <pointLight
-        position={[2.4, 2.6, 3.4]}
-        intensity={16 + level * 34}
-        color={palette.accent}
-        distance={12}
-      />
-      <directionalLight position={[-3, 4, 2]} intensity={2.2} color={palette.ink} />
-      <pointLight
-        position={[-3, -1.6, 2]}
-        intensity={8}
-        color={palette.accent2}
-        distance={12}
-      />
-      <ambientLight intensity={0.5} />
-    </Rig>
-  );
-}
