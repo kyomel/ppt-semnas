@@ -129,7 +129,7 @@ export function PromptAnatomySlide({ index }: { index: number }) {
           })}
 
           <div className="mt-1 flex items-center gap-3 rounded-lg bg-bg-soft/60 px-3.5 py-2.5 shadow-[inset_0_0_0_1px_var(--line)]">
-            <span className="font-mono text-[0.52rem] tracking-[0.16em] text-ink-faint uppercase">
+            <span className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
               kelengkapan
             </span>
             <div className="flex flex-1 gap-1">
@@ -151,7 +151,7 @@ export function PromptAnatomySlide({ index }: { index: number }) {
 
         <div className="flex min-h-0 flex-col justify-center gap-2.5">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+            <span className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
               prompt yang tersusun
             </span>
             <Badge tone={activeCount >= 3 ? "accent2" : "neutral"}>
@@ -184,7 +184,7 @@ export function PromptAnatomySlide({ index }: { index: number }) {
                       )}
                     />
                     <div className="min-w-0">
-                      <p className="font-mono text-[0.48rem] tracking-[0.16em] text-ink-faint uppercase">
+                      <p className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
                         {layer.name}
                       </p>
                       <p className="mt-0.5 font-mono text-[0.7rem] leading-relaxed text-ink-soft">
@@ -205,7 +205,7 @@ export function PromptAnatomySlide({ index }: { index: number }) {
                 : "bg-accent-3-soft/60 shadow-[inset_0_0_0_1.5px_var(--accent-3)]",
             )}
           >
-            <p className="font-mono text-[0.5rem] tracking-[0.16em] text-ink-faint uppercase">
+            <p className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
               efek pada jawaban (ilustrasi)
             </p>
             <p className="mt-1 text-[0.82rem] font-medium">{effect.title}</p>
@@ -218,7 +218,7 @@ export function PromptAnatomySlide({ index }: { index: number }) {
 
       <Reveal delay={0.4} className="mt-3 shrink-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3">
-          <span className="font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             Dua tambahan murah
           </span>
           {[
@@ -309,7 +309,7 @@ export function AgentAnatomySlide({ index }: { index: number }) {
           })}
 
           <div className="mt-1 rounded-xl bg-bg-soft/60 p-3.5 shadow-[inset_0_0_0_1px_var(--line)]">
-            <span className="font-mono text-[0.52rem] tracking-[0.16em] text-ink-faint uppercase">
+            <span className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
               kalau tiap langkah 90% benar, peluang rantai benar semua
             </span>
             <div className="mt-2 grid grid-cols-3 gap-2">
@@ -379,7 +379,7 @@ export function AutonomyGatesSlide({ index }: { index: number }) {
     >
       <div className="flex min-h-0 flex-1 flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
             tugas yang diserahkan ke agent
           </span>
           {ACTIONS.map((action) => (
@@ -406,7 +406,7 @@ export function AutonomyGatesSlide({ index }: { index: number }) {
                     : "bg-bg-soft/60 shadow-[inset_0_0_0_1px_var(--line)]",
               )}
             >
-              <p className="font-mono text-[0.54rem] tracking-[0.16em] text-ink uppercase">
+              <p className="font-mono text-[0.62rem] tracking-[0.16em] text-ink uppercase">
                 {item.label}
               </p>
               <p className="mt-2 text-[0.78rem] leading-relaxed text-ink-soft">
@@ -421,7 +421,7 @@ export function AutonomyGatesSlide({ index }: { index: number }) {
 
         <div className="shrink-0 rounded-xl border border-line p-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="flex items-center gap-2 font-mono text-[0.52rem] tracking-[0.18em] text-accent uppercase">
+            <span className="flex items-center gap-2 font-mono text-[0.62rem] tracking-[0.18em] text-accent uppercase">
               <DoorOpen size={12} /> lima gerbang alur kerja aman
             </span>
             <span className="text-[0.7rem] text-ink-faint">
@@ -438,7 +438,7 @@ export function AutonomyGatesSlide({ index }: { index: number }) {
                   </span>
                   <div className="min-w-0">
                     <p className="text-[0.76rem] font-medium">
-                      <span className="mr-1 font-mono text-[0.5rem] text-ink-faint tabular">
+                      <span className="mr-1 font-mono text-[0.62rem] text-ink-faint tabular">
                         0{i + 1}
                       </span>
                       {gate.name}
@@ -535,19 +535,19 @@ export function CaseStudySlide({ index }: { index: number }) {
               <div key={item.name} className="flex flex-col gap-2">
                 <span className="flex items-center gap-2">
                   <span className="h-3 w-3 rounded-full border-2 border-accent bg-accent" />
-                  <span className="font-mono text-[0.52rem] tracking-[0.12em] text-accent tabular">
+                  <span className="font-mono text-[0.62rem] tracking-[0.12em] text-accent tabular">
                     {item.time} mnt
                   </span>
                 </span>
                 <div className="flex flex-1 flex-col rounded-xl bg-bg-soft/60 p-3 shadow-[inset_0_0_0_1px_var(--line)]">
                   <p className="text-[0.84rem] leading-tight font-medium">{item.name}</p>
-                  <p className="mt-2 font-mono text-[0.48rem] tracking-[0.16em] text-accent uppercase">
+                  <p className="mt-2 font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
                     keluaran
                   </p>
                   <p className="mt-0.5 text-[0.72rem] leading-snug text-ink-soft">
                     {item.output}
                   </p>
-                  <p className="mt-2 border-t border-line pt-2 font-mono text-[0.48rem] tracking-[0.16em] text-ink-faint uppercase">
+                  <p className="mt-2 border-t border-line pt-2 font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
                     kesalahan umum
                   </p>
                   <p className="mt-0.5 text-[0.72rem] leading-snug text-ink-soft">

@@ -72,7 +72,7 @@ export function RecapSlide({ index }: { index: number }) {
                   >
                     <span
                       className={cn(
-                        "mt-0.5 font-mono text-[0.54rem] tabular transition-colors",
+                        "mt-0.5 font-mono text-[0.62rem] tabular transition-colors",
                         isActive ? "text-accent" : "text-ink-faint",
                       )}
                     >
@@ -175,7 +175,7 @@ export function QaSlide() {
               className="h-28 w-28 rounded-xl bg-white p-1.5"
             />
             <div className="flex flex-col items-start gap-1 text-left">
-              <span className="font-mono text-[0.54rem] tracking-[0.18em] text-ink-faint uppercase">
+              <span className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                 grup whatsapp
               </span>
               <span className="text-sm font-medium">SWE Growth</span>
@@ -183,7 +183,7 @@ export function QaSlide() {
                 href="https://chat.whatsapp.com/Gafg6mZXgFaCydmb3bW8W2"
                 target="_blank"
                 rel="noreferrer"
-                className="font-mono text-[0.54rem] tracking-[0.1em] text-accent underline-offset-4 hover:underline"
+                className="font-mono text-[0.62rem] tracking-[0.1em] text-accent underline-offset-4 hover:underline"
               >
                 chat.whatsapp.com/Gafg6mZXgFaCydmb3bW8W2
               </a>
@@ -192,7 +192,7 @@ export function QaSlide() {
         </Reveal>
 
         <Reveal delay={0.8}>
-          <p className="mt-6 flex items-center gap-2 font-mono text-[0.54rem] tracking-[0.18em] text-ink-faint uppercase">
+          <p className="mt-6 flex items-center gap-2 font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
             <Badge tone="accent">terima kasih</Badge>
             {deck.event} · {deck.dateLabel}
           </p>

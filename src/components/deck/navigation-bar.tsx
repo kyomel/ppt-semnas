@@ -82,7 +82,7 @@ export function NavigationBar({
             initial={{ opacity: 0, y: 4 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease }}
-            className="hidden truncate font-mono text-[0.6rem] tracking-[0.22em] text-ink-faint uppercase md:block"
+            className="hidden truncate font-mono text-[0.62rem] tracking-[0.22em] text-ink-faint uppercase md:block"
           >
             {sectionLabel}
           </motion.span>

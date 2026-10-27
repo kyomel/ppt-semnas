@@ -58,7 +58,7 @@ export function IndonesiaSlide({ index }: { index: number }) {
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] gap-[clamp(1.5rem,3vw,3rem)]">
         <Stagger className="flex flex-col justify-center gap-2">
           <StaggerItem>
-            <p className="mb-1 font-mono text-[0.54rem] tracking-[0.2em] text-ink-faint uppercase">
+            <p className="mb-1 font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
               Tiga angka yang menjelaskan posisi kita
             </p>
           </StaggerItem>
@@ -94,7 +94,7 @@ export function IndonesiaSlide({ index }: { index: number }) {
                     <span className="mt-0.5 block text-[0.75rem] leading-snug text-ink-soft">
                       {stat.note}
                     </span>
-                    <span className="mt-1 block font-mono text-[0.52rem] tracking-[0.12em] text-ink-faint uppercase">
+                    <span className="mt-1 block font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
                       {stat.source}
                     </span>
                   </span>
@@ -104,7 +104,7 @@ export function IndonesiaSlide({ index }: { index: number }) {
           })}
           <StaggerItem>
             <div className="mt-1 flex items-start gap-2.5 rounded-lg border border-line px-3.5 py-2.5">
-              <span className="mt-0.5 shrink-0 font-mono text-[0.5rem] tracking-[0.16em] text-accent uppercase">
+              <span className="mt-0.5 shrink-0 font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
                 pembanding
               </span>
               <p className="text-[0.72rem] leading-snug text-ink-soft">
@@ -152,7 +152,7 @@ function UsageBars({
 
   return (
     <div className="flex min-h-0 flex-col">
-      <p className="font-mono text-[0.56rem] tracking-[0.2em] text-ink-faint uppercase">
+      <p className="font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
         {title}
       </p>
 
@@ -316,7 +316,7 @@ export function SkillsSlide({ index }: { index: number }) {
           ].map((item, i) => (
             <Reveal key={item.label} delay={0.2 + i * 0.08} y={12}>
               <div className="rounded-lg bg-bg-soft/50 px-3.5 py-2.5 shadow-[inset_0_0_0_1px_var(--line)]">
-                <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                   {item.label}
                 </p>
                 <p className="mt-0.5 text-[0.86rem] font-medium">{item.value}</p>
@@ -353,7 +353,7 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
               Simply interacting with AI tools neither develops nor depends on the
               knowledge, skills or competences.
             </blockquote>
-            <p className="mt-3 font-mono text-[0.56rem] tracking-[0.14em] text-ink-faint uppercase">
+            <p className="mt-3 font-mono text-[0.62rem] tracking-[0.14em] text-ink-faint uppercase">
               OECD & European Commission, 2026
             </p>
           </div>
@@ -361,7 +361,7 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
 
         <div className="flex flex-col justify-center gap-4">
           <Reveal delay={0.15}>
-            <p className="font-mono text-[0.55rem] tracking-[0.2em] text-ink-faint uppercase">
+            <p className="font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
               Definisi lengkap
             </p>
             <p className="mt-1.5 text-[0.9rem] leading-relaxed text-ink-soft">
@@ -385,7 +385,7 @@ export function LiteracyDefinitionSlide({ index }: { index: number }) {
 
       <Reveal delay={0.4} className="mt-3 shrink-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3">
-          <span className="font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             Hambatan yang disebut framework
           </span>
           {[

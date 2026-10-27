@@ -65,7 +65,7 @@ export function RulesSlide({ index }: { index: number }) {
                   <span className="grid h-8 w-8 place-items-center rounded-md bg-accent text-bg">
                     <Icon size={15} />
                   </span>
-                  <span className="font-mono text-[0.5rem] tracking-[0.12em] text-ink-faint uppercase">
+                  <span className="font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
                     {rule.scope}
                   </span>
                 </div>
@@ -100,7 +100,7 @@ export function RulesSlide({ index }: { index: number }) {
 
       <Reveal delay={0.4} className="mt-3 shrink-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3">
-          <span className="shrink-0 font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="shrink-0 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             Tiga pertanyaan yang harus kamu ajukan
           </span>
           {[
@@ -162,7 +162,7 @@ export function MythsSlide({ index }: { index: number }) {
             <div>
               <div className="flex items-center justify-between">
                 <Badge tone="accent3">mitos</Badge>
-                <span className="font-mono text-[0.5rem] text-ink-faint tabular">
+                <span className="font-mono text-[0.62rem] text-ink-faint tabular">
                   0{i + 1}
                 </span>
               </div>
@@ -173,7 +173,7 @@ export function MythsSlide({ index }: { index: number }) {
             <div className="mt-3 border-t border-line pt-3">
               <Badge tone="accent2">fakta</Badge>
               <p className="mt-2 text-[0.8rem] leading-snug text-ink">{item.fact}</p>
-              <p className="mt-2 font-mono text-[0.5rem] tracking-[0.12em] text-ink-faint uppercase">
+              <p className="mt-2 font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
                 {item.source}
               </p>
             </div>
@@ -232,10 +232,10 @@ export function PlanSlide({ index }: { index: number }) {
               className="flex flex-col rounded-xl bg-bg-soft/50 p-3.5 shadow-[inset_0_0_0_1px_var(--line)]"
             >
               <div className="flex items-baseline justify-between">
-                <span className="font-mono text-[0.5rem] tracking-[0.18em] text-accent uppercase">
+                <span className="font-mono text-[0.62rem] tracking-[0.18em] text-accent uppercase">
                   {week.week}
                 </span>
-                <span className="font-mono text-[0.5rem] text-ink-faint tabular">
+                <span className="font-mono text-[0.62rem] text-ink-faint tabular">
                   0{w + 1}
                 </span>
               </div>
@@ -258,7 +258,7 @@ export function PlanSlide({ index }: { index: number }) {
               </ul>
 
               <div className="mt-2 border-t border-line pt-2">
-                <p className="font-mono text-[0.46rem] tracking-[0.14em] text-ink-faint uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.14em] text-ink-faint uppercase">
                   bukti
                 </p>
                 <p className="mt-0.5 text-[0.66rem] leading-snug text-ink-faint">
@@ -270,7 +270,7 @@ export function PlanSlide({ index }: { index: number }) {
         </div>
 
         <div className="mt-2.5 flex shrink-0 items-center gap-3 border-t border-line pt-3">
-          <span className="font-mono text-[0.52rem] tracking-[0.16em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
             mulai
           </span>
           <p className="text-[0.78rem] leading-snug text-ink-soft">

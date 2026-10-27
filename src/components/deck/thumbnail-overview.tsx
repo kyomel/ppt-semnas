@@ -27,7 +27,7 @@ export function ThumbnailOverview({
       <div className="flex h-full flex-col px-[clamp(1.5rem,3.4vw,3.5rem)] pb-8 pt-[clamp(1.2rem,2.6vh,2rem)]">
         <div className="mb-4 flex shrink-0 items-end justify-between">
           <div>
-            <p className="font-mono text-[0.6rem] tracking-[0.26em] text-accent uppercase">
+            <p className="font-mono text-[0.62rem] tracking-[0.26em] text-accent uppercase">
               Ikhtisar
             </p>
             <h2 className="mt-1 font-display text-[clamp(1.5rem,2.2vw,2.1rem)] leading-none">
@@ -66,19 +66,19 @@ export function ThumbnailOverview({
                   <div className="flex items-center justify-between gap-1">
                     <span
                       className={cn(
-                        "font-mono text-[0.52rem] tracking-[0.1em] tabular",
+                        "font-mono text-[0.62rem] tracking-[0.1em] tabular",
                         active ? "text-accent" : "text-ink-faint",
                       )}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="truncate font-mono text-[0.42rem] tracking-[0.12em] text-ink-faint uppercase">
+                    <span className="truncate font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
                       {slide.section}
                     </span>
                   </div>
                   <span
                     className={cn(
-                      "line-clamp-2 text-[0.6rem] leading-[1.2] font-medium tracking-tight",
+                      "line-clamp-2 text-[0.62rem] leading-[1.2] font-medium tracking-tight",
                       active ? "text-ink" : "text-ink-soft group-hover:text-ink",
                     )}
                   >
@@ -90,7 +90,7 @@ export function ThumbnailOverview({
           </div>
         </div>
 
-        <p className="mt-4 shrink-0 font-mono text-[0.55rem] tracking-[0.1em] text-ink-faint">
+        <p className="mt-4 shrink-0 font-mono text-[0.62rem] tracking-[0.1em] text-ink-faint">
           Klik untuk lompat · Esc untuk kembali
         </p>
       </div>

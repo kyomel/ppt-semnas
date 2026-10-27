@@ -66,6 +66,16 @@ Data di deck diverifikasi 24 Oktober 2026 dengan Exa. Slide 6 dan slide 24 diper
 
 Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu menghemat 3,5 menit. Kalau masih telat, potong tanya jawab, bukan slide 19 sampai 22.
 
+## Ukuran teks di proyektor (diukur 28 Oktober)
+
+- Semua ukuran teks memakai `rem`. Root `html` mengikuti layar: `min(1.25vw, 2.2222vh) x --type-scale` di `src/app/globals.css`. Di 1280x720 hasilnya 16px. Di 1920x1080 hasilnya 24px. Teks selalu sama besar terhadap tinggi layar, di resolusi apa pun.
+- Sebelum perubahan ini, teks isi tetap 11-13px di layar 1080p. Itu hanya sekitar 1,1% tinggi layar.
+- Zoom browser (Cmd +) tidak lagi memperbesar teks. Untuk memperbesar semua teks, ubah `--type-scale` (contoh `1.05`), lalu jalankan `bun run build`. Di atas 1,0 slide 7 dan 23 mulai meluap.
+- Judul sekitar 5,6% tinggi layar. Kalimat di bawah judul sekitar 3%. Dua bagian ini terbaca dari baris belakang.
+- Isi kartu (sekitar 1,7%) dan label (sekitar 1,4%) adalah rujukan jarak dekat. Ucapkan isinya, jangan minta peserta membacanya. Slide 6 pengecualian: isi kartu 16 piksel pada 1280x720 (2,3%).
+- Uji di aula sebelum mulai: layar penuh (F), berdiri di baris paling belakang, baca judul dan kalimat di bawahnya. Kalau tidak terbaca, perbesar `--type-scale` atau naikkan resolusi keluaran laptop.
+- Slide dengan ruang sisa paling banyak (teks isi bisa diperbesar sampai 1,25x): 1, 2, 4, 5, 8, 10, 14, 16, 18, 22, 25, 27. Slide terpadat (tidak bisa diperbesar): 7, 12, 15, 19, 23.
+
 ## Poin bicara per slide
 
 **1. Judul dan kabar SI (1,5 menit)**

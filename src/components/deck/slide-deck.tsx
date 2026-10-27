@@ -179,11 +179,11 @@ export function SlideDeck() {
             exit={{ opacity: 0, y: 8 }}
             transition={{ duration: 0.2, ease }}
           >
-            <span className="font-mono text-[0.6rem] tracking-[0.2em] text-ink-faint uppercase">
+            <span className="font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
               ke
             </span>
             <span className="font-mono text-base text-accent tabular">{buffer}</span>
-            <span className="font-mono text-[0.55rem] tracking-[0.16em] text-ink-faint uppercase">
+            <span className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
               enter
             </span>
           </motion.div>

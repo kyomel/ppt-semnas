@@ -53,7 +53,7 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
       >
         <div className="mb-6 flex items-start justify-between">
           <div>
-            <p className="font-mono text-[0.6rem] tracking-[0.26em] text-accent uppercase">
+            <p className="font-mono text-[0.62rem] tracking-[0.26em] text-accent uppercase">
               Pintasan
             </p>
             <h2 className="mt-1 font-display text-[clamp(1.5rem,2vw,2rem)] leading-none">
@@ -73,13 +73,13 @@ export function HelpOverlay({ onClose }: { onClose: () => void }) {
         <div className="grid grid-cols-3 gap-8">
           {groups.map((group) => (
             <div key={group.title}>
-              <p className="mb-3 font-mono text-[0.58rem] tracking-[0.2em] text-ink-faint uppercase">
+              <p className="mb-3 font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
                 {group.title}
               </p>
               <ul className="space-y-2.5">
                 {group.items.map(([keys, label]) => (
                   <li key={keys} className="flex flex-col gap-0.5">
-                    <kbd className="w-fit rounded border border-line bg-bg px-1.5 py-0.5 font-mono text-[0.6rem] text-ink">
+                    <kbd className="w-fit rounded border border-line bg-bg px-1.5 py-0.5 font-mono text-[0.62rem] text-ink">
                       {keys}
                     </kbd>
                     <span className="text-[0.72rem] leading-snug text-ink-soft">

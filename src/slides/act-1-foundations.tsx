@@ -79,7 +79,7 @@ export function PredictionSlide({ index }: { index: number }) {
                   </span>
                   <span className="min-w-0">
                     <span className="flex items-baseline gap-2">
-                      <span className="font-mono text-[0.55rem] tracking-[0.16em] text-ink-faint">
+                      <span className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint">
                         0{i + 1}
                       </span>
                       <span className="text-[0.9rem] font-medium">{step.label}</span>
@@ -113,7 +113,7 @@ export function PredictionSlide({ index }: { index: number }) {
 
       <Reveal delay={0.5} className="mt-4 shrink-0">
         <div className="flex items-center gap-3 rounded-lg bg-bg-soft/60 px-4 py-2.5 shadow-[inset_0_0_0_1px_var(--line)]">
-          <span className="font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             Analogi
           </span>
           <p className="text-[0.8rem] text-ink-soft">
@@ -181,7 +181,7 @@ export function HallucinationSlide({ index }: { index: number }) {
         <div className="flex flex-col justify-center gap-4">
           <div className="rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]">
             <div className="flex items-baseline justify-between">
-              <span className="font-mono text-[0.54rem] tracking-[0.18em] text-ink-faint uppercase">
+              <span className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                 Keyakinan model
               </span>
               <span className="font-mono text-[0.8rem] text-accent tabular">
@@ -198,7 +198,7 @@ export function HallucinationSlide({ index }: { index: number }) {
             </div>
 
             <div className="mt-4 flex items-baseline justify-between">
-              <span className="font-mono text-[0.54rem] tracking-[0.18em] text-ink-faint uppercase">
+              <span className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                 Kebenaran jawaban (ilustrasi)
               </span>
               <span className="font-mono text-[0.8rem] text-accent-2 tabular">
@@ -241,7 +241,7 @@ export function HallucinationSlide({ index }: { index: number }) {
 
       <Reveal delay={0.45} className="mt-3 shrink-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3">
-          <span className="font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             Tanda perlu dicek
           </span>
           {[
@@ -320,7 +320,7 @@ export function GlossarySlide({ index }: { index: number }) {
               <span className="font-display text-[clamp(1.5rem,2.3vw,2.3rem)] leading-none">
                 {item.term}
               </span>
-              <span className="font-mono text-[0.5rem] text-ink-faint tabular">
+              <span className="font-mono text-[0.62rem] text-ink-faint tabular">
                 {String(i + 1).padStart(2, "0")}
               </span>
             </div>
@@ -332,14 +332,14 @@ export function GlossarySlide({ index }: { index: number }) {
         ))}
 
         <div className="flex flex-col justify-between rounded-xl bg-accent-soft p-3.5 shadow-[inset_0_0_0_1px_var(--accent)]">
-          <span className="font-mono text-[0.5rem] tracking-[0.2em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             catatan
           </span>
           <p className="text-[0.72rem] leading-snug text-ink-soft">
             Tujuh istilah ini cukup untuk mengikuti sebagian besar berita AI.
             Sisanya kosakata.
           </p>
-          <span className="font-mono text-[0.5rem] tracking-[0.14em] text-ink-faint uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.14em] text-ink-faint uppercase">
             7 / 7
           </span>
         </div>
@@ -413,7 +413,7 @@ export function TimelineSlide({ index }: { index: number }) {
       source="Sumber: Anthropic (21 Okt); METR (22 Okt); Komdigi (23 Okt); Moonshot dan Artificial Analysis (23 Okt); OpenAI dan Artificial Analysis (26 Okt); Cohere (26 Okt); Antara (27 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
     >
       <div className="flex min-h-0 flex-1 flex-col gap-2">
-        <div className="relative h-[32%] min-h-[8.5rem] w-full">
+        <div className="relative h-[24%] min-h-[6.5rem] w-full">
           <div className="absolute inset-0 rounded-xl bg-[radial-gradient(ellipse_at_center,var(--accent-soft),transparent_72%)]" />
           <SceneCanvas kind="timeline" active={active} onPick={setActive} camera={[0, 0, 1.5]} />
         </div>
@@ -427,20 +427,20 @@ export function TimelineSlide({ index }: { index: number }) {
             className="flex flex-col justify-center gap-2 rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]"
           >
             <div className="flex items-center gap-2">
-              <span className="font-mono text-[0.6rem] tracking-[0.18em] text-accent uppercase">
+              <span className="font-mono text-[0.72rem] tracking-[0.18em] text-accent uppercase">
                 {event.date} 2026
               </span>
               <Badge>{event.tag}</Badge>
             </div>
-            <h3 className="font-display text-[clamp(1.15rem,1.7vw,1.75rem)] leading-tight">
+            <h3 className="font-display text-[clamp(1.35rem,2.2vw,2.2rem)] leading-tight">
               {event.title}
             </h3>
-            <p className="max-w-[52ch] text-[0.8rem] leading-relaxed text-ink-soft">
+            <p className="max-w-[58ch] text-[1.02rem] leading-relaxed text-ink-soft">
               {event.body}
             </p>
             <div className="mt-1 border-t border-line pt-2">
-              <p className="max-w-[52ch] text-[0.76rem] leading-relaxed text-ink-soft">
-                <span className="mr-1.5 font-mono text-[0.54rem] tracking-[0.16em] text-accent uppercase">
+              <p className="max-w-[58ch] text-[0.94rem] leading-relaxed text-ink-soft">
+                <span className="mr-1.5 font-mono text-[0.7rem] tracking-[0.16em] text-accent uppercase">
                   kenapa penting
                 </span>
                 {event.why}
@@ -469,7 +469,7 @@ export function TimelineSlide({ index }: { index: number }) {
                 type="button"
                 onClick={() => setActive(i)}
                 className={cn(
-                  "group flex items-center gap-2.5 border-l-2 py-1.5 pl-2.5 text-left transition-colors",
+                  "group flex items-center gap-2.5 border-l-2 py-2 pl-2.5 text-left transition-colors",
                   i === active
                     ? "border-accent"
                     : "border-transparent hover:border-line-strong",
@@ -477,7 +477,7 @@ export function TimelineSlide({ index }: { index: number }) {
               >
                 <span
                   className={cn(
-                    "w-10 shrink-0 font-mono text-[0.54rem] tracking-[0.1em] tabular",
+                    "w-16 shrink-0 font-mono text-[0.72rem] tracking-[0.1em] tabular",
                     i === active ? "text-accent" : "text-ink-faint",
                   )}
                 >
@@ -485,7 +485,7 @@ export function TimelineSlide({ index }: { index: number }) {
                 </span>
                 <span
                   className={cn(
-                    "truncate text-[0.72rem] leading-tight",
+                    "truncate text-[0.95rem] leading-tight",
                     i === active ? "font-medium text-ink" : "text-ink-soft",
                   )}
                 >

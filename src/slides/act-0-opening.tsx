@@ -32,7 +32,7 @@ export function IntroSlide() {
             <p className="font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
               {deck.dateLabel}
             </p>
-            <p className="mt-1 font-mono text-[0.58rem] tracking-[0.18em] text-ink-faint uppercase">
+            <p className="mt-1 font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
               {deck.durationMinutes} menit · {deck.location}
             </p>
           </div>
@@ -69,7 +69,7 @@ export function IntroSlide() {
 
           <Reveal delay={0.82} y={12}>
             <div className="mt-5 flex max-w-[50ch] items-start gap-3 border-l-2 border-accent pl-3.5">
-              <span className="shrink-0 pt-0.5 font-mono text-[0.56rem] tracking-[0.18em] text-accent uppercase">
+              <span className="shrink-0 pt-0.5 font-mono text-[0.62rem] tracking-[0.18em] text-accent uppercase">
                 Kabar terbaru
               </span>
               <div>
@@ -78,7 +78,7 @@ export function IntroSlide() {
                   Intelligence” (SI) menggantikan “AI”. Rilis resmi Tiongkok tetap
                   menulis AI. Namanya baru, mesinnya sama.
                 </p>
-                <p className="mt-1 font-mono text-[0.5rem] tracking-[0.12em] text-ink-faint uppercase">
+                <p className="mt-1 font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
                   White House 25 dan 29 Sep · Kemlu Tiongkok 26 Sep 2026
                 </p>
               </div>
@@ -98,7 +98,7 @@ export function IntroSlide() {
                 <p className="text-[0.86rem] leading-tight font-medium">
                   {deck.speaker}
                 </p>
-                <p className="font-mono text-[0.56rem] tracking-[0.16em] text-ink-faint uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
                   {deck.speakerRole}
                 </p>
               </div>
@@ -126,7 +126,7 @@ export function IntroSlide() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8, ease }}
       >
-        <p className="flex items-center gap-2 font-mono text-[0.54rem] tracking-[0.22em] text-ink-faint uppercase">
+        <p className="flex items-center gap-2 font-mono text-[0.62rem] tracking-[0.22em] text-ink-faint uppercase">
           <kbd className="rounded border border-line px-1 py-0.5">←</kbd>
           <kbd className="rounded border border-line px-1 py-0.5">→</kbd>
           navigasi
@@ -155,7 +155,7 @@ export function OverviewSlide({ index }: { index: number }) {
             {String(index).padStart(2, "0")}
           </span>
         </div>
-        <p className="font-mono text-[0.58rem] tracking-[0.18em] text-ink-faint uppercase">
+        <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
           Enam bagian · {contentSlides} slide konten
         </p>
       </div>
@@ -196,7 +196,7 @@ export function OverviewSlide({ index }: { index: number }) {
                   </span>
                 </span>
 
-                <span className="shrink-0 font-mono text-[0.55rem] tracking-[0.14em] text-ink-faint tabular">
+                <span className="shrink-0 font-mono text-[0.62rem] tracking-[0.14em] text-ink-faint tabular">
                   {String(section.firstSlide).padStart(2, "0")}–
                   {String(section.firstSlide + section.slides - 1).padStart(2, "0")}
                 </span>

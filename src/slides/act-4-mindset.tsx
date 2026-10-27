@@ -36,10 +36,10 @@ export function ApprenticeSlide({ index }: { index: number }) {
             <div className="flex h-full flex-col justify-between rounded-xl bg-bg-soft/50 p-5 shadow-[inset_0_0_0_1px_var(--line)]">
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[0.54rem] tracking-[0.2em] text-ink-faint uppercase">
+                  <span className="font-mono text-[0.62rem] tracking-[0.2em] text-ink-faint uppercase">
                     pola lama
                   </span>
-                  <span className="rounded-full bg-ink/5 px-2 py-0.5 font-mono text-[0.5rem] tracking-[0.14em] text-ink-faint uppercase">
+                  <span className="rounded-full bg-ink/5 px-2 py-0.5 font-mono text-[0.62rem] tracking-[0.14em] text-ink-faint uppercase">
                     oracle
                   </span>
                 </div>
@@ -62,7 +62,7 @@ export function ApprenticeSlide({ index }: { index: number }) {
                 ))}
               </ul>
               <div className="border-t border-line pt-3">
-                <p className="font-mono text-[0.5rem] tracking-[0.16em] text-ink-faint uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
                   hasilnya
                 </p>
                 <p className="mt-1 text-[0.8rem] leading-snug text-ink-faint">
@@ -78,10 +78,10 @@ export function ApprenticeSlide({ index }: { index: number }) {
             <div className="flex h-full flex-col justify-between rounded-xl bg-accent-soft/50 p-5 shadow-[inset_0_0_0_1.5px_var(--accent)]">
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[0.54rem] tracking-[0.2em] text-accent uppercase">
+                  <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
                     pola baru
                   </span>
-                  <span className="rounded-full bg-accent px-2 py-0.5 font-mono text-[0.5rem] tracking-[0.14em] text-bg uppercase">
+                  <span className="rounded-full bg-accent px-2 py-0.5 font-mono text-[0.62rem] tracking-[0.14em] text-bg uppercase">
                     rekan magang
                   </span>
                 </div>
@@ -104,7 +104,7 @@ export function ApprenticeSlide({ index }: { index: number }) {
                 ))}
               </ul>
               <div className="border-t border-line pt-3">
-                <p className="font-mono text-[0.5rem] tracking-[0.16em] text-accent uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
                   hasilnya
                 </p>
                 <p className="mt-1 text-[0.8rem] leading-snug text-ink-soft">
@@ -161,7 +161,7 @@ export function VerificationSlide({ index }: { index: number }) {
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-[clamp(1.5rem,3vw,3rem)]">
         <div className="flex flex-col justify-center gap-2">
           <Reveal delay={0.1}>
-            <p className="font-mono text-[0.56rem] tracking-[0.16em] text-ink-faint uppercase">
+            <p className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
               “Berapa jam belajar untuk lulus JLPT N3?” Dua jawaban AI untuk satu pertanyaan.
             </p>
           </Reveal>
@@ -180,11 +180,11 @@ export function VerificationSlide({ index }: { index: number }) {
               )}
             >
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+                <span className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                   {answer.tag}
                 </span>
                 {answer.reasoning ? (
-                  <span className="rounded-full bg-ink/5 px-2 py-0.5 font-mono text-[0.48rem] tracking-[0.12em] text-ink-faint uppercase">
+                  <span className="rounded-full bg-ink/5 px-2 py-0.5 font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
                     dengan penalaran
                   </span>
                 ) : null}
@@ -193,7 +193,7 @@ export function VerificationSlide({ index }: { index: number }) {
                 {answer.text}
               </p>
               <div className="mt-2 border-t border-line pt-2">
-                <p className="font-mono text-[0.52rem] tracking-[0.18em] text-accent uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.18em] text-accent uppercase">
                   {answer.verdict}
                 </p>
                 <p className="mt-1 text-[0.74rem] leading-snug text-ink-soft">
@@ -208,7 +208,7 @@ export function VerificationSlide({ index }: { index: number }) {
           <div className="rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]">
             <div className="flex items-center gap-2">
               <ShieldCheck size={13} className="text-accent" />
-              <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+              <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                 temuan utama
               </p>
             </div>
@@ -228,7 +228,7 @@ export function VerificationSlide({ index }: { index: number }) {
           </div>
 
           <div className="rounded-xl border border-line p-4">
-            <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+            <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
               dari Komdigi, 23 Okt 2026
             </p>
             <p className="mt-2 text-[0.76rem] leading-relaxed text-ink-soft">
@@ -242,7 +242,7 @@ export function VerificationSlide({ index }: { index: number }) {
 
       <Reveal delay={0.45} className="mt-3 shrink-0">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-3">
-          <span className="font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             Verifikasi 2 menit
           </span>
           {[
@@ -255,7 +255,7 @@ export function VerificationSlide({ index }: { index: number }) {
               key={item}
               className="flex items-center gap-1.5 rounded-full bg-ink/[0.04] px-2.5 py-1 text-[0.7rem] text-ink-soft"
             >
-              <span className="font-mono text-[0.5rem] text-accent tabular">
+              <span className="font-mono text-[0.62rem] text-accent tabular">
                 0{i + 1}
               </span>
               {item}
@@ -325,7 +325,7 @@ export function FrictionSlide({ index }: { index: number }) {
               );
             })}
           </div>
-          <p className="mt-3 font-mono text-[0.52rem] tracking-[0.12em] text-ink-faint uppercase">
+          <p className="mt-3 font-mono text-[0.62rem] tracking-[0.12em] text-ink-faint uppercase">
             n=54, preprint, tugas menulis esai
           </p>
         </div>
@@ -335,7 +335,7 @@ export function FrictionSlide({ index }: { index: number }) {
             <div className="rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]">
               <div className="flex items-center gap-2">
                 <Brain size={13} className="text-accent" />
-                <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                   yang hilang
                 </p>
               </div>
@@ -351,7 +351,7 @@ export function FrictionSlide({ index }: { index: number }) {
             <div className="rounded-xl border border-line p-4">
               <div className="flex items-center gap-2">
                 <Activity size={13} className="text-accent-2" />
-                <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                   kata Google, Sep 2026
                 </p>
               </div>
@@ -413,7 +413,7 @@ export function AgencySlide({ index }: { index: number }) {
               className="rounded-lg bg-bg-soft/60 px-3.5 py-3 shadow-[inset_0_0_0_1px_var(--line)]"
             >
               <div className="flex items-center gap-2">
-                <span className="grid h-5 w-5 place-items-center rounded-full bg-accent font-mono text-[0.5rem] text-bg">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-accent font-mono text-[0.62rem] text-bg">
                   {i + 1}
                 </span>
                 <span className="text-[0.84rem] font-medium">{layer.name}</span>
@@ -432,7 +432,7 @@ export function AgencySlide({ index }: { index: number }) {
           <div className="rounded-xl bg-bg-soft/60 p-4 shadow-[inset_0_0_0_1px_var(--line)]">
             <div className="flex items-center gap-2">
               <Scale size={13} className="text-accent" />
-              <p className="font-mono text-[0.52rem] tracking-[0.18em] text-ink-faint uppercase">
+              <p className="font-mono text-[0.62rem] tracking-[0.18em] text-ink-faint uppercase">
                 empat pertanyaan sebelum menerima
               </p>
             </div>
@@ -444,7 +444,7 @@ export function AgencySlide({ index }: { index: number }) {
                 "Apakah saya masih bisa mengerjakan ini tanpa AI?",
               ].map((question, i) => (
                 <li key={question} className="flex items-start gap-2.5">
-                  <span className="mt-0.5 font-mono text-[0.55rem] text-accent tabular">
+                  <span className="mt-0.5 font-mono text-[0.62rem] text-accent tabular">
                     0{i + 1}
                   </span>
                   <span className="text-[0.78rem] leading-snug text-ink-soft">
@@ -497,10 +497,10 @@ export function JaggedFrontierSlide({ index }: { index: number }) {
                 "repeating-linear-gradient(90deg, var(--line-strong) 0 6px, transparent 6px 12px)",
             }}
           />
-          <span className="absolute top-2.5 left-3 font-mono text-[0.5rem] tracking-[0.16em] text-ink-faint uppercase">
+          <span className="absolute top-2.5 left-3 font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
             di dalam frontier
           </span>
-          <span className="absolute bottom-2.5 left-3 font-mono text-[0.5rem] tracking-[0.16em] text-ink-faint uppercase">
+          <span className="absolute bottom-2.5 left-3 font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint uppercase">
             di luar frontier
           </span>
 

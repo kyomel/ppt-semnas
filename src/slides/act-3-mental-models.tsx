@@ -94,7 +94,7 @@ export function DomainsSlide({ index }: { index: number }) {
                 </span>
                 <span className="min-w-0">
                   <span className="flex items-baseline gap-2">
-                    <span className="font-mono text-[0.55rem] tracking-[0.16em] text-ink-faint">
+                    <span className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint">
                       0{i + 1}
                     </span>
                     <span className="text-[0.88rem] font-medium">{item.full}</span>
@@ -103,7 +103,7 @@ export function DomainsSlide({ index }: { index: number }) {
                     {item.line}
                   </span>
                   <span className="mt-1 block text-[0.72rem] leading-snug text-ink-faint">
-                    <span className="mr-1.5 font-mono text-[0.5rem] tracking-[0.16em] text-accent uppercase">
+                    <span className="mr-1.5 font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
                       contoh
                     </span>
                     {item.example}
@@ -196,7 +196,7 @@ export function LadderSlide({ index }: { index: number }) {
                 </span>
                 <span className="min-w-0 pr-2">
                   <span className="flex flex-wrap items-baseline gap-x-2">
-                    <span className="font-mono text-[0.55rem] tracking-[0.16em] text-ink-faint">
+                    <span className="font-mono text-[0.62rem] tracking-[0.16em] text-ink-faint">
                       L{i + 1}
                     </span>
                     <span className="text-[0.9rem] font-medium">{item.name}</span>
@@ -206,7 +206,7 @@ export function LadderSlide({ index }: { index: number }) {
                     {item.behavior}
                   </span>
                   <span className="mt-1 block text-[0.72rem] leading-snug text-ink-faint">
-                    <span className="mr-1.5 font-mono text-[0.5rem] tracking-[0.16em] text-accent uppercase">
+                    <span className="mr-1.5 font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
                       bukti naik level
                     </span>
                     {item.proof}
@@ -220,7 +220,7 @@ export function LadderSlide({ index }: { index: number }) {
 
       <Reveal delay={0.4} className="mt-3 shrink-0">
         <div className="flex items-center gap-3 border-t border-line pt-3">
-          <span className="shrink-0 font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="shrink-0 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             cek posisimu
           </span>
           <p className="text-[0.8rem] leading-snug text-ink-soft">
@@ -285,7 +285,7 @@ export function TrapsSlide({ index }: { index: number }) {
                 <span className="grid h-8 w-8 place-items-center rounded-md bg-accent text-bg">
                   <Icon size={15} />
                 </span>
-                <span className="font-mono text-[0.5rem] text-ink-faint tabular">
+                <span className="font-mono text-[0.62rem] text-ink-faint tabular">
                   0{i + 1}
                 </span>
               </div>
@@ -297,7 +297,7 @@ export function TrapsSlide({ index }: { index: number }) {
               </p>
 
               <div className="mt-3 border-t border-line pt-2.5">
-                <p className="font-mono text-[0.5rem] tracking-[0.16em] text-accent uppercase">
+                <p className="font-mono text-[0.62rem] tracking-[0.16em] text-accent uppercase">
                   obat
                 </p>
                 <p className="mt-1 text-[0.8rem] leading-snug text-ink-soft">
@@ -317,7 +317,7 @@ export function TrapsSlide({ index }: { index: number }) {
 
       <Reveal delay={0.4} className="mt-3 shrink-0">
         <div className="flex items-center gap-3 border-t border-line pt-3">
-          <span className="shrink-0 font-mono text-[0.55rem] tracking-[0.2em] text-accent uppercase">
+          <span className="shrink-0 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
             akar bersama
           </span>
           <p className="text-[0.8rem] leading-snug text-ink-soft">

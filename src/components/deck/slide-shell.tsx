@@ -71,7 +71,7 @@ export function SlideShell({
         {title ? (
           <h2
             className={cn(
-              "max-w-[24ch] font-display text-[clamp(1.9rem,3.15vw,3.15rem)] leading-[1.06] text-balance",
+              "max-w-[40ch] font-display text-[clamp(1.9rem,3.15vw,3.15rem)] leading-[1.06] text-balance",
               titleClassName,
             )}
           >
@@ -81,7 +81,7 @@ export function SlideShell({
 
         {lead ? (
           <Reveal delay={0.18}>
-            <p className="mt-[clamp(0.7rem,1.6vh,1.1rem)] max-w-[62ch] text-[clamp(0.92rem,1.12vw,1.12rem)] leading-relaxed text-ink-soft">
+            <p className="mt-[clamp(0.7rem,1.6vh,1.1rem)] max-w-[72ch] text-[clamp(1.05rem,1.7vw,1.7rem)] leading-snug text-ink-soft">
               {lead}
             </p>
           </Reveal>
@@ -97,7 +97,7 @@ export function SlideShell({
       {source ? (
         <div className="shrink-0 px-[clamp(2rem,4.4vw,4.75rem)] pt-1.5">
           <Reveal delay={0.4} y={4} blur={false}>
-            <p className="max-w-[130ch] font-mono text-[0.56rem] leading-relaxed tracking-[0.03em] text-ink-faint">
+            <p className="max-w-[130ch] font-mono text-[0.62rem] leading-relaxed tracking-[0.03em] text-ink-faint">
               {source}
             </p>
           </Reveal>
@@ -149,7 +149,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-mono text-[0.58rem] tracking-[0.14em] uppercase",
+        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase",
         tones[tone],
         className,
       )}
