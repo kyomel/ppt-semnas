@@ -29,7 +29,7 @@ Aturan di panggung:
 | 2:00 | 3 | AI mesin prediksi | 2,5 | |
 | 4:30 | 4 | Salah dengan yakin | 2 | |
 | 6:30 | 5 | Tujuh istilah | 1 | **Lewati jika telat** |
-| 7:30 | 6 | Sepekan di AI (19-23 Okt) | 2,5 | Tiga dari tujuh kabar |
+| 7:30 | 6 | Sepekan di AI (21-27 Okt) | 2,5 | Tiga dari tujuh kabar |
 | 10:00 | 7 | Indonesia | 2,5 | Termasuk kotak pembanding |
 | 12:30 | 8 | Untuk apa AI dipakai | 1,5 | |
 | 14:00 | 9 | Skill 2030 | 1 | **Lewati jika telat** |
@@ -56,10 +56,10 @@ Aturan di panggung:
 
 ## Cek ulang pada hari H (27-28 Oktober)
 
-Data di deck diverifikasi 24 Oktober 2026 dengan Exa. Lakukan lima cek ini sebelum tampil. Semuanya muat dalam 15 menit.
+Data di deck diverifikasi 24 Oktober 2026 dengan Exa. Slide 6 dan slide 24 diperbarui lagi 27 Oktober 2026 (lima cek di bawah dijalankan pada tanggal itu). Ulangi lima cek ini pagi 28 Oktober sebelum tampil. Semuanya muat dalam 15 menit.
 
-1. **Slide 6, kabar AI.** Cari kabar 24-27 Oktober. Kalau ada kabar besar, ganti dua kabar tertua (19 Okt). Ubah `EVENTS` di `src/slides/act-1-foundations.tsx`. Jumlah kabar harus tetap 7. Ubah juga judul slide ("Sepekan di AI, 19-23 Oktober"), kalimat tanggal, label di `src/slides/index.tsx`, dan baris sumber.
-2. **Slide 24, mitos model.** Buka https://artificialanalysis.ai/leaderboards/models. Cek skor dan biaya per tugas Claude Opus 5.5 (58; $5,98) dan MiniMax M3.1 Flash (43; $0,22). Ubah teks mitos 3 kalau angkanya bergeser.
+1. **Slide 6, kabar AI.** Cari kabar 27-28 Oktober. Kalau ada kabar besar, ganti dua kabar tertua (21 dan 22 Okt). Ubah `EVENTS` di `src/slides/act-1-foundations.tsx`. Jumlah kabar harus tetap 7. Ubah juga judul slide ("Sepekan di AI, 21-27 Oktober"), label di `src/slides/index.tsx`, dan baris sumber.
+2. **Slide 24, mitos model.** Buka https://artificialanalysis.ai/leaderboards/models. Cek skor dan biaya per tugas Claude Opus 5.5 (58; $5,98) dan MiniMax M3.1 Flash (43; $0,22). Angka ini tidak berubah per 27 Okt. Ubah teks mitos 3 kalau angkanya bergeser.
 3. **Slide 1, kabar SI.** Cek apakah Tiongkok atau pihak lain berubah sikap sejak 26 September. Dialog SI AS-Tiongkok dijadwalkan paling lambat November.
 4. **Slide 23, aturan.** Cek apakah Perpres etika AI dan peta jalan AI nasional, serta lembaga PDP, sudah resmi terbit. Kalau ya, ubah kalimat di bawah judul slide.
 5. **Slide 21, Claude Duet.** Cek apakah ketersediaan berubah dari "research preview, waitlist, AS".
@@ -84,8 +84,14 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 **5. Tujuh istilah (1)**: LLM, token, konteks, halusinasi, RAG, fine-tuning, agent. Semua definisi tampil. Bacakan dua atau tiga, sisanya dibaca sendiri.
 
 **6. Sepekan di AI (2,5)**
-- Ucapkan (klik daftar kanan, tiga kabar, sekitar 40 detik per kabar): MiniMax (murah, tapi menebak daripada mengaku tidak tahu), Claude Duet (agent dengan gerbang izin), Komdigi (jawaban chatbot bukan bukti). Lalu satu kalimat: METR menguji pemantauan agent OpenAI, dan Google mengubah kebijakan privasi.
-- Di layar, jawab kalau ditanya: angka kecepatan Mercury 3 adalah klaim vendor. Kabar Google: pengiklan tidak mendapat datamu, sambungan Gmail, Drive, Foto ke fitur AI bersifat pilihan. METR: OpenAI menyatakan celah sudah ditambal, METR belum menilai klaim itu.
+- Ucapkan (klik daftar kanan, tiga kabar, sekitar 40 detik per kabar): GPT-6.1 Terra (lebih murah, klaim galat turun datang dari OpenAI sendiri, jadi tetap cek jawaban), Cohere dan Qwen (sandbox menahan upaya kirim file ke Beijing, agent butuh gerbang), Komdigi untuk pelajar (jangan salin jawaban AI, bandingkan dengan sumber teruji). Lalu satu kalimat: Claude Duet meminta izin sebelum bertindak, dan Kimi K3.1 Pro baru berjanji merilis bobot pada 4 November.
+- Di layar, jawab kalau ditanya:
+  - GPT-6.1 Terra: angka galat 53,6% ke 16,7% (usaha rendah) dan 4,3% (usaha maksimum) berasal dari uji internal OpenAI dengan prompt pemicu galat. Artificial Analysis memberi skor 48 dan $0,40 per tugas (27 Okt).
+  - Cohere dan Qwen: terjadi pada kurang dari 1 dari 100.000 panggilan. Cohere tidak bisa menentukan apakah itu disengaja atau sisa pelatihan, dan belum menetapkan siapa pemilik bucket. Cohere menjual model sendiri dan bersaing dengan Alibaba. Sandbox tanpa jalur keluar menahan permintaan itu, jadi tidak ada data terkirim.
+  - Kimi K3.1 Pro: skor Artificial Analysis 55, $2,11 per tugas. Lisensi belum diumumkan. Angka Terminal-Bench adalah klaim Moonshot.
+  - METR: OpenAI menyatakan celah sudah ditambal, METR belum menilai klaim itu.
+  - Komdigi dan Meta AI: Komdigi meminta klarifikasi Meta. Tanggapan Meta tidak ditemukan per 27 Okt.
+  - Kabar besar lain pekan ini: 26 Okt Anthropic mengajukan S-1 ke SEC untuk IPO di Nasdaq dengan ticker ANT. Harga dan jumlah saham belum ditentukan. 26 Okt Cloudflare mengungkap 155 respons model GLM-5.3 di Workers AI memuat data pelanggan lain (27 Agu-9 Sep, prompt di atas 681.280 token). Celah sudah diperbaiki.
 
 **7. Indonesia (2,5)**
 - Ucapkan: indeks literasi 49,96 ("kurang baik", APJII 2025). Pengguna AI di survei 2026: 18,2%, sebelumnya 27,34%. Baca sebagai arah. 68% bergantung: hanya 1.000 Gen Z dan Milenial urban. Lalu kotak pembanding: e-Conomy SEA menyebut 58% penduduk usia kerja enam negara Asia Tenggara sudah mengadopsi AI generatif. Katakan: ukurannya berbeda, jangan dikurangkan. Periksa apa yang diukur.
@@ -134,7 +140,7 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 - Di layar, jawab kalau ditanya: Koding dan AI mapel pilihan, belum wajib. PP 33/2026 terbit 16 Juli 2026, berlaku 16 Januari 2027. Lembaga PDP masih disiapkan (23 Okt). AI yang menilai ujian berisiko tinggi di EU, kewajiban penuh 2 Desember 2027 setelah AI Omnibus. Perpres etika AI dan peta jalan AI nasional masih rancangan (Komdigi, 23 Okt).
 
 **24. Empat mitos (1,5)**
-- Ucapkan tiga mitos: (1) "AI ganti semua pekerjaan": di survei WEF 40% pemberi kerja berencana mengurangi staf yang skill-nya tidak relevan, 85% memprioritaskan upskilling. Itu rencana, bukan hasil. (2) "Model paling mahal paling baik": Artificial Analysis 24 Okt, Opus 5.5 skor 58 ($5,98 per tugas), M3.1 Flash skor 43 ($0,22). (3) "Gratis berarti aman": kebijakan privasi Google.
+- Ucapkan tiga mitos: (1) "AI ganti semua pekerjaan": di survei WEF 40% pemberi kerja berencana mengurangi staf yang skill-nya tidak relevan, 85% memprioritaskan upskilling. Itu rencana, bukan hasil. (2) "Model paling mahal paling baik": Artificial Analysis 27 Okt, Opus 5.5 skor 58 ($5,98 per tugas), M3.1 Flash skor 43 ($0,22). (3) "Gratis berarti aman": kebijakan privasi Google.
 - Di layar, jawab kalau ditanya: mitos prompt panjang. Selisih biaya sekitar 27 kali untuk selisih 15 poin.
 
 **25. Rencana 30 hari (1)**: satu aksi, satu bukti per minggu. Minta audiens memilih satu item untuk besok, dalam hati.

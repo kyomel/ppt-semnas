@@ -350,27 +350,6 @@ export function GlossarySlide({ index }: { index: number }) {
 
 const EVENTS = [
   {
-    date: "19 Okt",
-    title: "Model murah jadi pintar",
-    body: "MiniMax M3.1 Flash: $0,15 per juta token input, $0,60 output. Skor Intelligence Index Artificial Analysis 43 (saat peluncuran 42; M3: 29).",
-    why: "Biaya bukan alasan lagi untuk tidak mencoba. Tapi model ini memilih menjawab salah pada 93% kegagalannya, bukan mengaku tidak tahu.",
-    tag: "Harga",
-  },
-  {
-    date: "19 Okt",
-    title: "Teks jadi jauh lebih cepat",
-    body: "Mercury 3 (model difusi): 1.068 token per detik, konteks 1 juta token. Angka dari Inception Labs.",
-    why: "Jawaban datang dalam hitungan detik. Kebiasaan memakainya ikut berubah.",
-    tag: "Kecepatan",
-  },
-  {
-    date: "21 Okt",
-    title: "Model OpenAI masuk cloud Google",
-    body: "GPT-6 Astra, GPT-6.1 Sol, dan GPT-6 Luna masuk Google Cloud Model Garden. Private preview untuk pelanggan enterprise terpilih.",
-    why: "Pilihan model makin cair. Pilih yang cocok untuk tugasmu, bukan yang paling terkenal.",
-    tag: "Distribusi",
-  },
-  {
     date: "21 Okt",
     title: "Agent punya komputer sendiri",
     body: "Claude Duet bekerja di VM dengan browser sendiri. Ia meminta persetujuan sebelum kirim pesan, bayar, tanda tangan, atau hapus. Research preview, waitlist, baru di AS.",
@@ -393,10 +372,31 @@ const EVENTS = [
   },
   {
     date: "23 Okt",
-    title: "Fitur AI personal, data personal",
-    body: "Google menambah satu pengecualian di kebijakan privasi (berlaku 16 Okt). Kalau kamu menyambungkan Gmail, Drive, atau Foto ke fitur AI seperti Personal Intelligence, data itu boleh memengaruhi iklan. Pengiklan tidak mendapat datanya.",
-    why: "Fitur yang lebih personal meminta akses ke datamu. Baca pengaturannya sebelum menyambungkan.",
-    tag: "Data",
+    title: "Model terbuka, bobot belum terbuka",
+    body: "Moonshot meluncurkan Kimi K3.1 Pro: 2,8 triliun parameter, konteks 1 juta token, $2 per juta token input dan $10 output. Skor Artificial Analysis 55 (Claude Opus 5.5: 58). Bobot model dijanjikan paling lambat 4 Nov.",
+    why: "“Terbuka” belum berarti bisa kamu jalankan sendiri. Model sebesar ini butuh server khusus, dan bobotnya masih janji.",
+    tag: "Model",
+  },
+  {
+    date: "26 Okt",
+    title: "Lebih murah, klaim galat turun",
+    body: "OpenAI merilis GPT-6.1 Terra: $1 per juta token input dan $5 output, separuh harga GPT-6.1 Sol. Pada uji internal OpenAI dengan prompt pemicu galat, tingkat galat turun dari 53,6% ke 16,7% (usaha rendah) dan 4,3% (usaha maksimum).",
+    why: "Angka galat itu dari uji vendor sendiri. Harga turun, kewajiban mengecek jawaban tidak ikut turun.",
+    tag: "Harga",
+  },
+  {
+    date: "26 Okt",
+    title: "Sandbox menahan upaya kirim file",
+    body: "Cohere melihat Qwen3.8-Flash-Next mencoba mengunggah file ke server Alibaba Cloud di Beijing, padahal catatan penalarannya berkata tidak akan memakai tool. Sandbox tanpa jalur keluar menahannya. Terjadi pada kurang dari 1 dari 100.000 panggilan. Niatnya belum terbukti.",
+    why: "Catatan penalaran tidak cukup untuk mengawasi agent. Ia butuh batas jaringan dan log aksi.",
+    tag: "Keamanan",
+  },
+  {
+    date: "27 Okt",
+    title: "Jangan salin jawaban AI",
+    body: "Dirjen Komunikasi Publik dan Media Kemkomdigi meminta pelajar bertanya mengapa AI menjawab begitu, lalu membandingkannya dengan sumber teruji: guru, profesor, atau bacaan ilmiah.",
+    why: "Pesan pemerintah untuk pelajar hari ini sama dengan pesan seminar ini. AI alat bantu, bukan pengganti berpikir.",
+    tag: "Indonesia",
   },
 ] as const;
 
@@ -408,9 +408,9 @@ export function TimelineSlide({ index }: { index: number }) {
     <SlideShell
       index={index}
       eyebrow="Fondasi"
-      title="Sepekan di AI, 19-23 Oktober"
-      lead="Kalau AI terasa berubah terlalu cepat, memang begitu. Ini tujuh kabar pilihan dari pekan itu."
-      source="Sumber: MiniMax, Artificial Analysis dan VentureBeat (19 Okt); Inception Labs (19 Okt); Google Cloud dan OpenAI (21 Okt); Anthropic (21 Okt); METR (22 Okt); Komdigi (23 Okt); The Verge (23 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
+      title="Sepekan di AI, 21-27 Oktober"
+      lead="Kalau AI terasa berubah terlalu cepat, memang begitu. Ini tujuh kabar dari pekan itu."
+      source="Sumber: Anthropic (21 Okt); METR (22 Okt); Komdigi (23 Okt); Moonshot dan Artificial Analysis (23 Okt); OpenAI dan Artificial Analysis (26 Okt); Cohere (26 Okt); Antara (27 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
     >
       <div className="flex min-h-0 flex-1 flex-col gap-2">
         <div className="relative h-[32%] min-h-[8.5rem] w-full">

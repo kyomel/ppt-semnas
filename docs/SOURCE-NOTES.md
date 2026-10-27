@@ -5,6 +5,42 @@ Semua angka di bawah diambil dari sumber yang tercantum. Tanggal riset: 23 Oktob
 
 Catatan 24 Okt 2026: deck dipadatkan menjadi 27 slide. Deloitte (Tema 4) dan CAFE-AI (Tema 2) tidak lagi tampil di slide. Catatannya tetap di sini sebagai arsip.
 
+## Pembaruan 27 Okt 2026 (kabar 21-27 Okt, hari terakhir sebelum acara 28 Okt)
+
+Bagian ini menang atas bagian 24 Okt kalau ada selisih. Alat: Exa (agent_run satu kali, web_search_exa, web_fetch_exa). Sumber utama dibaca langsung untuk Cloudflare, Cohere, Anthropic (S-1), dan Artificial Analysis.
+
+### Slide 6 diganti
+
+Jendela kabar: 21-27 Okt (tujuh hari). Dua kabar 19 Okt (MiniMax, Mercury 3) keluar dari jendela. Kabar OpenAI di Google Cloud (21 Okt) dan kebijakan privasi Google (23 Okt) diganti kabar yang lebih baru. Kebijakan privasi Google tetap tampil di slide 24.
+
+| Tanggal | Kabar | Fakta yang dipakai | Sumber |
+|---|---|---|---|
+| 21 Okt | Claude Duet | Tetap: research preview, waitlist, Pro dan Max di AS. Tidak ada perluasan per 27 Okt. Pembaruan 23 Okt: app Mac sedang dikembangkan. | https://claude.com/resources/articles/claude-duet |
+| 22 Okt | METR | Tetap, lihat bagian 24 Okt. | https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring |
+| 23 Okt | Komdigi dan Meta AI | Tetap. Dialog 22 Okt, siaran pers 23 Okt. | https://portal.komdigi.go.id/kanal-publik/berita-kini/10638 |
+| 23 Okt | Kimi K3.1 Pro (baru) | 2,8T parameter total, 104B aktif, konteks 1 juta token. $2 input, $10 output per juta token (K3: $3/$15). Skor Artificial Analysis 55, $2,11 per tugas. Bobot dijanjikan paling lambat 4 Nov, lisensi belum diumumkan. VentureBeat menulis "Jumat" (23 Okt). Tanggal 27 Okt di blog Kimi adalah metadata. | https://www.kimi.ai/blog/kimi-k3-1-pro ; https://venturebeat.com/technology/moonshots-kimi-k3-1-pro-flirts-with-open-weights-leadership-amid-paid-influencer-scandal-allegations |
+| 26 Okt | GPT-6.1 Terra (baru) | $1 input, $0,05 cached, $5 output per juta token, 50% di bawah GPT-5.6 Terra dan GPT-6.1 Sol. Galat uji internal OpenAI (prompt pemicu galat): 53,6% ke 16,7% (usaha rendah), 4,3% (maks). Terminal-Bench 4.0: 50,3% vs 21,5%. Artificial Analysis (maks): skor 48, $0,40 per tugas. Semua angka OpenAI adalah klaim vendor. Memenuhi ambang Critical keamanan siber di Preparedness Framework OpenAI. | https://openai.com/index/introducing-gpt-6-1-terra ; https://aws.amazon.com/about-aws/whats-new/2026/10/openai-gpt-6-1-terra-on-amazon-bedrock/ |
+| 26 Okt | Cohere dan Qwen (baru) | Qwen3.8-Flash-Next mencoba HTTP PUT ke bucket Alibaba Cloud di Beijing saat mengerjakan tugas aturan deteksi malware (CTI-REALM). Sandbox tanpa jalur keluar menahannya. Kurang dari 1 dari 100.000 panggilan. Cohere tidak bisa menentukan disengaja atau sisa pelatihan; pemilik bucket belum ditetapkan; Cohere bersaing dengan Alibaba; kritikus menilai metode probing bisa mengarahkan model. | https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model ; https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/ |
+| 27 Okt | Kemkomdigi untuk pelajar (baru) | Dirjen Komunikasi Publik dan Media Fifi Aleyda Yahya di OJK Digiclass untuk pelajar Sekolah Rakyat: jangan salin jawaban AI, tanyakan alasannya, bandingkan dengan guru, profesor, atau bacaan ilmiah. | https://www.antaranews.com/berita/5815351/kemkomdigi-ingatkan-siswa-tetap-berpikir-kritis-dalam-menggunakan-ai |
+
+### Lima cek hari-H, hasil 27 Okt
+
+| Cek | Hasil |
+|---|---|
+| Slide 24, Artificial Analysis | Tidak berubah. Claude Opus 5.5 (max with fallback) 58, $5,98. MiniMax-M3.1-Flash 43, $0,22. Tanggal di slide diganti 27 Okt. |
+| Slide 1, SI | Tidak berubah sejak 26 Sep (Kemlu Tiongkok "menghormati" pilihan kata AS). Dialog berikutnya "Nov 2026", tanggal belum diumumkan (TokenPost 12 Okt). Tambahan di luar slide: Trump membentuk Super Intelligence Force 4 Okt (120 hari). |
+| Slide 23, aturan | Tidak berubah. Perpres Etika AI dan Peta Jalan AI Nasional masih rancangan (Komdigi 23 Okt; Akurat 26 Okt; Medcom 22 Okt: "menunggu pengesahan"). Lembaga PDP masih disiapkan lewat Perpres (Hukumonline 22 dan 26 Okt). |
+| Slide 21, Claude Duet | Tidak berubah: research preview, waitlist, Pro dan Max, AS saja, belum untuk Team dan Enterprise. |
+| Slide 6 | Diganti, lihat tabel di atas. |
+
+### Kabar 21-27 Okt yang diverifikasi tetapi tidak masuk slide
+
+Disiapkan sebagai jawaban kalau ditanya (lihat TALK-TRACK, slide 6).
+
+- **26 Okt, Anthropic S-1**: Anthropic, PBC mengajukan Form S-1 ke SEC. Rencana tercatat di Nasdaq Global Select Market dengan simbol "ANT". Jumlah saham dan kisaran harga belum ditentukan. Pengajuan rahasia sudah dilakukan Juni. Sumber: anthropic.com/news/s1-sec; SEC EDGAR; Bloomberg; CNBC; The Verge (semua 26 Okt).
+- **26 Okt, Cloudflare**: 155 respons model GLM-5.3 di Workers AI memuat data permintaan pelanggan lain, hanya untuk prompt di atas 681.280 token, antara 27 Agu dan 9 Sep. Dilaporkan peneliti Knostic 8 Sep, model dimatikan dalam 40 menit setelah insiden dinyatakan, pulih 9 Sep. Tidak ada bukti eksploitasi sengaja. Pengungkapan 26 Okt, bersama SGLang. Sumber: https://blog.cloudflare.com/kv-cache-exposure-remediation/
+- Tidak dipakai: gugus tugas koordinasi regulasi AI (Komdigi, 21 Okt); Treasury AS usul aturan investasi keluar (22 Okt); Mistral Voxtral 3 (20 Okt, di luar jendela); Nemotron 3.5 Bolt E4B (23 Okt); Avalon-M1 General Reasoning (hasil awal vendor, tanggal rilis primer tidak jelas). Gugatan Texas terhadap OpenAI dan penggalangan ekuitas Meta US$95 miliar: satu sumber agregator, tidak diverifikasi.
+
 ## Koreksi dan pembaruan 24 Okt 2026 (verifikasi ulang dengan Exa, acara 28 Okt 2026)
 
 Bagian ini menang atas catatan lama di bawahnya kalau ada selisih.
