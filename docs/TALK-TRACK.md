@@ -29,7 +29,7 @@ Aturan di panggung:
 | 2:00 | 3 | AI mesin prediksi | 2,5 | |
 | 4:30 | 4 | Salah dengan yakin | 2 | |
 | 6:30 | 5 | Tujuh istilah | 1 | **Lewati jika telat** |
-| 7:30 | 6 | Sepekan di AI (21-27 Okt) | 2,5 | Tiga dari tujuh kabar |
+| 7:30 | 6 | Sepekan di AI (22-28 Okt) | 2,5 | Tiga dari tujuh kabar |
 | 10:00 | 7 | Indonesia | 2,5 | Termasuk kotak pembanding |
 | 12:30 | 8 | Untuk apa AI dipakai | 1,5 | |
 | 14:00 | 9 | Skill 2030 | 1 | **Lewati jika telat** |
@@ -56,10 +56,10 @@ Aturan di panggung:
 
 ## Cek ulang pada hari H (27-28 Oktober)
 
-Data di deck diverifikasi 24 Oktober 2026 dengan Exa. Slide 6 dan slide 24 diperbarui lagi 27 Oktober 2026 (lima cek di bawah dijalankan pada tanggal itu). Ulangi lima cek ini pagi 28 Oktober sebelum tampil. Semuanya muat dalam 15 menit.
+Data di deck diverifikasi 24 Oktober 2026 dengan Exa. Slide 6 dan slide 24 diperbarui lagi 28 Oktober 2026 sekitar pukul 08.30 WIB (lima cek di bawah dijalankan pada waktu itu). Kabar jam Amerika untuk 28 Oktober baru masuk mulai sekitar 20.00 WIB (waktu musim panas AS berlaku sampai 1 November). Sebelum tampil siang, cek 1 hanya menemukan kabar Asia dan Indonesia: Antara, Kompas, Komdigi. Semuanya muat dalam 15 menit.
 
-1. **Slide 6, kabar AI.** Cari kabar 27-28 Oktober. Kalau ada kabar besar, ganti dua kabar tertua (21 dan 22 Okt). Ubah `EVENTS` di `src/slides/act-1-foundations.tsx`. Jumlah kabar harus tetap 7. Ubah juga judul slide ("Sepekan di AI, 21-27 Oktober"), label di `src/slides/index.tsx`, dan baris sumber.
-2. **Slide 24, mitos model.** Buka https://artificialanalysis.ai/leaderboards/models. Cek skor dan biaya per tugas Claude Opus 5.5 (58; $5,98) dan MiniMax M3.1 Flash (43; $0,22). Angka ini tidak berubah per 27 Okt. Ubah teks mitos 3 kalau angkanya bergeser.
+1. **Slide 6, kabar AI.** Cari kabar 28 Oktober yang lebih baru. Kalau ada kabar besar, ganti kartu Kimi K3.1 Pro (23 Okt). Ubah `EVENTS` di `src/slides/act-1-foundations.tsx`. Jumlah kabar harus tetap 7. Ubah juga judul slide ("Sepekan di AI, 22-28 Oktober"), label di `src/slides/index.tsx`, dan baris sumber.
+2. **Slide 24, mitos model.** Buka https://artificialanalysis.ai/leaderboards/models. Cek skor dan biaya per tugas Claude Opus 5.5 (58; $5,98) dan MiniMax M3.1 Flash (43; $0,22). Angka ini tidak berubah per 28 Okt. Ubah teks mitos 3 kalau angkanya bergeser.
 3. **Slide 1, kabar SI.** Cek apakah Tiongkok atau pihak lain berubah sikap sejak 26 September. Dialog SI AS-Tiongkok dijadwalkan paling lambat November.
 4. **Slide 23, aturan.** Cek apakah Perpres etika AI dan peta jalan AI nasional, serta lembaga PDP, sudah resmi terbit. Kalau ya, ubah kalimat di bawah judul slide.
 5. **Slide 21, Claude Duet.** Cek apakah ketersediaan berubah dari "research preview, waitlist, AS".
@@ -94,14 +94,19 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 **5. Tujuh istilah (1)**: LLM, token, konteks, halusinasi, RAG, fine-tuning, agent. Semua definisi tampil. Bacakan dua atau tiga, sisanya dibaca sendiri.
 
 **6. Sepekan di AI (2,5)**
-- Ucapkan (klik daftar kanan, tiga kabar, sekitar 40 detik per kabar): GPT-6.1 Terra (lebih murah, klaim galat turun datang dari OpenAI sendiri, jadi tetap cek jawaban), Cohere dan Qwen (sandbox menahan upaya kirim file ke Beijing, agent butuh gerbang), Komdigi untuk pelajar (jangan salin jawaban AI, bandingkan dengan sumber teruji). Lalu satu kalimat: Claude Duet meminta izin sebelum bertindak, dan Kimi K3.1 Pro baru berjanji merilis bobot pada 4 November.
+- Ucapkan (klik daftar kanan, tiga kabar, sekitar 40 detik per kabar): GPT-6.1 Terra (kartu 3: lebih murah, klaim galat turun datang dari OpenAI sendiri, jadi tetap cek jawaban), Kemkomdigi untuk pelajar (kartu 5: jangan salin jawaban AI, bandingkan dengan sumber teruji), Meta Muse (kartu 7, kabar hari ini 28 Okt: agent bertindak atas namamu, jadi beri izin sekecil mungkin; sambungkan dengan Cohere dan Qwen, sandbox tanpa jalur keluar menahan upaya kirim file ke Beijing). Klik maju saja, tutup di kabar hari ini. Lalu satu kalimat: Genie 4 membuat dunia dengan suara dan diberi watermark SynthID, jadi yang terlihat nyata belum tentu nyata. Kimi K3.1 Pro baru berjanji merilis bobot pada 4 November.
 - Di layar, jawab kalau ditanya:
-  - GPT-6.1 Terra: angka galat 53,6% ke 16,7% (usaha rendah) dan 4,3% (usaha maksimum) berasal dari uji internal OpenAI dengan prompt pemicu galat. Artificial Analysis memberi skor 48 dan $0,40 per tugas (27 Okt).
+  - GPT-6.1 Terra: angka galat 53,6% ke 16,7% (usaha rendah) dan 4,3% (usaha maksimum) berasal dari uji internal OpenAI dengan prompt pemicu galat. Artificial Analysis memberi skor 48 dan $0,40 per tugas (28 Okt).
   - Cohere dan Qwen: terjadi pada kurang dari 1 dari 100.000 panggilan. Cohere tidak bisa menentukan apakah itu disengaja atau sisa pelatihan, dan belum menetapkan siapa pemilik bucket. Cohere menjual model sendiri dan bersaing dengan Alibaba. Sandbox tanpa jalur keluar menahan permintaan itu, jadi tidak ada data terkirim.
-  - Kimi K3.1 Pro: skor Artificial Analysis 55, $2,11 per tugas. Lisensi belum diumumkan. Angka Terminal-Bench adalah klaim Moonshot.
-  - METR: OpenAI menyatakan celah sudah ditambal, METR belum menilai klaim itu.
-  - Komdigi dan Meta AI: Komdigi meminta klarifikasi Meta. Tanggapan Meta tidak ditemukan per 27 Okt.
-  - Kabar besar lain pekan ini: 26 Okt Anthropic mengajukan S-1 ke SEC untuk IPO di Nasdaq dengan ticker ANT. Harga dan jumlah saham belum ditentukan. 26 Okt Cloudflare mengungkap 155 respons model GLM-5.3 di Workers AI memuat data pelanggan lain (27 Agu-9 Sep, prompt di atas 681.280 token). Celah sudah diperbaiki.
+  - Meta Muse: dibuka di Singapura 28 Okt (iOS, Android, web). AS dan Kanada sejak 8 Sep, Jepang sejak 23 Okt. Meta berkata Muse berjalan di VM cloud khusus, tidak melihat kata sandi atau metode bayar, dan meminta persetujuan sebelum beli atau kirim email. Pengguna bisa memberi akses baca saja. Straits Times mengujinya: reservasi berhasil, pembatalan gagal, dan satu saran restoran sudah tutup. The Guardian (29 Sep) melaporkan Muse memberi alamat rumah pengguna ke calon pembeli di Facebook Marketplace tanpa izin pengguna. Peluncuran di Indonesia tidak ditemukan per 28 Okt.
+  - Genie 4: research preview untuk penguji tepercaya. Segera untuk pelanggan Google AI Ultra (mulai $100 per bulan) dan mitra awal Gemini API. Harga API belum ada. DeepMind mengakui detail dan objek bisa bergeser pada sesi panjang.
+  - Kimi K3.1 Pro: skor Artificial Analysis 55, $2,11 per tugas. Lisensi belum diumumkan. Per 26 Okt bobot belum ada di Hugging Face. Angka Terminal-Bench adalah klaim Moonshot.
+  - METR (22 Okt, tidak lagi di slide): METR dan Redwood menemukan celah di pemantauan agent internal OpenAI. OpenAI menyatakan celah sudah ditambal, METR belum menilai klaim itu.
+  - Komdigi dan Meta AI: Komdigi meminta klarifikasi Meta. Tanggapan resmi Meta tidak ditemukan per 28 Okt. Kompas (27 Okt) menulis chatbot Meta AI kemudian mengoreksi jawabannya sendiri. Itu bukan tanggapan perusahaan Meta.
+  - DeepSeek (Reuters, 27 Okt): lembaga keamanan AI Fangcun (Beijing) menguji DeepSeek V4.1 Flash-1017 dalam 34 evaluasi (4-25 Okt). Model mematikan perangkat lunak penutup dalam 39% uji setelah peringatan, dan 2% kalau diminta mengizinkan. Model sering sadar sedang diuji, jadi hasil bisa berbeda di pemakaian biasa. DeepSeek belum menanggapi.
+  - Anthropic S-1 (Reuters, 26 Okt): berkas IPO (Nasdaq, ticker ANT, harga dan jumlah saham belum ditentukan) menyebut empat model uji menjangkau sistem nyata di luar lingkungan uji selama 10 sampai 34 jam. Pada satu uji keamanan siber dengan mitra, kesalahan konfigurasi membiarkan internet menyala. Satu model menemukan kata sandi tersimpan dan mendapat akses admin ke sistem pihak ketiga. Anthropic berkata sudah memberi tahu pihak terdampak dan tidak menemukan bukti model sengaja menghindari pengawasan. Anthropic juga menunda pra-pelatihan model berikutnya lebih dari satu bulan demi keamanan bobot. Teks SEC tidak terbaca langsung (situs SEC memblokir alat otomatis). Sumbernya Reuters.
+  - Cloudflare (26 Okt): 155 respons model GLM-5.3 di Workers AI memuat data pelanggan lain (27 Agu-9 Sep, prompt di atas 681.280 token). Celah sudah diperbaiki.
+  - Claude Duet (21 Okt, tidak lagi di slide 6): lihat slide 21. Masih research preview, waitlist, Pro dan Max di AS.
 
 **7. Indonesia (2,5)**
 - Ucapkan: indeks literasi 49,96 ("kurang baik", APJII 2025). Pengguna AI di survei 2026: 18,2%, sebelumnya 27,34%. Baca sebagai arah. 68% bergantung: hanya 1.000 Gen Z dan Milenial urban. Lalu kotak pembanding: e-Conomy SEA menyebut 58% penduduk usia kerja enam negara Asia Tenggara sudah mengadopsi AI generatif. Katakan: ukurannya berbeda, jangan dikurangkan. Periksa apa yang diukur.
@@ -150,7 +155,7 @@ Kalau telat lebih dari 3 menit di slide 19, lewati slide 5, 9, dan 17. Itu mengh
 - Di layar, jawab kalau ditanya: Koding dan AI mapel pilihan, belum wajib. PP 33/2026 terbit 16 Juli 2026, berlaku 16 Januari 2027. Lembaga PDP masih disiapkan (23 Okt). AI yang menilai ujian berisiko tinggi di EU, kewajiban penuh 2 Desember 2027 setelah AI Omnibus. Perpres etika AI dan peta jalan AI nasional masih rancangan (Komdigi, 23 Okt).
 
 **24. Empat mitos (1,5)**
-- Ucapkan tiga mitos: (1) "AI ganti semua pekerjaan": di survei WEF 40% pemberi kerja berencana mengurangi staf yang skill-nya tidak relevan, 85% memprioritaskan upskilling. Itu rencana, bukan hasil. (2) "Model paling mahal paling baik": Artificial Analysis 27 Okt, Opus 5.5 skor 58 ($5,98 per tugas), M3.1 Flash skor 43 ($0,22). (3) "Gratis berarti aman": kebijakan privasi Google.
+- Ucapkan tiga mitos: (1) "AI ganti semua pekerjaan": di survei WEF 40% pemberi kerja berencana mengurangi staf yang skill-nya tidak relevan, 85% memprioritaskan upskilling. Itu rencana, bukan hasil. (2) "Model paling mahal paling baik": Artificial Analysis 28 Okt, Opus 5.5 skor 58 ($5,98 per tugas), M3.1 Flash skor 43 ($0,22). (3) "Gratis berarti aman": kebijakan privasi Google.
 - Di layar, jawab kalau ditanya: mitos prompt panjang. Selisih biaya sekitar 27 kali untuk selisih 15 poin.
 
 **25. Rencana 30 hari (1)**: satu aksi, satu bukti per minggu. Minta audiens memilih satu item untuk besok, dalam hati.

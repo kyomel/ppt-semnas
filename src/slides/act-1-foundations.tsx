@@ -350,20 +350,6 @@ export function GlossarySlide({ index }: { index: number }) {
 
 const EVENTS = [
   {
-    date: "21 Okt",
-    title: "Agent punya komputer sendiri",
-    body: "Claude Duet bekerja di VM dengan browser sendiri. Ia meminta persetujuan sebelum kirim pesan, bayar, tanda tangan, atau hapus. Research preview, waitlist, baru di AS.",
-    why: "AI mulai mengerjakan, bukan hanya menjawab. Karena itu ia butuh gerbang izin.",
-    tag: "Agent",
-  },
-  {
-    date: "22 Okt",
-    title: "Agent diuji dari luar",
-    body: "METR dan Redwood Research menguji sistem pemantauan agent internal OpenAI selama tiga minggu. Mereka menemukan celah. OpenAI menyatakan celah yang memengaruhi produksi sudah ditambal. METR belum menilai klaim itu.",
-    why: "Gerbang jejak harus diuji pihak luar. Pemantauan yang tidak pernah diuji belum bisa dipercaya.",
-    tag: "Pengawasan",
-  },
-  {
     date: "23 Okt",
     title: "Jawaban AI bukan bukti",
     body: "Komdigi meminta klarifikasi Meta atas jawaban Meta AI yang dikaitkan dengan dugaan pembatasan konten karhutla. Kata Komdigi: jawaban chatbot bukan bukti, periksa sumbernya (trust but verify).",
@@ -395,8 +381,22 @@ const EVENTS = [
     date: "27 Okt",
     title: "Jangan salin jawaban AI",
     body: "Dirjen Komunikasi Publik dan Media Kemkomdigi meminta pelajar bertanya mengapa AI menjawab begitu, lalu membandingkannya dengan sumber teruji: guru, profesor, atau bacaan ilmiah.",
-    why: "Pesan pemerintah untuk pelajar hari ini sama dengan pesan seminar ini. AI alat bantu, bukan pengganti berpikir.",
+    why: "Pesan pemerintah untuk pelajar sama dengan pesan seminar ini. AI alat bantu, bukan pengganti berpikir.",
     tag: "Indonesia",
+  },
+  {
+    date: "27 Okt",
+    title: "AI membuat dunia dengan suara",
+    body: "Google DeepMind memperkenalkan Genie 4: dari teks, AI membuat dunia interaktif dengan suara dan dialog. Satu adegan bertahan sampai dua menit. Baru untuk penguji tepercaya. Semua video dan audio diberi watermark SynthID.",
+    why: "Gambar dan suara buatan AI makin sulit dibedakan dari yang nyata. Cari label asal-usul konten, jangan percaya hanya karena terlihat nyata.",
+    tag: "Konten",
+  },
+  {
+    date: "28 Okt",
+    title: "Agent pribadi Meta ke Singapura",
+    body: "Meta membuka Muse di Singapura mulai 28 Okt. Atas izinmu, agent ini masuk ke Gmail, Instagram, dan Kalender, lalu mengurus pesanan. Konektor Shopee, Lazada, dan Grab menyusul bertahap. Ia meminta persetujuan sebelum beli atau kirim email. Di uji Straits Times, ia gagal membatalkan reservasi.",
+    why: "Agent bekerja dengan izin yang kamu beri. Beri izin sekecil mungkin, misalnya akses baca saja.",
+    tag: "Agent",
   },
 ] as const;
 
@@ -408,9 +408,9 @@ export function TimelineSlide({ index }: { index: number }) {
     <SlideShell
       index={index}
       eyebrow="Fondasi"
-      title="Sepekan di AI, 21-27 Oktober"
+      title="Sepekan di AI, 22-28 Oktober"
       lead="Kalau AI terasa berubah terlalu cepat, memang begitu. Ini tujuh kabar dari pekan itu."
-      source="Sumber: Anthropic (21 Okt); METR (22 Okt); Komdigi (23 Okt); Moonshot dan Artificial Analysis (23 Okt); OpenAI dan Artificial Analysis (26 Okt); Cohere (26 Okt); Antara (27 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
+      source="Sumber: Komdigi (23 Okt); Moonshot dan Artificial Analysis (23 Okt); OpenAI dan Artificial Analysis (26 Okt); Cohere (26 Okt); Antara (27 Okt); Google DeepMind (27 Okt); Meta dan Straits Times (28 Okt 2026). Sebagian angka kinerja adalah klaim vendor."
     >
       <div className="flex min-h-0 flex-1 flex-col gap-2">
         <div className="relative h-[24%] min-h-[6.5rem] w-full">

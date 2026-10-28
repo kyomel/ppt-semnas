@@ -134,8 +134,8 @@ const MYTHS = [
   },
   {
     myth: "Model lebih besar dan lebih mahal selalu lebih baik.",
-    fact: "Artificial Analysis, 27 Okt 2026: Claude Opus 5.5 memimpin (skor 58, $5,98 per tugas uji). MiniMax M3.1 Flash skor 43 dengan $0,22 per tugas. Selisih 15 poin, selisih biaya sekitar 27 kali. Pilih model sesuai tugas.",
-    source: "Artificial Analysis, 27 Okt 2026",
+    fact: "Artificial Analysis, 28 Okt 2026: Claude Opus 5.5 memimpin (skor 58, $5,98 per tugas uji). MiniMax M3.1 Flash skor 43 dengan $0,22 per tugas. Selisih 15 poin, selisih biaya sekitar 27 kali. Pilih model sesuai tugas.",
+    source: "Artificial Analysis, 28 Okt 2026",
   },
   {
     myth: "Kalau gratis, berarti aman.",
@@ -151,7 +151,7 @@ export function MythsSlide({ index }: { index: number }) {
       eyebrow="Aksi"
       title="Empat mitos yang masih beredar"
       lead="Mitos di atas, fakta di bawah, masing-masing dengan sumbernya."
-      source="Sumber: WEF Future of Jobs 2025; Anthropic 2025; Artificial Analysis (27 Okt 2026); The Verge (23 Okt 2026). Klaim praktik umum ditandai."
+      source="Sumber: WEF Future of Jobs 2025; Anthropic 2025; Artificial Analysis (28 Okt 2026); The Verge (23 Okt 2026). Klaim praktik umum ditandai."
     >
       <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-2.5">
         {MYTHS.map((item, i) => (

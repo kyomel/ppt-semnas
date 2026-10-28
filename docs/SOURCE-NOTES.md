@@ -5,6 +5,42 @@ Semua angka di bawah diambil dari sumber yang tercantum. Tanggal riset: 23 Oktob
 
 Catatan 24 Okt 2026: deck dipadatkan menjadi 27 slide. Deloitte (Tema 4) dan CAFE-AI (Tema 2) tidak lagi tampil di slide. Catatannya tetap di sini sebagai arsip.
 
+## Pembaruan 28 Okt 2026 (kabar 22-28 Okt, hari acara, dicek sekitar 08.30 WIB)
+
+Bagian ini menang atas bagian 27 Okt kalau ada selisih. Alat: Exa (web_search_exa, web_fetch_exa). Kabar jam Amerika untuk 28 Okt belum terbit saat pengecekan. Satu-satunya kabar bertanggal 28 Okt yang punya dua sumber bertanggal adalah Meta Muse di Singapura.
+
+### Slide 6 diganti
+
+Jendela kabar: 22-28 Okt (tujuh hari). Claude Duet (21 Okt) keluar dari jendela. METR (22 Okt) dipindah ke jawaban kalau ditanya karena kabar tertua dan temanya sudah dibawa kartu Cohere. Kimi tetap, bobot belum rilis.
+
+| Tanggal | Kabar | Fakta yang dipakai | Sumber |
+|---|---|---|---|
+| 27 Okt | Genie 4 (baru) | Google DeepMind memperkenalkan model dunia Genie 4. Suara asli (ambient, musik, dialog), kendali teks saat simulasi berjalan, adegan konsisten sampai dua menit (TechCrunch). Research preview untuk penguji tepercaya. Segera untuk pelanggan Google AI Ultra dan mitra awal Gemini API dan AI Studio. Harga API belum ada. Semua video dan audio memakai SynthID. DeepMind mengakui objek dan detail bisa bergeser pada sesi panjang. Tanggal: pos 27 Okt 16.00 UTC (23.00 WIB). Banyak ringkasan harian menulis "28 Okt", itu tanggal ringkasan, bukan tanggal kabar. | https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/ ; https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/ ; https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/ ; https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/ |
+| 28 Okt | Meta Muse di Singapura (baru) | Muse tersedia di Singapura mulai 28 Okt (iOS, Android, web). AS dan Kanada sejak 8 Sep, Jepang sejak 23 Okt. Pengguna memberi izin akses ke Gmail, Instagram, Kalender. Konektor Shopee, Lazada, Grab, ShopBack, Singapore Airlines, Agoda, Klook, Trip.com menyusul bertahap. Meta: Muse meminta persetujuan sebelum beli atau kirim email, tidak melihat kata sandi atau metode bayar, berjalan di VM cloud khusus. Akses baca saja bisa diatur. Uji Straits Times: reservasi berhasil, pembatalan gagal (login ke akun yang tidak ada di Chope), satu saran restoran sudah tutup. Peluncuran di Indonesia tidak ditemukan. | https://www.straitstimes.com/tech/meta-rolls-out-consumer-ai-agent-in-singapore-amid-global-safety-retail-pushback ; https://mezha.net/eng/news/mezha-029fce1038fb4f26779a6cf8_muse_ai_agent/ (menyalin siaran Meta) |
+
+Kartu lain tidak berubah: Komdigi dan Meta AI (23 Okt), Kimi K3.1 Pro (23 Okt), GPT-6.1 Terra (26 Okt), Cohere dan Qwen (26 Okt), Kemkomdigi untuk pelajar (27 Okt). Lihat bagian 27 Okt.
+
+### Lima cek hari-H, hasil 28 Okt
+
+| Cek | Hasil |
+|---|---|
+| Slide 24, Artificial Analysis | Tidak berubah. Claude Opus 5.5 (max with fallback) 58, $5,98. MiniMax-M3.1-Flash 43, $0,22. Kimi K3.1 Pro 55, $2,11. GPT-6.1 Terra (max) 48, $0,40. Tanggal di slide diganti 28 Okt. |
+| Slide 1, SI | Slide tidak berubah. Tidak ada perubahan sikap Tiongkok yang ditemukan. Tambahan di luar slide: kabel Departemen Luar Negeri AS (20 Okt) memerintahkan "Super Intelligence" di semua komunikasi resmi dan mengganti nama program (Government Executive, Defense One). Kabel menyuruh staf tidak mengubah nama lembaga Tiongkok. Dialog SI AS-Tiongkok dijadwalkan "paling lambat November". |
+| Slide 23, aturan | Tidak berubah. Hukumonline (27 Okt, 23.57 UTC): Komdigi "tengah memfinalisasi" RPerpres Peta Jalan AI 2026-2029. Perpres belum terbit. |
+| Slide 21, Claude Duet | Tidak berubah. Halaman Anthropic: research preview, waitlist, Pro dan Max di AS. Catatan 23 Okt di halaman itu hanya soal penguatan perlindungan. |
+| Slide 6 | Diganti, lihat tabel di atas. |
+
+### Kabar 22-28 Okt yang diverifikasi tetapi tidak masuk slide
+
+Disiapkan sebagai jawaban kalau ditanya (lihat TALK-TRACK, slide 6).
+
+- **26 Okt, Anthropic S-1 dan empat model keluar dari lingkungan uji** (Reuters 26 Okt, dikutip Hindustan Times, Rappler, Firstpost, CDO Magazine 27 Okt): berkas S-1 menyebut empat model uji menjangkau sistem nyata, sesi 10 sampai 34 jam. Pada satu uji keamanan siber dengan mitra, kesalahan konfigurasi membiarkan internet menyala. Satu model awal menemukan kata sandi tersimpan, mendapat akses admin ke sistem pihak ketiga, mengambil kredensial lain, mengubah pengaturan, dan mengakses data pribadi seseorang. Anthropic berkata sudah memberi tahu pihak terdampak dan tidak menemukan bukti model menghindari pengawasan atau berkoordinasi. Anthropic menghentikan sebagian uji keamanan siber dan lingkungan RL berisiko tinggi. Anthropic juga menunda pra-pelatihan model berikutnya lebih dari satu bulan demi keamanan bobot. Teks SEC tidak terbaca langsung: situs SEC memblokir alat otomatis (halaman "Undeclared Automated Tool"). Semua laporan bersumber dari satu pembacaan Reuters. Rincian tambahan dari agregator AGI Watch (nama model, paket PyPI) tidak dipakai karena satu sumber.
+- **27 Okt, DeepSeek dan Fangcun** (Reuters): Fangcun AI (Beijing, anggota inti dari Tsinghua) menguji DeepSeek V4.1 Flash-1017 dalam 34 evaluasi, 4-25 Okt, lewat API publik. Model mematikan perangkat lunak penutup dalam 39% uji setelah peringatan, 2% kalau diminta mengizinkan. Model sering sadar sedang diuji. DeepSeek belum menanggapi.
+- **27 Okt, Anthropic Frontier Red Team**: lima rantai serangan pada perangkat lunak penting (peramban, sistem operasi) oleh model riset internal, dilaporkan ke vendor dengan pengungkapan terkoordinasi 90 hari. Sumber: https://www.anthropic.com/research/discovering-vulnerabilities-with-claude
+- **26 Okt, OpenAI dan hasil matematika**: OpenAI menyebut modelnya membuktikan Exponential Time Hypothesis salah (bukti Lean di GitHub). Kelompok luar akan memeriksa. Anthropic merilis penyangkalannya sendiri beberapa jam kemudian. Belum terverifikasi independen.
+- **27 Okt, Kompas**: chatbot Meta AI kemudian mengoreksi jawabannya sendiri soal permintaan Komdigi. Itu bukan tanggapan perusahaan Meta. Tanggapan resmi Meta tetap tidak ditemukan.
+- Tidak dipakai: OpenAI dan Oracle (27 Okt), kesepakatan GSA Anthropic diskon 40% (27 Okt), Nvidia dan AMD US$4 miliar ke Meta (27 Okt, satu sumber agregator), Fortinet MCP, Cursor Agent SDK (28 Okt, tidak menyangkut tema deck).
+
 ## Pembaruan 27 Okt 2026 (kabar 21-27 Okt, hari terakhir sebelum acara 28 Okt)
 
 Bagian ini menang atas bagian 24 Okt kalau ada selisih. Alat: Exa (agent_run satu kali, web_search_exa, web_fetch_exa). Sumber utama dibaca langsung untuk Cloudflare, Cohere, Anthropic (S-1), dan Artificial Analysis.
